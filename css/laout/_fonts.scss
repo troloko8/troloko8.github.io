@@ -1,0 +1,25 @@
+ $font-family: (AlegreyaSans-Black: (400,normal),
+ AlegreyaSans-BlackItalic: (700,italic),
+ AlegreyaSans-Bold: (700,normal),
+ AlegreyaSans-BoldItalic: (700,italic),
+ AlegreyaSans-ExtraBold: (900,normal),
+ AlegreyaSans-ExtraBoldItalic: (900,italic),
+ AlegreyaSans-Italic: (400,italic),
+ AlegreyaSans-Light: (300,normal),
+ AlegreyaSans-Medium: (500,normal),
+ AlegreyaSans-MediumItalic: (500,italic),
+ AlegreyaSans-Regular: (400,normal),
+ AlegreyaSans-Thin: (400,normal),
+ AlegreyaSans-ThinItalic: (400,italic));
+
+@each  $font,$font-info in $font-family {
+  $font-weight: nth($font-info, 1);
+  $font-style: nth($font-info, 2);
+  @font-face {
+    font-family: #{$font};
+    src: url('/fonts/#{$font}.woff') format('woff'),
+    url('/fonts/#{$font}.woff2') format('woff2');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
