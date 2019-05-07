@@ -1,0 +1,16 @@
+.telephone {
+  display: flex;
+  align-items: center;
+  @include text-info(AlegreyaSans-Regular, 400, normal, 24px, 30px, white);
+
+  &:before {
+    content: '';
+    display: flex;
+    margin-right: 5px;
+    height: 15px;
+    width: 15px;
+    background-image: url("/img/phone.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}

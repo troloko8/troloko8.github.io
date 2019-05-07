@@ -1,0 +1,11 @@
+.logo {
+  display: flex;
+  width: 50px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: white;
+  @include text-info (AlegreyaSans-Regular, 400, normal, 24px, 20px, white);
+}

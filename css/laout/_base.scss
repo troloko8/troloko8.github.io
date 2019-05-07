@@ -39,3 +39,42 @@ a {
   text-decoration: none;
 }
 
+.wrapper {
+  min-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.page {
+  height: 100vh;
+  position: relative;
+
+   &-wellcome {
+    background-image: url('/img/pattern.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+.container {
+  width: 940px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+
+  &-head {
+    position: relative;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  width: 100%;
+}

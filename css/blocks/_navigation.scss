@@ -1,0 +1,16 @@
+.navigation__list {
+  display: flex;
+}
+
+.navigation__item {
+  margin-left: 30px;
+
+  &:first-child {
+    margin-left: 0
+  }
+}
+
+.navigation__link {
+  @include text-info (AlegreyaSans-Regular, 400, normal, 18px, 30px, white);
+
+}

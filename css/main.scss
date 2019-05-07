@@ -2,136 +2,51 @@
 @import 'laout/fonts';
 @import 'laout/base';
 
+@import 'blocks/mixin';
+
+@import 'blocks/logo';
+@import 'blocks/navigation';
+@import 'blocks/telephone';
 
 
-.wrapper {
-  min-width: 1100px;
+
+
+
+.page-wellcome__container {
   display: flex;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+.page-wellcome__info,
+.page-wellcome__background {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
   flex-direction: column;
-  height: 100%;
+
 }
 
-.page {
-  height: 100vh;
-
-  &-wellcome {
-    background-color: #61c4d9;
-  }
-
-  &-pattern {
-    background-image: url('/img/pattern.png');
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: 85%;
-  }
-
-  &_relative {
-    position: relative;
-  }
-}
-
-.container {
-  width: 1060px;
-  margin: auto;
-  height: 100%;
-  display: flex;
-  flex-direction: column ;
-
-  &-head {
-    position: relative;
-  }
-
-  &__why-chocco {
-    align-items: center;
-  }
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-}
-
-.logo {
-  display: flex;
-  width: 50px;
-  height: 40px;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 21px;
-  text-transform: uppercase;
-  color: white;
-}
-
-.navigation__list {
-  display: flex;
-}
-
-@mixin text-info ($font, $font-weight, $font-style, $font-size, $line-height, $color) {
-  font-family: $font;
-  font-weight: $font-weight;
-  font-style: $font-style;
-  font-size: $font-size;
-  line-height: $line-height;
-  color: $color;
-}
-
-.navigation__item {
-  @include text-info (AlegreyaSans-Regular, 400, normal, 18px, 30px, white);
-  margin-left: 30px;
-
-  &:first-child {
-    margin-left: 0
-  }
-}
-
-.telephone {
-  display: flex;
-  align-items: center;
-  @include text-info(AlegreyaSans-Regular, 400, normal, 24px, 30px, white);
-
-  &:before {
-    content: '';
-    display: flex;
-    margin-right: 5px;
-    height: 15px;
-    width: 15px;
-    background-image: url("/img/phone.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-}
-
-.header__title {
+.page-wellcome__title {
   @include text-info(AlegreyaSans-Bold, 700, normal, 60px, 60px, white);
   width: 415px;
-  height: 170px;
   text-transform: uppercase;
-  margin-top: 70px;
 }
 
-.header__text {
+.page-wellcome__text {
   @include text-info(AlegreyaSans-Regular, 400, normal, 21px, 30px, white);
-  width: 350px;
   margin-top: 15px;
 }
 
-.bottom-order {
-  width: 160px;
-  height: 60px;
+.button-order__link {
+  display: flex;
+  padding: 10px 20px;
   background-color: white;
   border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 30px;
-
-  &__link {
-    text-transform: uppercase;
-    @include text-info("sans serif", 700, normal, 21px, 30px, #0f5a47);
-
-  }
+  text-transform: uppercase;
+  @include text-info(AlegreyaSans-ExtraBold, 900, normal, 19px, 30px, #0f5a47);
 }
 
 .info-uniq {
@@ -172,7 +87,7 @@
   }
 }
 
-.fone__picture-leaves {
+.background__picture-leaves {
   display: block;
   position: absolute;
   bottom: -55px;
@@ -180,25 +95,29 @@
   width: 110%;
 }
 
-.fone__picture-berries {
+.background__picture-berries {
   display: block;
   position: absolute;
   bottom: -40px;
   right: 0;
 }
 
-.fone__picture-candy-bars {
+.background__picture-candy-bars {
   display: block;
   position: absolute;
   bottom: 50px;
   right: -50px;
 }
 
-.sidebar {
+.pagination {
   position: fixed;
   right: 20px;
   top: 50%;
   transform: translate(0, -50%);
+
+  &__item {
+    margin-top: 5px;
+  }
 
   &__link {
     display: flex;
@@ -223,6 +142,13 @@
       border-radius: 50%;
       background-repeat: no-repeat;
     }
+
+    &:hover {
+      border: 1px solid white;
+      border-radius: 50%;
+      background-color: transparent;
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -238,22 +164,19 @@
   @include text-info(AlegreyaSans-Bold, 700, normal, 48px, 30px, black);
   text-transform: uppercase;
   text-align: center;
-  margin-top: 100px;
 }
 
 .why-chocco__title {
   text-align: center;
-  margin-top: 100px;
+  margin-bottom: 30px;
 }
 
 .why-chocco__text {
   @include text-info(AlegreyaSans-Regular, 400, normal, 18px, 30px, black);
   text-align: center;
-  margin-top: 30px;
 }
 
 .features {
-  width: 90%;
   display: flex;
   margin-top: 50px;
 
@@ -283,13 +206,17 @@
 
 
   &__box {
-    width: 33.3%;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 35px;
+    margin-left: 70px;
     position: relative;
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
 
   &__title {
@@ -311,8 +238,8 @@
     position: absolute;
     top: 20%;
     right: -10px;
-  
-  
+
+
     &::before {
       content: '';
       @extend .features__circles;
@@ -320,25 +247,25 @@
       height: 10px;
       top: 25%;
       right: -20px;
-  
+
     }
-  
+
     &::after {
       content: '';
       @extend .features__circles::before;
       right: 30px;
     }
-  }  
+  }
 }
 
 @each $name-picture in (human, smile, hand) {
-  .features__picture-#{$name-picture}::before {
+  .features__picture_#{$name-picture}::before {
     background-image: url('/img/#{$name-picture}.png');
   }
 }
 
 
-.page-fone {
+.background-leaf {
   background-image: url('/img/leaf-phone.png');
   background-repeat: no-repeat;
   position: absolute;
@@ -347,36 +274,44 @@
   left: 0;
   top: 225px;
 
-} 
-
- .page-raspberries {
-   background-image: url('/img/raspberries.png');
-   background-repeat: no-repeat;
-   position: absolute;
-   bottom: -120px;
-   left: 0;
-   width: 161px;
-   height: 315px;
 }
 
-.reviews {
-  width: 90%;
+.background-raspberries {
+  background-image: url('/img/raspberries.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  width: 161px;
+  height: 315px;
+}
+
+.review {
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin-top: 50px;
+  width: 100%;
 
   &__box {
-  background-color: #f8faf9;
-  padding: 50px;
-  width: 100%;
-  display: flex;
-  position: relative;
+    background-color: #f8faf9;
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    background-image: url('/img/gray-raspberry.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: auto;
+    position: relative;
   }
 
   &__picture {
     width: 260px;
-    height: 260px;
-    background-size: cover;
+  }
+
+  &__photo {
+    max-width: 100%;
+    max-height: 100%;
   }
 
   &__container {
@@ -396,18 +331,28 @@
   }
 
   &__name {
-    @extend .reviews__text ;
+    @extend .review__text;
     font-family: AlegreyaSans-Medium;
     font-weight: 500;
   }
+}
 
-  &-picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+.review__controller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 
-    &__people{
+  .controller__item {
+    margin-left: 40px;
+
+    &::first-child {
+      margin-left: 0;
+    }
+  }
+
+
+  .controller__link {
     display: flex;
     width: 95px;
     height: 95px;
@@ -415,13 +360,11 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    margin-left: 40px;
-    }
+  }
 
-    & .active {
-      border: 5px solid #0f5a47;
-      box-sizing: unset;
-    }
+  & .active {
+    border: 5px solid #0f5a47;
+    box-sizing: unset;
   }
 }
 
@@ -434,6 +377,18 @@
   right: 0;
   width: 130px;
   height: 170px;
+}
+
+.white-circle {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  right: 50%;
+  transform: translate(50%, 0);
+
 }
 
 .strawberry {
