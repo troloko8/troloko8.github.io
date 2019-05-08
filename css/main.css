@@ -495,7 +495,7 @@ a {
   display: flex; }
 
 .navigation__item {
-  margin-left: 30px; }
+  margin-left: 27px; }
   .navigation__item:first-child {
     margin-left: 0; }
 
@@ -573,19 +573,18 @@ a {
   font-weight: 400;
   font-style: normal;
   font-size: 21px;
-  line-height: 30px;
+  line-height: 21px;
   color: white;
-  margin-top: 15px; }
+  margin-top: 10px; }
 
 .button-order {
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px 20px;
+  padding: 15px 35px;
   background-color: white;
   border-radius: 30px;
-  margin-top: 30px;
   text-transform: uppercase;
   font-family: AlegreyaSans-ExtraBold;
   font-weight: 900;
@@ -593,12 +592,14 @@ a {
   font-size: 19px;
   line-height: 30px;
   color: #0f5a47; }
+  .button-order_wellcome {
+    margin-top: 40px; }
 
 .info-uniq {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 30px; }
+  margin-top: 60px; }
   .info-uniq__box {
     position: relative;
     width: 90px;
@@ -726,14 +727,14 @@ a {
 
 .why-chocco__title {
   text-align: center;
-  margin-bottom: 30px; }
+  margin-bottom: 20px; }
 
 .why-chocco__text {
   font-family: AlegreyaSans-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 20px;
   color: black;
   text-align: center; }
 
@@ -808,7 +809,7 @@ a {
     font-size: 18px;
     line-height: 25px;
     color: #666666;
-    margin-top: 30px;
+    margin-top: 15px;
     text-align: center; }
   .features__circles, .features__circles::before, .features__circles::after {
     width: 20px;
@@ -881,7 +882,7 @@ a {
     background-size: auto;
     position: relative; }
   .review__picture {
-    width: 260px; }
+    width: 252px; }
   .review__photo {
     max-width: 100%;
     max-height: 100%; }
@@ -894,7 +895,7 @@ a {
     -ms-flex-direction: column;
     flex-direction: column;
     width: 500px;
-    padding: 15px; }
+    padding: 25px 15px; }
   .review__title {
     font-family: AlegreyaSans-Medium;
     font-weight: 500;
@@ -907,9 +908,9 @@ a {
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
-    line-height: 20px;
+    line-height: 22px;
     color: #666666;
-    margin-top: 20px; }
+    margin-top: 23px; }
   .review__name {
     font-family: AlegreyaSans-Medium;
     font-weight: 500; }
@@ -940,7 +941,7 @@ a {
     background-position: center center;
     background-repeat: no-repeat; }
   .review__controller .active {
-    border: 5px solid #0f5a47;
+    border: 8px solid #0f5a47;
     -webkit-box-sizing: unset;
     box-sizing: unset; }
 
