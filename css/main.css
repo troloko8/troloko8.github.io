@@ -385,6 +385,12 @@ template {
   font-weight: 400;
   font-style: italic; }
 
+@font-face {
+  font-family: MuseoSansCyrl-500;
+  src: url("/fonts/MuseoSansCyrl-500.woff") format("woff"), url("/fonts/MuseoSansCyrl-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal; }
+
 html, body {
   height: 100%; }
 
@@ -482,8 +488,8 @@ a {
   line-height: 21px;
   text-transform: uppercase;
   color: white;
-  font-family: AlegreyaSans-Regular;
-  font-weight: 400;
+  font-family: MuseoSansCyrl-500;
+  font-weight: 500;
   font-style: normal;
   font-size: 24px;
   line-height: 20px;

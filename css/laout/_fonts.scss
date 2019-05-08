@@ -10,7 +10,8 @@
  AlegreyaSans-MediumItalic: (500,italic),
  AlegreyaSans-Regular: (400,normal),
  AlegreyaSans-Thin: (400,normal),
- AlegreyaSans-ThinItalic: (400,italic));
+ AlegreyaSans-ThinItalic: (400,italic),
+ MuseoSansCyrl-500: (500,normal));
 
 @each  $font,$font-info in $font-family {
   $font-weight: nth($font-info, 1);
