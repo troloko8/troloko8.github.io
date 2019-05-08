@@ -1,0 +1,26 @@
+.page-wellcome__container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+.page-wellcome__info,
+.page-wellcome__background {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+}
+
+.page-wellcome__title {
+  @include text-info(AlegreyaSans-Bold, 700, normal, 60px, 60px, white);
+  width: 415px;
+  text-transform: uppercase;
+}
+
+.page-wellcome__text {
+  @include text-info(AlegreyaSans-Regular, 400, normal, 21px, 21px, white);
+  margin-top: 10px;
+}

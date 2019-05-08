@@ -1,0 +1,89 @@
+
+.background__picture-leaves {
+  display: block;
+  position: absolute;
+  bottom: -55px;
+  left: -50px;
+  width: 110%;
+}
+
+.background__picture-berries {
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+}
+
+.background__picture-candy-bars {
+  display: block;
+  position: absolute;
+  bottom: 50px;
+  right: -50px;
+}
+
+.background-leaf {
+  background-image: url('/img/leaf-phone.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 191px;
+  height: 314px;
+  left: 0;
+  top: 225px;
+
+}
+
+.background-raspberries {
+  background-image: url('/img/raspberries.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  width: 161px;
+  height: 315px;
+}
+
+.background-gray-raspberry {
+  background-image: url('/img/gray-raspberry.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 130px;
+  height: 170px;
+}
+
+
+
+.background-strawberry {
+  background-image: url('/img/strawberry.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 173px;
+  height: 100px;
+}
+
+.background-gray-leaf {
+  background-image: url('/img/gray-leaf.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -200px;
+  left: 0;
+  width: 134px;
+  height: 422px;
+}
+
+.background-berries-reviews {
+  background-image: url('/img/berries-reviews.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  width: 154px;
+  height: 220px;
+}

@@ -1,0 +1,10 @@
+.title {
+  @include text-info(AlegreyaSans-Bold, 700, normal, 48px, 30px, black);
+  text-transform: uppercase;
+  text-align: center;
+
+  &_why-chocco {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,88 @@
+
+.features {
+  display: flex;
+  margin-top: 50px;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__picture {
+    background-color: #f2f5f4;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: '';
+      width: 74px;
+      height: 70px;
+      background-repeat: no-repeat;
+      background-image: url('/img/human.png');
+    }
+  }
+
+
+  &__item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 70px;
+    position: relative;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    @include text-info(AlegreyaSans-Bold, 700, normal, 27px, 30px, black);
+    margin-top: 30px;
+  }
+
+  &__text {
+    @include text-info(AlegreyaSans-Light, 300, normal, 18px, 25px, #666666);
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  &__circles {
+    width: 20px;
+    height: 20px;
+    background-color: #f2f5f4;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    right: -10px;
+
+
+    &::before {
+      content: '';
+      @extend .features__circles;
+      width: 10px;
+      height: 10px;
+      top: 25%;
+      right: -20px;
+
+    }
+
+    &::after {
+      content: '';
+      @extend .features__circles::before;
+      right: 30px;
+    }
+  }
+}
+
+@each $name-picture in (human, smile, hand) {
+  .features__picture_#{$name-picture}::before {
+    background-image: url('/img/#{$name-picture}.png');
+  }
+}
