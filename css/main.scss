@@ -13,7 +13,69 @@
 @import 'blocks/background';
 @import 'blocks/pagination';
 @import 'blocks/title';
-@import 'blocks/best__text';
+@import 'blocks/why-chocco__info';
 @import 'blocks/features';
 @import 'blocks/review';
+@import 'blocks/controller';
 
+.team__list {
+  height: 400px;
+  width: 100%;
+  display: flex;
+}
+
+
+.team__item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:nth-child(2n) {
+    margin-top:40px;
+  }
+}
+
+.team__picture {
+  width: 100%;
+  height: 290px;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.team__name {
+  @include text-info (AlegreyaSans-Medium, 500, normal, 21px, 21px,#323232);
+
+  &::after {
+    content: '';
+    margin-left: 5px;
+    border: 5px solid transparent;
+    border-bottom-color: black;   
+    position: relative;
+    top: -12px;
+    transition: 1s;
+  }
+}
+
+.team__hidden-block {
+  height: 0;
+  overflow: hidden;
+}
+
+.active {
+  & .team__hidden-block{
+  height: initial;
+  }
+  
+  & .team__name::after {
+    border-bottom-color: transparent;
+    border-top-color: black;
+    top: 12px;  
+  }
+}

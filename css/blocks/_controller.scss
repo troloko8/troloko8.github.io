@@ -1,0 +1,29 @@
+.controller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  &__item {
+    margin-left: 40px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  & .active {
+    border: 8px solid #0f5a47;
+    box-sizing: unset;
+  }
+}

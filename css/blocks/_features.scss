@@ -1,7 +1,6 @@
 
 .features {
   display: flex;
-  margin-top: 50px;
 
   &__container {
     display: flex;
@@ -40,6 +39,20 @@
     &:first-child {
       margin-left: 0;
     }
+
+    &:after {
+      content: '';
+      background-image: url("/img/gray-circle.png");
+      width: 67px;
+      height: 21px;
+      position: absolute;
+      top: 20%;
+      right: -70px;
+    }
+
+    &:last-child:after {
+      background-image: none;
+    }
   }
 
   &__title {
@@ -51,33 +64,6 @@
     @include text-info(AlegreyaSans-Light, 300, normal, 18px, 25px, #666666);
     margin-top: 15px;
     text-align: center;
-  }
-
-  &__circles {
-    width: 20px;
-    height: 20px;
-    background-color: #f2f5f4;
-    border-radius: 50%;
-    position: absolute;
-    top: 20%;
-    right: -45px;
-
-
-    &::before {
-      content: '';
-      @extend .features__circles;
-      width: 10px;
-      height: 10px;
-      top: 25%;
-      right: -20px;
-
-    }
-
-    &::after {
-      content: '';
-      @extend .features__circles::before;
-      right: 30px;
-    }
   }
 }
 

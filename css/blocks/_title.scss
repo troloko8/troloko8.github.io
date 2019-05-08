@@ -1,5 +1,5 @@
 .title {
-  @include text-info(AlegreyaSans-Bold, 700, normal, 48px, 30px, black);
+  @include text-info(AlegreyaSans-Bold, 700, normal, 48px, 1, black);
   text-transform: uppercase;
   text-align: center;
 
@@ -9,6 +9,10 @@
   }
 
   &_reviews{
+    margin-bottom: 50px;
+  }
+
+  &_team {
     margin-bottom: 50px;
   }
 }
