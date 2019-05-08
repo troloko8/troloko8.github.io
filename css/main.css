@@ -779,6 +779,8 @@ a {
   .title_why-chocco {
     text-align: center;
     margin-bottom: 20px; }
+  .title_reviews {
+    margin-bottom: 50px; }
 
 .best__text {
   font-family: AlegreyaSans-Regular;
@@ -869,7 +871,7 @@ a {
     border-radius: 50%;
     position: absolute;
     top: 20%;
-    right: -10px; }
+    right: -45px; }
     .features__circles::before, .features__circles::after {
       content: '';
       width: 10px;
@@ -900,7 +902,6 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 50px;
   width: 100%; }
   .review__box {
     background-color: #f8faf9;
