@@ -50,22 +50,28 @@
 }
 
 .team__name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
   @include text-info (AlegreyaSans-Medium, 500, normal, 21px, 21px,#323232);
+
 
   &::after {
     content: '';
     margin-left: 5px;
     border: 5px solid transparent;
     border-bottom-color: black;   
-    position: relative;
-    top: -12px;
     transition: 1s;
   }
 }
 
 .team__hidden-block {
+  display: flex;
+  flex-direction: column;
   height: 0;
   overflow: hidden;
+  align-items: center;
+
 }
 
 .active {
@@ -74,8 +80,18 @@
   }
   
   & .team__name::after {
-    border-bottom-color: transparent;
-    border-top-color: black;
-    top: 12px;  
+    content: '';
+    display: flex;
+   transform: rotate(180deg);
   }
+}
+
+.team__hidden-profession {
+  margin-bottom: 5px;
+  @include text-info (AlegreyaSans-Regular, 400, normal, 18px, 18px,#000000)
+}
+
+.team__hidden-text {
+  @include text-info (AlegreyaSans-Light, 300, normal, 18px, 18px,#666666);
+  text-align: center;
 }

@@ -72,3 +72,13 @@
     height: 220px;
   }
 }
+
+.team::after {
+  content: '';
+  background: url('/img/raspberry.png') no-repeat;
+  position: absolute; 
+  left: 5%;
+  bottom: -50px;
+  width: 104px;
+  height: 114px;
+}

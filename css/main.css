@@ -713,6 +713,15 @@ a {
     width: 154px;
     height: 220px; }
 
+.team::after {
+  content: '';
+  background: url("/img/raspberry.png") no-repeat;
+  position: absolute;
+  left: 5%;
+  bottom: -50px;
+  width: 104px;
+  height: 114px; }
+
 .pagination {
   position: fixed;
   right: 20px;
@@ -1010,6 +1019,13 @@ a {
   margin-bottom: 20px; }
 
 .team__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 10px;
   font-family: AlegreyaSans-Medium;
   font-weight: 500;
   font-style: normal;
@@ -1021,20 +1037,50 @@ a {
     margin-left: 5px;
     border: 5px solid transparent;
     border-bottom-color: black;
-    position: relative;
-    top: -12px;
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s; }
 
 .team__hidden-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   height: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .active .team__hidden-block {
   height: initial; }
 
 .active .team__name::after {
-  border-bottom-color: transparent;
-  border-top-color: black;
-  top: 12px; }
+  content: '';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.team__hidden-profession {
+  margin-bottom: 5px;
+  font-family: AlegreyaSans-Regular;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000000; }
+
+.team__hidden-text {
+  font-family: AlegreyaSans-Light;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 18px;
+  color: #666666;
+  text-align: center; }
