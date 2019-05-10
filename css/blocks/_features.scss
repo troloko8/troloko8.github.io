@@ -16,14 +16,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    &::before {
-      content: '';
-      width: 74px;
-      height: 70px;
-      background-repeat: no-repeat;
-      background-image: url('/img/human.png');
-    }
   }
 
 
@@ -67,8 +59,20 @@
   }
 }
 
-@each $name-picture in (human, smile, hand) {
-  .features__picture_#{$name-picture}::before {
-    background-image: url('/img/#{$name-picture}.png');
-  }
+.features__human {
+  fill: #f2f5f4;
+  fill-rule: evenodd;
+  stroke: black;
+  
+  width: 70px;
+  height: 70px;
+}
+
+.features__smile {
+  @extend .features__human ;
+}
+
+.features__hand {
+ @extend .features__human ;
+ width: 85px;
 }

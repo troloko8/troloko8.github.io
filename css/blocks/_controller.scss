@@ -21,9 +21,9 @@
     background-position: center center;
     background-repeat: no-repeat;
   }
+}
 
-  & .active {
-    border: 8px solid #0f5a47;
-    box-sizing: unset;
-  }
+.active .controller__link {
+  border: 8px solid #0f5a47;
+  box-sizing: unset;
 }

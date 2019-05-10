@@ -1,37 +1,30 @@
 .info-uniq {
   display: flex;
-  margin-top: 60px;
+  width: 55%;
 
-  &__box {
-    position: relative;
-    width: 90px;
+
+  &__item {
+    width: 33%;
     height: 60px;
     display: flex;
-    margin-left: 100px;
+    margin-right: 45px;
     @include text-info(AlegreyaSans-Regular, 400, normal, 16px, 20px, white);
+    
+    &:last-child {
+      margin-right: 0;
+    }
   }
-}
 
-.info-uniq__box:first-child {
-  margin-left: 50px;
-}
+  &__svg-box {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
 
-.info-uniq__box-leaf::before,
-.info-uniq__box-bus::before,
-.info-uniq__box-meter::before {
-  content: '';
-  display: flex;
-  width: 50px;
-  height: 50px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  left: -50px;
-}
-
-@each $img-name in (leaf, bus, meter) {
-  .info-uniq__box-#{$img-name}::before {
-    background-image: url('/img/#{$img-name}.png');
+  &__svg {
+    width: 50px;
+    height: 50px;
+    fill: transparent;
+    stroke: #b0f7ff;
   }
 }

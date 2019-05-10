@@ -62,18 +62,10 @@ a {
   justify-content: center;
   
 
-  &-head {
+  &_head {
     justify-content: space-between;
     align-items: flex-start;
     padding: 25px 0 50px 0;
     position: relative;
   }
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-  width: 100%;
 }

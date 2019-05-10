@@ -12,7 +12,7 @@
   <div class="wrapper">
 
     <section class="page page-wellcome">
-      <div class="container container-head">
+      <div class="container container_head">
         <header class="header">
           <span class="logo">cho cco</span>
           <nav class="navigation">
@@ -51,9 +51,33 @@
           </div>
         </div>
         <ul class="info-uniq">
-          <li class="info-uniq__box info-uniq__box-leaf">100% натуральный продукт</li>
-          <li class="info-uniq__box info-uniq__box-bus">3-5 дней доставка по РФ</li>
-          <li class="info-uniq__box info-uniq__box-meter">Не портит фигуру</li>
+          <li class="info-uniq__item ">
+            <div class="info-uniq__svg-box">
+              <svg class="info-uniq__svg">
+                <use xlink:href="./img/icons/sprite.svg#leaf">
+                </use>
+              </svg>
+            </div>
+            <span>100% натуральный продукт</span>
+          </li>
+          <li class="info-uniq__item ">
+              <div class="info-uniq__svg-box">
+                  <svg class="info-uniq__svg">
+                    <use xlink:href="./img/icons/sprite.svg#bus">
+                    </use>
+                  </svg>
+                </div>
+            <span>3-5 дней доставка по РФ</span>
+          </li>
+          <li class="info-uniq__item ">
+              <div class="info-uniq__svg-box">
+                  <svg class="info-uniq__svg">
+                    <use xlink:href="./img/icons/sprite.svg#meter">
+                    </use>
+                  </svg>
+                </div>
+            <span>Не портит фигуру</span>
+          </li>
         </ul>
 
       </div>
@@ -69,8 +93,12 @@
         <ul class="features">
           <li class="features__item">
             <div class="features__icon">
-              <div class="features__circles"></div>
-              <div class="features__picture features__picture_human"></div>
+              <div class="features__picture ">
+                <svg class="features__human">
+                  <use xlink:href="./img/icons/sprite.svg#human">
+                  </use>
+                </svg>
+              </div>
             </div>
             <h5 class="features__title">Полезно</h5>
             <p class="features__text">Натураьность - ключевое качество нашего продукта. Мы используем только природный
@@ -78,8 +106,12 @@
           </li>
           <li class="features__item">
             <div class="features__icon">
-              <div class="features__circles"></div>
-              <div class="features__picture features__picture_smile"></div>
+              <div class="features__picture">
+                <svg class="features__smile">
+                  <use xlink:href="./img/icons/sprite.svg#smile">
+                  </use>
+                </svg>
+              </div>
             </div>
             <h5 class="features__title">Вкусно</h5>
             <p class="features__text">Натураьность - ключевое качество нашего продукта. Мы используем только природный
@@ -87,7 +119,12 @@
           </li>
           <li class="features__item">
             <div class="features__icon">
-              <div class="features__picture features__picture_hand"></div>
+              <div class="features__picture ">
+                <svg class="features__hand">
+                  <use xlink:href="./img/icons/sprite.svg#hand">
+                  </use>
+                </svg>
+              </div>
             </div>
             <h5 class="features__title">Питательно</h5>
             <p class="features__text">Натураьность - ключевое качество нашего продукта. Мы используем только природный
@@ -102,7 +139,6 @@
         <h2 class="title title_reviews">Отзывы</h2>
         <div class="widget-reviews">
           <div class="widget-reviews__box">
-            <div class="widget-reviews__white-circle"></div>
             <div class="widget-reviews__picture">
               <img src="/img/big-first-people.png" alt="" class="widget-reviews__photo">
             </div>
@@ -117,8 +153,8 @@
             </div>
           </div>
           <ul class="controller">
-            <li class="controller__item ">
-              <a href="#" class="controller__link active" style="background-image: url('/img/first-people.png');"></a>
+            <li class="controller__item active">
+              <a href="#" class="controller__link" style="background-image: url('/img/first-people.png');"></a>
             </li>
             <li class="controller__item">
               <a href="#" class="controller__link" style="background-image: url('/img/second-people.png');"></a></li>
@@ -133,28 +169,37 @@
       <div class="container">
         <h2 class="title title_team">Команда</h2>
         <ul class="team__list">
-          <li class="team__item">
+          <li class="team__item ">
             <div class="team__picture" style="  background-image: url('../img/team-photo1.png');"></div>
             <span class="team__name">Борис Федорович</span>
-            <div class="team__hidden-block">С радостью поможет подобрать батончики иоформить заказ</div>
+            <div class="team__hidden-block">
+              <span class="team__hidden-profession">Главный технолог</span>
+              <p class="team__hidden-text">Отвечает за вкусовые качества и калорийность</p>
+            </div>
           </li>
-          <li class="team__item">
+          <li class="team__item ">
             <div class="team__picture" style="  background-image: url('../img/team-photo2.png');"></div>
-            <span class="team__name">Борис Федорович</span>
-            <div class="team__hidden-block">С радостью поможет подобрать батончики иоформить заказ</div>
+            <span class="team__name">Алла Ивановна</span>
+            <div class="team__hidden-block">
+              <span class="team__hidden-profession">Специалист по упаковке</span>
+              <p class="team__hidden-text">Автор запоминающего стиля нашего батончика</p>
+            </div>
           </li>
           <li class="team__item active">
             <div class="team__picture" style="  background-image: url('../img/team-photo3.png');"></div>
-            <span class="team__name">Борис Федорович</span>
+            <span class="team__name">Кирил Матросов</span>
             <div class="team__hidden-block">
               <span class="team__hidden-profession">Оператор</span>
               <p class="team__hidden-text">С радостью поможет подобрать батончики иоформить заказ</p>
             </div>
           </li>
-          <li class="team__item">
+          <li class="team__item ">
             <div class="team__picture" style="  background-image: url('../img/team-photo4.png');"></div>
-            <span class="team__name">Борис Федорович</span>
-            <div class="team__hidden-block">С радостью поможет подобрать батончики иоформить заказ</div>
+            <span class="team__name">Мила Рыжкова</span>
+            <div class="team__hidden-block">
+              <span class="team__hidden-profession">PR,маркетинг</span>
+              <p class="team__hidden-text">По всем вопросам сотрудничества и рекламы писать только Миле</p>
+            </div>
           </li>
         </ul>
       </div>

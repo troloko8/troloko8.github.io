@@ -4,6 +4,7 @@
 
 @import 'blocks/mixin';
 
+@import 'blocks/header';
 @import 'blocks/logo';
 @import 'blocks/navigation';
 @import 'blocks/telephone';
@@ -15,83 +16,8 @@
 @import 'blocks/title';
 @import 'blocks/why-chocco__info';
 @import 'blocks/features';
-@import 'blocks/review';
+@import 'blocks/widget-reviews';
 @import 'blocks/controller';
-
-.team__list {
-  height: 400px;
-  width: 100%;
-  display: flex;
-}
+@import 'blocks/team';
 
 
-.team__item {
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 10px;
-
-  &:first-child {
-    margin-left: 0;
-  }
-
-  &:nth-child(2n) {
-    margin-top:40px;
-  }
-}
-
-.team__picture {
-  width: 100%;
-  height: 290px;
-  background-position: center center;
-  background-size: cover;
-  margin-bottom: 20px;
-}
-
-.team__name {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  @include text-info (AlegreyaSans-Medium, 500, normal, 21px, 21px,#323232);
-
-
-  &::after {
-    content: '';
-    margin-left: 5px;
-    border: 5px solid transparent;
-    border-bottom-color: black;   
-    transition: 1s;
-  }
-}
-
-.team__hidden-block {
-  display: flex;
-  flex-direction: column;
-  height: 0;
-  overflow: hidden;
-  align-items: center;
-
-}
-
-.active {
-  & .team__hidden-block{
-  height: initial;
-  }
-  
-  & .team__name::after {
-    content: '';
-    display: flex;
-   transform: rotate(180deg);
-  }
-}
-
-.team__hidden-profession {
-  margin-bottom: 5px;
-  @include text-info (AlegreyaSans-Regular, 400, normal, 18px, 18px,#000000)
-}
-
-.team__hidden-text {
-  @include text-info (AlegreyaSans-Light, 300, normal, 18px, 18px,#666666);
-  text-align: center;
-}
