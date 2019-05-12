@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.3;
+      }
+    </style>
+  </defs>
+  <image id="twitter" class="cls-1" width="20" height="16" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAQAAAC8EZeQAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBQsVIBtG6UcoAAAA80lEQVQoz33RMUtCYRjF8Z/eqwlSmoOiBS3WGBQRtPbdGxoCo0EInEKysJQ0LQ1vg16ra3qm87zPfzjPe1LImkiq4kjBzLOmkbJJStqlG70/2L6TpZ9i7CqQd2jPyGC5SrsQLKdAYCiX9oXAqXPbi1VRJhFk4D70oWcXFRWvHvXlkoGjO0JZLceyoKRkVVMIhc5ENmk8Dz7Sk9oIvsxBGj43gp0YHGp4W4sNdGOQvJ21YDNafCf0bSn+iz1Erbn5OaOgrpbAuq6j2dyGC7zgQDWBtd2axUOoqi6/UtpYU/v3QwoZNWVFWWkz7/o6nuIS4i6+AQ1QPfljQ7QgAAAAAElFTkSuQmCC"/>
+</svg>

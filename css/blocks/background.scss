@@ -6,7 +6,7 @@
   background-size: 40%;
 }
 
-.container-head::after {
+.container_head::after {
   content: '';
   background-image: url('/img/leaves.png');
   background-repeat: no-repeat;
@@ -15,10 +15,9 @@
   position: absolute;
   bottom: -40px;
   right: -10%;
- 
 }
 
-.container-head::before {
+.container_head::before {
   content: '';
   background-image: url('/img/leave.png');
   background-repeat: no-repeat;
@@ -81,4 +80,5 @@
   bottom: -50px;
   width: 104px;
   height: 114px;
+  z-index: 1;
 }

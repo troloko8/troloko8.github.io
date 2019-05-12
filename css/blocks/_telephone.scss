@@ -13,4 +13,13 @@
     background-position: center center;
     background-repeat: no-repeat;
   }
+
+  &_footer {
+    color: #0f5a47;
+
+    &:before {
+      @extend .telephone:before ;
+      background-image: url('/img/phone-green.png')
+    }
+  }
 }

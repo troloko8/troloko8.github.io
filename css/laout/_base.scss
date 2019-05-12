@@ -61,11 +61,16 @@ a {
   align-items: center;
   justify-content: center;
   
-
   &_head {
     justify-content: space-between;
     align-items: flex-start;
     padding: 25px 0 50px 0;
     position: relative;
+  }
+
+  &_footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
   }
 }
