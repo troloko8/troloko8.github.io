@@ -82,3 +82,21 @@
   height: 114px;
   z-index: 1;
 }
+
+.page_form {
+  background: url('/img/currant.png') 3% 90% no-repeat,
+   url('/img/leaf-form.png') right 80% no-repeat,
+   url('/img/bg-form.jpg');
+   background-size: auto,auto,cover;
+}
+
+.page_form::after {
+  content: '';
+  background: url('/img/Blackberry.png');
+  position: absolute;
+  right: 0;
+  top: -130px;
+  width: 197px;
+  height: 264px;
+  z-index: 1;
+}

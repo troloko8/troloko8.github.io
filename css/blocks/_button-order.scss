@@ -1,5 +1,4 @@
 .button-order{
-  z-index: 1;
   display: flex;
   padding: 15px 35px;
   background-color: white;
@@ -9,5 +8,11 @@
 
   &_wellcome {
     margin-top: 40px;
+  }
+
+  &_form {
+    background-color: #0f5a47;
+    color: white;
+    margin-right: 29px;
   }
 }

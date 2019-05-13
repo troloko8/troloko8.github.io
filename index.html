@@ -275,9 +275,9 @@
 
     <section class="page map">
       <img src="/img/map.jpg" alt="map" class="map__picture">
-     
-        <footer class="footer">
-            <div class="container container_footer">
+
+      <footer class="footer">
+        <div class="container container_footer">
           <div class="contact">
             <span class="address">Москва ул.Новый Арбат,д.31/12</span>
             <a href="tel:8 800 903 90 90" class="telephone telephone_footer">8 800 903 90 90</a>
@@ -295,14 +295,92 @@
               </li>
               <li class="social__item">
                 <a href="#" class="social__link">
-                  
+
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        </footer>
-      
+      </footer>
+    </section>
+
+    <section class="page page_form">
+      <div class="container">
+        <h2 class="title"></h2>
+        <form action="" class="form">
+          <div class="form__container">
+            <div class="form__left">
+              <div class="form__contacts">
+                <label class="form__row">
+                  <span class="form__text-input">Имя</span>
+                  <input type="name" name="name" class="form__input" autofocus>
+                </label>
+                <label class="form__row">
+                  <span class="form__text-input">Телефон</span>
+                  <input type="tel" name="phone" class="form__input">
+                </label>
+              </div>
+              <div class="form__contacts">
+                <label class="form__row">
+                  <span class="form__text-input">Цлица</span>
+                  <input type="text" class="form__input">
+                </label>
+              </div>
+              <div class="form__contacts">
+                <label class="form__row">
+                  <span class="form__text-input">дом</span>
+                  <input type="text" class="form__input">
+                </label>
+                <label class="form__row">
+                  <span class="form__text-input">корпус</span>
+                  <input type="text" class="form__input">
+                </label>
+                <label class="form__row">
+                  <span class="form__text-input">квартира</span>
+                  <input type="text" class="form__input">
+                </label>
+                <label class="form__row">
+                  <span class="form__text-input">этаж</span>
+                  <input type="text" class="form__input">
+                </label>
+              </div>
+            </div>
+            <div class="form__right">
+              <label class="form__row-textarea">
+                <span class="form__text-input">Коментарий</span>
+                <textarea name="comment" class="form__comment"></textarea>
+              </label>
+              <div class="form__radio-box">
+                <div class="form__radio-button">
+                  <label class="form__control">
+                    <input type="radio" class="form__radio" name="payment">
+                    <span class="form__hidden"></span>
+                    <span class="form__text-input">Потребуется сдача</span>
+                  </label>
+                </div>
+                <div class="form__radio-button">
+                  <label class="form__control">
+                    <input type="radio" class="form__radio" name="payment" checked>
+                    <span class="form__hidden"></span>
+                    <span class="form__text-input">Оплата по карте</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__not-call">
+                <label class="form__control">
+                  <input type="checkbox" class="form__checkbox">
+                  <span class="form__hidden form__hidden_checkbox"></span>
+                  <span class="form__text-input">Не перезванивать</span>
+                </label>
+              </div>
+              <div class="form__buttons">
+                <button type="submit" class="button-order button-order_form">Заказать</button>
+                <button type="reset" class="form__reset">Очистить</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </section>
   </div>
 
