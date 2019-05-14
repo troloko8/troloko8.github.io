@@ -27,4 +27,99 @@
 @import 'blocks/socials';
 @import 'blocks/_form';
 
+@media (max-width: 1100px) {
+  html {
+    font-size: 16px;
+  }
+}
 
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  .page {
+    height: 200vh;
+  }
+
+  .container {
+    align-items: center;
+    max-width: 550px;
+  }
+
+  .page-wellcome {
+
+    &__info {
+      align-items: center;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__text {
+      text-align: center;
+      width: 100%
+    }
+  }
+
+  .telephone,
+  .navigation {
+    display: none;
+  }
+
+  .features {
+    flex-direction: column;
+    width: 280px;
+
+    &__item {
+      margin-left: 0;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+
+  .widget-reviews {
+
+    &__box {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__container {
+      text-align: center;
+    }
+  }
+
+  .team {
+
+    &__list {
+      margin-left: -10px;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: calc(50% - 10px);
+
+      &:first-child {
+        margin-left: 10px;
+      }
+
+      &:nth-child(2n) {
+        margin-top: 0;
+      }
+    }
+  }
+
+
+}
+
+
+@media (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+}

@@ -2,13 +2,12 @@
   display: flex;
   width: 55%;
 
-
   &__item {
     width: 33%;
     height: 60px;
     display: flex;
     margin-right: 45px;
-    @include text-info(AlegreyaSans-Regular, 400, normal, 16px, 20px, white);
+    @include text-info(AlegreyaSans-Regular, 400, normal, 1rem, 1.25rem, white);
     
     &:last-child {
       margin-right: 0;

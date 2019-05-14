@@ -27,13 +27,13 @@
 
   &__text-input {
     display: flex;
-    @include text-info(AlegreyaSans-Regular, 400, normal, 18px, 30px, #0f5a47);
+    @include text-info(AlegreyaSans-Regular, 400, normal, 1.125rem, 1.875rem, #0f5a47);
   }
 
   &__input {
     width: 100%;
     padding: 13px 5px;
-    @include text-info("Open-Sans", 400, normal, 18px, 30px, black);
+    @include text-info("Open-Sans", 400, normal, 1.125rem, 1.875rem, black);
 
     &:focus {
       border: 3px solid #dde3bd;
@@ -80,7 +80,7 @@
   }
 
   &__reset {
-    @include text-info(AlegreyaSans-Regular, 400, normal, 18px, 30px, #0f5a47)
+    @include text-info(AlegreyaSans-Regular, 400, normal, 1.125rem, 1.875rem, #0f5a47)
   }
 
   

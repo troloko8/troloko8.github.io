@@ -8,6 +8,12 @@
     align-items: center;
   }
 
+   &__icon {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+   }
+
   &__picture {
     background-color: #f2f5f4;
     border-radius: 50%;
@@ -48,12 +54,12 @@
   }
 
   &__title {
-    @include text-info(AlegreyaSans-Bold, 700, normal, 27px, 30px, black);
+    @include text-info(AlegreyaSans-Bold, 700, normal, 1.6875rem, 1.875rem, black);
     margin-top: 30px;
   }
 
   &__text {
-    @include text-info(AlegreyaSans-Light, 300, normal, 18px, 25px, #666666);
+    @include text-info(AlegreyaSans-Light, 300, normal, 1.125rem, 1.5625rem, #666666);
     margin-top: 15px;
     text-align: center;
   }

@@ -1,7 +1,7 @@
 .telephone {
   display: flex;
   align-items: center;
-  @include text-info(AlegreyaSans-Regular, 400, normal, 24px, 30px, white);
+  @include text-info(AlegreyaSans-Regular, 400, normal, 1.5rem, 1.875rem, white);
 
   &_footer {
     color: #0f5a47;

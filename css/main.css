@@ -426,7 +426,6 @@ a {
   text-decoration: none; }
 
 .wrapper {
-  min-width: 1100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -442,7 +441,7 @@ a {
   position: relative; }
 
 .container {
-  width: 940px;
+  width: 100%;
   max-width: 940px;
   margin: auto;
   height: 100%;
@@ -506,8 +505,8 @@ a {
   font-family: MuseoSansCyrl-500;
   font-weight: 500;
   font-style: normal;
-  font-size: 24px;
-  line-height: 20px;
+  font-size: 1.5rem;
+  line-height: 1.25rem;
   color: white; }
 
 .navigation__list {
@@ -524,8 +523,8 @@ a {
   font-family: AlegreyaSans-Regular;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
   color: white; }
 
 .telephone {
@@ -538,8 +537,8 @@ a {
   font-family: AlegreyaSans-Regular;
   font-weight: 400;
   font-style: normal;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
   color: white; }
   .telephone_footer {
     color: #0f5a47; }
@@ -561,11 +560,11 @@ a {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  width: 100%; }
+  width: 50%; }
 
 .page-wellcome__info,
 .page-wellcome__background {
-  width: 50%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -581,20 +580,21 @@ a {
   font-family: AlegreyaSans-Bold;
   font-weight: 700;
   font-style: normal;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 3.74rem;
+  line-height: 3.74rem;
   color: white;
-  width: 415px;
+  width: 100%;
   text-transform: uppercase; }
 
 .page-wellcome__text {
   font-family: AlegreyaSans-Regular;
   font-weight: 400;
   font-style: normal;
-  font-size: 21px;
-  line-height: 21px;
+  font-size: 1.3125rem;
+  line-height: 1.3125rem;
   color: white;
-  margin-top: 10px; }
+  margin-top: 10px;
+  width: 75%; }
 
 .button-order {
   display: -webkit-box;
@@ -607,8 +607,8 @@ a {
   font-family: AlegreyaSans-ExtraBold;
   font-weight: 900;
   font-style: normal;
-  font-size: 19px;
-  line-height: 30px;
+  font-size: 1.1875rem;
+  line-height: 1.875;
   color: #0f5a47; }
   .button-order_wellcome {
     margin-top: 40px; }
@@ -632,8 +632,8 @@ a {
     font-family: AlegreyaSans-Regular;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     color: white; }
     .info-uniq__item:last-child {
       margin-right: 0; }
@@ -778,7 +778,7 @@ a {
   font-family: AlegreyaSans-Bold;
   font-weight: 700;
   font-style: normal;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 1;
   color: black;
   text-transform: uppercase;
@@ -806,8 +806,8 @@ a {
   font-family: AlegreyaSans-Regular;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 1.125rem;
+  line-height: 1.26rem;
   color: black;
   text-align: center; }
 
@@ -825,6 +825,14 @@ a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+  .features__icon {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
   .features__picture {
     background-color: #f2f5f4;
     border-radius: 50%;
@@ -874,16 +882,16 @@ a {
     font-family: AlegreyaSans-Bold;
     font-weight: 700;
     font-style: normal;
-    font-size: 27px;
-    line-height: 30px;
+    font-size: 1.6875rem;
+    line-height: 1.875rem;
     color: black;
     margin-top: 30px; }
   .features__text {
     font-family: AlegreyaSans-Light;
     font-weight: 300;
     font-style: normal;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
     color: #666666;
     margin-top: 15px;
     text-align: center; }
@@ -954,15 +962,15 @@ a {
     font-family: AlegreyaSans-Medium;
     font-weight: 500;
     font-style: normal;
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 1.875rem;
+    line-height: 1.875rem;
     color: black; }
   .widget-reviews__text, .widget-reviews__name {
     font-family: AlegreyaSans-Regular;
     font-weight: 400;
     font-style: normal;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
     color: #666666;
     margin-top: 23px; }
   .widget-reviews__name {
@@ -1043,8 +1051,8 @@ a {
   font-family: AlegreyaSans-Medium;
   font-weight: 500;
   font-style: normal;
-  font-size: 21px;
-  line-height: 21px;
+  font-size: 1.3125rem;
+  line-height: 1.3125rem;
   color: #323232; }
   .team__name::after {
     content: '';
@@ -1086,16 +1094,16 @@ a {
   font-family: AlegreyaSans-Regular;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
   color: #000000; }
 
 .team__hidden-text {
   font-family: AlegreyaSans-Light;
   font-weight: 300;
   font-style: normal;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
   color: #666666;
   text-align: center; }
 
@@ -1167,7 +1175,7 @@ a {
     font-family: AlegreyaSans-Medium;
     font-weight: 500;
     font-style: normal;
-    font-size: 50px;
+    font-size: 3.125rem;
     line-height: 1;
     color: white; }
   .menu-accordeon__hidden-box {
@@ -1181,12 +1189,12 @@ a {
     font-family: AlegreyaSans-Regular;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     color: white; }
 
 .active .menu-accordeon__hidden-box {
-  width: 500px;
+  width: 100%;
   padding: 60px 30px; }
 
 .map {
@@ -1209,8 +1217,8 @@ a {
   font-family: AlegreyaSans-Regular;
   font-weight: 400;
   font-style: normal;
-  font-size: 21px;
-  line-height: 24px;
+  font-size: 1.3125rem;
+  line-height: 1.5rem;
   color: black; }
 
 .socials {
@@ -1283,8 +1291,8 @@ a {
   font-family: AlegreyaSans-Regular;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
   color: #0f5a47; }
 
 .form__input, .form__comment {
@@ -1293,8 +1301,8 @@ a {
   font-family: "Open-Sans";
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
   color: black; }
   .form__input:focus, .form__comment:focus {
     border: 3px solid #dde3bd;
@@ -1343,8 +1351,8 @@ a {
   font-family: AlegreyaSans-Regular;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
   color: #0f5a47; }
 
 .form__radio {
@@ -1401,3 +1409,64 @@ a {
   .form__checkbox:checked + .form__hidden_checkbox::before {
     width: 11px;
     height: 9px; }
+
+@media (max-width: 1100px) {
+  html {
+    font-size: 16px; } }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px; }
+  .page {
+    height: 200vh; }
+  .container {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 550px; }
+  .page-wellcome__info {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .page-wellcome__title {
+    text-align: center; }
+  .page-wellcome__text {
+    text-align: center;
+    width: 100%; }
+  .telephone,
+  .navigation {
+    display: none; }
+  .features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 280px; }
+    .features__item {
+      margin-left: 0; }
+      .features__item::after {
+        content: none; }
+  .widget-reviews__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .widget-reviews__container {
+    text-align: center; }
+  .team__list {
+    margin-left: -10px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .team__item {
+    width: calc(50% - 10px); }
+    .team__item:first-child {
+      margin-left: 10px; }
+    .team__item:nth-child(2n) {
+      margin-top: 0; } }
+
+@media (max-width: 480px) {
+  html {
+    font-size: 16px; } }

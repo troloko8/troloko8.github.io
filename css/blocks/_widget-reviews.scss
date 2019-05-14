@@ -46,11 +46,11 @@
   }
 
   &__title {
-    @include text-info(AlegreyaSans-Medium, 500, normal, 30px, 30px, black);
+    @include text-info(AlegreyaSans-Medium, 500, normal, 1.875rem, 1.875rem, black);
   }
 
   &__text {
-    @include text-info(AlegreyaSans-Regular, 400, normal, 18px, 22px, #666666);
+    @include text-info(AlegreyaSans-Regular, 400, normal, 1.125rem, 1.375rem, #666666);
     margin-top: 23px;
   }
 

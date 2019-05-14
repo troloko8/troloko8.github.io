@@ -39,7 +39,7 @@
     transform: rotate(-90deg);
     padding-left: 50px;
     white-space: nowrap;
-    @include text-info (AlegreyaSans-Medium, 500, normal, 50px, 1, white);
+    @include text-info (AlegreyaSans-Medium, 500, normal, 3.125rem, 1, white);
   }
 
   &__hidden-box {
@@ -52,14 +52,14 @@
 
   &__hidden-text {
     z-index: 1;
-    @include text-info (AlegreyaSans-Regular, 400, normal, 16px, 24px, white);
+    @include text-info (AlegreyaSans-Regular, 400, normal, 1rem, 1.5rem, white);
   }
 }
 
 .active {
 
   & .menu-accordeon__hidden-box {
-    width: 500px;
+    width: 100%;
     padding: 60px 30px;
   }
 }

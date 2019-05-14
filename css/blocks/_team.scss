@@ -34,7 +34,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  @include text-info (AlegreyaSans-Medium, 500, normal, 21px, 21px,#323232);
+  @include text-info (AlegreyaSans-Medium, 500, normal, 1.3125rem, 1.3125rem,#323232);
 
 
   &::after {
@@ -70,10 +70,10 @@
 
 .team__hidden-profession {
   margin-bottom: 5px;
-  @include text-info (AlegreyaSans-Regular, 400, normal, 18px, 18px,#000000)
+  @include text-info (AlegreyaSans-Regular, 400, normal, 1.125rem, 1.125rem,#000000)
 }
 
 .team__hidden-text {
-  @include text-info (AlegreyaSans-Light, 300, normal, 18px, 18px,#666666);
+  @include text-info (AlegreyaSans-Light, 300, normal, 1.125rem, 1.125rem,#666666);
   text-align: center;
 }
