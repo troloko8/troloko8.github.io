@@ -3,23 +3,18 @@
   align-items: center;
   @include text-info(AlegreyaSans-Regular, 400, normal, 24px, 30px, white);
 
-  &:before {
-    content: '';
-    display: flex;
-    margin-right: 5px;
-    height: 15px;
-    width: 15px;
-    background-image: url("/img/phone.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-
   &_footer {
     color: #0f5a47;
 
-    &:before {
-      @extend .telephone:before ;
-      background-image: url('/img/phone-green.png')
+    & .telephone__icon {
+      fill: #0f5a47;
     }
+  }
+
+  &__icon {
+    width: 12px;
+    height: 12px;
+    fill: white;
+    margin-right: 5px;
   }
 }

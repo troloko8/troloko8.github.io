@@ -1,8 +1,30 @@
 .socials {
-  width: 50%;
-  
+  flex: 1;
+
   &__list {
     display: flex;
-    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: #b2b2b2;
+
+    &:hover {
+      fill: initial;
+    }
   }
 }
