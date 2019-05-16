@@ -1,10 +1,10 @@
 .info-uniq {
   display: flex;
-  width: 55%;
+  width: 50%;
 
   &__item {
     width: 33%;
-    height: 60px;
+    // height: 60px;
     display: flex;
     margin-right: 45px;
     @include text-info(AlegreyaSans-Regular, 400, normal, 1rem, 1.25rem, white);
@@ -15,13 +15,13 @@
   }
 
   &__svg-box {
-    width: 50px;
+    width: 45px;
     height: 50px;
     margin-right: 10px;
   }
 
   &__svg {
-    width: 50px;
+    width: 43px;
     height: 50px;
     fill: transparent;
     stroke: #b0f7ff;

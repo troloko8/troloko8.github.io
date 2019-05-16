@@ -2,12 +2,12 @@
   display: flex;
   align-items: center;
   flex: 1;
-  width: 50%;
+  // width: 50%;
 }
 
 .page-wellcome__info,
 .page-wellcome__background {
-  width: 100%;
+  width: 50%;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -23,5 +23,5 @@
 .page-wellcome__text {
   @include text-info(AlegreyaSans-Regular, 400, normal, 1.3125rem, 1.3125rem, white);
   margin-top: 10px;
-  width: 75%;
+  width: 80%;
 }

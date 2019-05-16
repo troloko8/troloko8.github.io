@@ -8,6 +8,7 @@
 @import 'blocks/logo';
 @import 'blocks/navigation';
 @import 'blocks/telephone';
+@import 'blocks/burger-menu';
 @import 'blocks/page-wellcome__container';
 @import 'blocks/button-order';
 @import 'blocks/info-uniq';
@@ -25,7 +26,8 @@
 @import 'blocks/footer';
 @import 'blocks/contact';
 @import 'blocks/socials';
-@import 'blocks/_form';
+@import 'blocks/form';
+@import 'blocks/media-768';
 
 @media (max-width: 1100px) {
   html {
@@ -33,93 +35,49 @@
   }
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 480px) {
   html {
-    font-size: 16px;
-  }
-
-  .page {
-    height: 200vh;
-  }
-
-  .container {
-    align-items: center;
-    max-width: 550px;
+    font-size: 13px;
   }
 
   .page-wellcome {
 
-    &__info {
-      align-items: center;
-    }
-
-    &__title {
-      text-align: center;
-    }
-
     &__text {
-      text-align: center;
-      width: 100%
+      width: 70%;
     }
   }
 
-  .telephone,
-  .navigation {
-    display: none;
+  .button-order_wellcome {
+    margin: 25px 0 40px 0;
   }
 
-  .features {
-    flex-direction: column;
-    width: 280px;
-
-    &__item {
-      margin-left: 0;
-
-      &::after {
-        content: none;
-      }
+  .map {
+    &__picture {
+      height: 80%;
     }
   }
 
+  .footer {
+    height: 20%;
+  }
 
-  .widget-reviews {
+  .container {
+    max-width: 480px;
 
-    &__box {
+    &_footer {
       flex-direction: column;
-      align-items: center;
-    }
-
-    &__container {
-      text-align: center;
+      justify-content: center;
     }
   }
 
-  .team {
-
-    &__list {
-      margin-left: -10px;
-      flex-wrap: wrap;
+  .contact {
+    width: initial;
+    & .telephone {
+      display: flex;
+      justify-content: center;
     }
-
-    &__item {
-      width: calc(50% - 10px);
-
-      &:first-child {
-        margin-left: 10px;
-      }
-
-      &:nth-child(2n) {
-        margin-top: 0;
-      }
-    }
-  }
-
-
-}
-
-
-@media (max-width: 480px) {
-  html {
-    font-size: 16px;
   }
 }
+
+

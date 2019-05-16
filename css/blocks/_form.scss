@@ -2,6 +2,7 @@
 
   &__container {
     display: flex;
+    margin-left: -20px;
   }
 
   &__left {
@@ -10,19 +11,20 @@
 
   &__right {
     flex: 1;
-    margin-left: 15px;
+    margin-left: 20px;
   }
 
   &__contacts {
     flex: 1;
     display: flex;
+    margin-bottom: 10px;
   }
 
   &__row {
     display: flex;
     flex: 1;
     flex-direction: column;
-    margin-left: 15px;
+    margin-left: 20px;
   }
 
   &__text-input {
@@ -43,7 +45,7 @@
 
   &__row-textarea {
     @extend .form__row;
-    margin-left: 0;
+    margin: 0 0 20px 0;
   }
 
   &__comment {
@@ -59,7 +61,7 @@
 
   &__radio-button {
     display: flex;
-    margin-right: 20px;
+    margin-right: 27px;
 
     &:last-child {
       margin-right: 0;
@@ -88,18 +90,18 @@
     display: none;
 
     &:checked+.form__hidden:before {
-      width: 10px;
-      height: 10px;
+      width: 12px;
+      height: 12px;
     }
   }
 
   &__hidden {
     display: flex;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     background-color: white;
     border-radius: 50%;
-    margin-right: 5px;
+    margin-right: 7px;
     justify-content: center;
     align-items: center;
 
@@ -108,7 +110,7 @@
       display: flex;
       width: 0;
       height: 0;
-      background-color: red;
+      background-color: #0f5a47;
       border-radius: 50%;
       transition: .3s;
     }

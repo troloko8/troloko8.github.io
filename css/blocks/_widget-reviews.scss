@@ -5,32 +5,19 @@
   width: 100%;
 
   &__box {
-    background-color: #f8faf9;
     padding: 50px;
     width: 100%;
     display: flex;
-    background-image: url('/img/gray-raspberry.png');
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: auto;
+    background: url('/img/gray-raspberry.png') top right no-repeat,
+    url('/img/half-circle.png') 50% -45px no-repeat,
+    #f8faf9;
+    background-size: auto,auto;
     position: relative;
-
-    &::after {
-      content: '';
-      width: 100px;
-      height: 100px;
-      background-color: white;
-      border-radius: 50%;
-      position: absolute;
-      top: -50px;
-      right: 50%;
-      transform: translate(50%, 0);
-    }
   }
 
   &__picture {
-    width: 252px;
-    height: 260px;
+    width: 16rem;
+    height: 16rem;
     overflow: hidden;
   }
 
