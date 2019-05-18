@@ -1,16 +1,22 @@
-.navigation__list {
-  display: flex;
-}
-
-.navigation__item {
-  margin-left: 27px;
-
-  &:first-child {
-    margin-left: 0
+.navigation {
+  &__list {
+    display: flex;
+  }
+  
+  &__item {
+    margin-left: rem(27px);
+  
+    &:first-child {
+      margin-left: 0
+    }
+  }
+  
+  &__link {
+    @include text-info (AlegreyaSans-Regular, 400, normal, 1.125rem, 1.875rem, white);
+  }
+  
+  @include tablets {
+    display: none;
   }
 }
 
-.navigation__link {
-  @include text-info (AlegreyaSans-Regular, 400, normal, 1.125rem, 1.875rem, white);
-
-}

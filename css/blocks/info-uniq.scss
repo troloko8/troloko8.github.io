@@ -4,9 +4,9 @@
 
   &__item {
     width: 33%;
-    // height: 60px;
+    // height: rem(60px);
     display: flex;
-    margin-right: 45px;
+    margin-right: rem(45px);
     @include text-info(AlegreyaSans-Regular, 400, normal, 1rem, 1.25rem, white);
     
     &:last-child {
@@ -15,15 +15,27 @@
   }
 
   &__svg-box {
-    width: 45px;
-    height: 50px;
-    margin-right: 10px;
+    width: rem(45px);
+    height: rem(50px);
+    margin-right: rem(10px);
   }
 
   &__svg {
-    width: 43px;
-    height: 50px;
+    width: rem(43px);
+    height: rem(50px);
     fill: transparent;
     stroke: #b0f7ff;
+  }
+
+  @include tablets {
+    width: 75%;
+
+    &__item {
+      width: initial;
+    }
+  }
+
+  @include phone {
+    width: 100%;
   }
 }

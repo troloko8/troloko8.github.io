@@ -1,16 +1,26 @@
-html, body {
-  height:100%;
+html {
+  @include phone {
+    font-size: 13px;
+  }
+}
+
+html,
+body {
+  height: 100%;
 }
 
 * {
   box-sizing: border-box;
 
 }
-ul, li {
+
+ul,
+li {
   list-style-type: none;
 
 }
-ul{
+
+ul {
   margin: 0;
   padding: 0;
 }
@@ -21,7 +31,12 @@ button {
   cursor: pointer;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   font-weight: normal;
 }
@@ -30,6 +45,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 p {
   padding: 0;
   margin: 0;
@@ -57,14 +73,14 @@ a {
   margin: auto;
   height: 100%;
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+
   &_head {
     justify-content: space-between;
     align-items: flex-start;
-    padding: 25px 0 50px 0;
+    padding: rem(25px) 0 rem(50px) 0;
     position: relative;
   }
 
@@ -72,5 +88,16 @@ a {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+
+    @include phone {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
+
+  @include tablets {
+    align-items: center;
+    max-width: 472px;
+  }
+
 }

@@ -1,27 +1,59 @@
-.page-wellcome__container {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  // width: 50%;
-}
 
-.page-wellcome__info,
-.page-wellcome__background {
-  width: 50%;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
 
-}
+.page-wellcome {
+  &__container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    // width: 50%;
+  }
+  
+  &__info,
+  &__background {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  
+  }
+  
+  &__title {
+    @include text-info(AlegreyaSans-Bold, 700, normal, 3.74rem, 3.74rem, white);
+    width: 100%;
+    text-transform: uppercase;
+  }
+  
+  &__text {
+    @include text-info(AlegreyaSans-Regular, 400, normal, 1.3125rem, 1.3125rem, white);
+    margin-top: rem(10px);
+    width: 80%;
+  }
 
-.page-wellcome__title {
-  @include text-info(AlegreyaSans-Bold, 700, normal, 3.74rem, 3.74rem, white);
-  width: 100%;
-  text-transform: uppercase;
-}
+  @include tablets {
 
-.page-wellcome__text {
-  @include text-info(AlegreyaSans-Regular, 400, normal, 1.3125rem, 1.3125rem, white);
-  margin-top: 10px;
-  width: 80%;
+    & .container {
+      max-width: none;
+    }
+
+    &__info {
+      align-items: center;
+      align-self: flex-end;
+      width: 100%;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__text {
+      text-align: center;
+      width: 50%;
+    }
+  }
+
+  @include phone {
+    &__text {
+      width: 70%;
+    }
+  }
 }

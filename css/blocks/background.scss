@@ -4,28 +4,60 @@
    #61c4d9 ;
   background-repeat: no-repeat;
   background-size: 40%,40%;
+
+  @include tablets {
+    background:
+    url('/img/leave.png') 22% 36%,
+    url('/img/leaves-768.png') 66% 32%,
+    url('/img/berries-768.png') 50% 30%,
+    url('/img/candy.png') 44% 9%,
+    url('/img/texture.png') top right,
+    #61c4d9;
+  background-repeat: no-repeat;
+  background-size: 6%, 31%, 50%, 52%, 65%;
+  }
+
+  @include phone {
+    background: 
+    url('/img/leave.png') 6% 42%,
+    url('/img/leaves-768.png') 95% 37%,
+    url('/img/berries-768.png') 66% 36%,
+    url('/img/candy.png') 42% 14%,
+    url('/img/texture.png') top right,
+     #61c4d9 ;
+    background-repeat: no-repeat;
+    background-size: 10%,54%,80%,82%,92%;
+  }
 }
 
 .container_head::after {
   content: '';
   background-image: url('/img/leaves.png');
   background-repeat: no-repeat;
-  width: 464px;
-  height: 343px;
+  width: rem(464px);
+  height: rem(343px);
   position: absolute;
-  bottom: -40px;
+  bottom: rem(-40px);
   right: -10%;
+
+  @include tablets {
+    content: none;
+  }
 }
 
 .container_head::before {
   content: '';
   background-image: url('/img/leave.png');
   background-repeat: no-repeat;
-  width: 59px;
-  height: 112px;
+  width: rem(59px);
+  height: rem(112px);
   position: absolute;
-  bottom: -50px;
-  left: -50px;
+  bottom: rem(-50px);
+  left: rem(-50px);
+
+  @include tablets {
+    content: none;
+  }
 }
 
 .why-chocco::after {
@@ -33,10 +65,10 @@
   background-image: url('/img/raspberries.png');
   background-repeat: no-repeat;
   position: absolute;
-  bottom: -120px;
+  bottom: rem(-120px);
   left: 0;
-  width: 161px;
-  height: 315px;
+  width: rem(161px);
+  height: rem(315px);
 }
 
 .why-chocco {
@@ -54,10 +86,10 @@
     background-image: url('/img/gray-leaf.png');
     background-repeat: no-repeat;
     position: absolute;
-    bottom: -200px;
+    bottom: rem(-200px);
     left: 0;
-    width: 134px;
-    height: 422px;
+    width: rem(134px);
+    height: rem(422px);
   }
 
   &:after {
@@ -65,10 +97,10 @@
     background-image: url('/img/berries-reviews.png');
     background-repeat: no-repeat;
     position: absolute;
-    bottom: -100px;
+    bottom: rem(-100px);
     left: 0;
-    width: 154px;
-    height: 220px;
+    width: rem(154px);
+    height: rem(220px);
   }
 }
 
@@ -77,9 +109,9 @@
   background: url('/img/raspberry.png') no-repeat;
   position: absolute; 
   left: 5%;
-  bottom: -50px;
-  width: 104px;
-  height: 114px;
+  bottom: rem(-50px);
+  width: rem(104px);
+  height: rem(114px);
   z-index: 1;
 }
 
@@ -95,8 +127,8 @@
   background: url('/img/Blackberry.png');
   position: absolute;
   right: 0;
-  top: -130px;
-  width: 197px;
-  height: 264px;
+  top: rem(-130px);
+  width: rem(197px);
+  height: rem(264px);
   z-index: 1;
 }

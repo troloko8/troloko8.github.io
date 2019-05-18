@@ -2,6 +2,11 @@
 .features {
   display: flex;
 
+  @include tablets {
+    flex-direction: column;
+    padding: 0 20%;
+  }
+
   &__container {
     display: flex;
     justify-content: center;
@@ -17,8 +22,8 @@
   &__picture {
     background-color: #f2f5f4;
     border-radius: 50%;
-    width: 130px;
-    height: 130px;
+    width: rem(130px);
+    height: rem(130px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +36,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-left: 70px;
+    margin-left: rem(70px);
     position: relative;
 
     &:first-child {
@@ -41,26 +46,34 @@
     &:after {
       content: '';
       background-image: url("/img/gray-circle.png");
-      width: 67px;
-      height: 21px;
+      width: rem(67px);
+      height: rem(21px);
       position: absolute;
       top: 20%;
-      right: -70px;
+      right: rem(-70px);
     }
 
     &:last-child:after {
       background-image: none;
     }
+
+    @include tablets {
+      margin: 0 0 rem(30px) 0 ;
+
+      &::after {
+        content: none;
+      }
+    }
   }
 
   &__title {
     @include text-info(AlegreyaSans-Bold, 700, normal, 1.6875rem, 1.875rem, black);
-    margin-top: 30px;
+    margin-top: rem(20px);
   }
 
   &__text {
     @include text-info(AlegreyaSans-Light, 300, normal, 1.125rem, 1.5625rem, #666666);
-    margin-top: 15px;
+    margin-top: rem(15px);
     text-align: center;
   }
 }
@@ -70,8 +83,8 @@
   fill-rule: evenodd;
   stroke: black;
   
-  width: 70px;
-  height: 70px;
+  width: rem(70px);
+  height: rem(70px);
 }
 
 .features__smile {
@@ -80,5 +93,5 @@
 
 .features__hand {
  @extend .features__human ;
- width: 85px;
+ width: rem(85px);
 }

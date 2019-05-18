@@ -5,7 +5,7 @@
   width: 100%;
 
   &__box {
-    padding: 50px;
+    padding: rem(50px);
     width: 100%;
     display: flex;
     background: url('/img/gray-raspberry.png') top right no-repeat,
@@ -13,12 +13,23 @@
     #f8faf9;
     background-size: auto,auto;
     position: relative;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+      padding: rem(70px) rem(50px) 0 rem(50px);
+    }
   }
 
   &__picture {
     width: 16rem;
     height: 16rem;
     overflow: hidden;
+
+    @include tablets {
+      width: rem(206px);
+      height: rem(210px);
+    }
   }
 
   &__photo {
@@ -28,8 +39,12 @@
   &__container {
     display: flex;
     flex-direction: column;
-    width: 500px;
-    padding: 25px 15px;
+    width: rem(500px);
+    padding: rem(25px) rem(15px);
+
+    @include tablets {
+      text-align: center;
+    }
   }
 
   &__title {
@@ -38,7 +53,7 @@
 
   &__text {
     @include text-info(AlegreyaSans-Regular, 400, normal, 1.125rem, 1.375rem, #666666);
-    margin-top: 23px;
+    margin-top: rem(23px);
   }
 
   &__name {

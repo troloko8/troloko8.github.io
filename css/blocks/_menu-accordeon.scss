@@ -14,7 +14,7 @@
 
   &__link {
     display: flex;
-    width: 100px;
+    width: rem(100px);
     align-items: flex-end;
     justify-content: center;
     background-position: 30% center;
@@ -37,7 +37,7 @@
     display: flex;
     width: 0;
     transform: rotate(-90deg);
-    padding-left: 50px;
+    padding-left: rem(50px);
     white-space: nowrap;
     @include text-info (AlegreyaSans-Medium, 500, normal, 3.125rem, 1, white);
   }
@@ -60,6 +60,6 @@
 
   & .menu-accordeon__hidden-box {
     width: 100%;
-    padding: 60px 30px;
+    padding: rem(60px) rem(30px);
   }
 }

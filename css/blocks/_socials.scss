@@ -4,10 +4,14 @@
   &__list {
     display: flex;
     justify-content: flex-end;
+
+    @include phone {
+      justify-content: center;
+    }
   }
 
   &__item {
-    margin-left: 20px;
+    margin-left: rem(20px);
 
     &:first-child {
       margin-left: 0;
@@ -19,8 +23,8 @@
   }
 
   &__icon {
-    width: 20px;
-    height: 20px;
+    width: rem(20px);
+    height: rem(20px);
     fill: #b2b2b2;
 
     &:hover {

@@ -2,14 +2,18 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
+  width: rem(24px);
+  height: rem(24px);
+  margin-right: rem(10px);
 
   &__row {
     display: flex;
-    height: 4px;
+    height: rem(4px);
     background-color: white;
-    border-radius: 2px;
+    border-radius: rem(2px);
+  }
+
+  @include tablets {
+    display: flex;
   }
 }

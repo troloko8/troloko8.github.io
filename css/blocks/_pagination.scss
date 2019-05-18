@@ -1,23 +1,23 @@
 
 .pagination {
   position: fixed;
-  right: 20px;
+  right: rem(20px);
   top: 50%;
   transform: translate(0, -50%);
 
   &__item {
-    margin-top: 5px;
+    margin-top: rem(5px);
   }
 
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
+    width: rem(20px);
+    height: rem(20px);
 
     &-active {
-      border: 1px solid white;
+      border: rem(1px) solid white;
       border-radius: 50%;
       background-color: transparent;
       background-repeat: no-repeat;
@@ -27,17 +27,21 @@
       content: "";
       display: flex;
       background-color: white;
-      width: 6px;
-      height: 6px;
+      width: rem(6px);
+      height: rem(6px);
       border-radius: 50%;
       background-repeat: no-repeat;
     }
 
     &:hover {
-      border: 1px solid white;
+      border: rem(1px) solid white;
       border-radius: 50%;
       background-color: transparent;
       background-repeat: no-repeat;
     }
+  }
+
+  @include tablets {
+    display: none;
   }
 }

@@ -4,4 +4,14 @@
   left: 0;
   height: 10%;
   width: 100%;
+
+  @include tablets {
+    .container {
+      max-width: 720px;
+    }
+  }
+
+  @include phone {
+    height: 20%;
+  }
 }

@@ -6,6 +6,10 @@
   &_footer {
     color: #0f5a47;
 
+    @include phone {
+      justify-content: center
+    }
+    
     & .telephone__icon {
       fill: #0f5a47;
     }
