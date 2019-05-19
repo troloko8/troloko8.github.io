@@ -4,7 +4,6 @@
 
   &__item {
     width: 33%;
-    // height: rem(60px);
     display: flex;
     margin-right: rem(45px);
     @include text-info(AlegreyaSans-Regular, 400, normal, 1rem, 1.25rem, white);
@@ -29,13 +28,13 @@
 
   @include tablets {
     width: 75%;
-
-    &__item {
-      width: initial;
-    }
   }
 
   @include phone {
     width: 100%;
+    
+    &__item {
+      margin-right: 5%;
+    }
   }
 }

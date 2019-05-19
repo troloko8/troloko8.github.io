@@ -55,16 +55,30 @@ a {
   text-decoration: none;
 }
 
+input {
+  border: 0;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100%;
   overflow: hidden;
+
+  @include phone {
+    overflow: scroll;
+    min-height: none;
+    height: 100%;
+  }
 }
 
 .page {
   height: 100vh;
   position: relative;
+
+  @include phone {
+    height: 100%;
+  }
 }
 
 .container {

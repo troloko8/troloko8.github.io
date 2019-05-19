@@ -21,6 +21,10 @@
     @include text-info(AlegreyaSans-Bold, 700, normal, 3.74rem, 3.74rem, white);
     width: 100%;
     text-transform: uppercase;
+
+    @include phone {
+      font-size: 3rem;
+    }
   }
   
   &__text {

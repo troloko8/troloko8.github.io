@@ -436,6 +436,9 @@ p {
 a {
   text-decoration: none; }
 
+input {
+  border: 0; }
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -446,10 +449,18 @@ a {
   flex-direction: column;
   min-height: 100%;
   overflow: hidden; }
+  @media screen and (max-width: 480px) {
+    .wrapper {
+      overflow: scroll;
+      min-height: none;
+      height: 100%; } }
 
 .page {
   height: 100vh;
   position: relative; }
+  @media screen and (max-width: 480px) {
+    .page {
+      height: 100%; } }
 
 .container {
   width: 95%;
@@ -647,6 +658,9 @@ a {
   color: white;
   width: 100%;
   text-transform: uppercase; }
+  @media screen and (max-width: 480px) {
+    .page-wellcome__title {
+      font-size: 3rem; } }
 
 .page-wellcome__text {
   font-family: AlegreyaSans-Regular;
@@ -737,12 +751,12 @@ a {
     stroke: #b0f7ff; }
   @media screen and (max-width: 768px) {
     .info-uniq {
-      width: 75%; }
-      .info-uniq__item {
-        width: initial; } }
+      width: 75%; } }
   @media screen and (max-width: 480px) {
     .info-uniq {
-      width: 100%; } }
+      width: 100%; }
+      .info-uniq__item {
+        margin-right: 5%; } }
 
 .page-wellcome {
   background: url("/img/candy.png") 85% 50%, url("/img/texture.png") bottom right, #61c4d9;
@@ -847,7 +861,7 @@ a {
   content: '';
   background: url("/img/raspberry.png") no-repeat;
   position: absolute;
-  left: 5%;
+  left: 0;
   bottom: -3.125rem;
   width: 6.5rem;
   height: 7.125rem;
@@ -865,13 +879,18 @@ a {
 
 .page_form::after {
   content: '';
-  background: url("/img/Blackberry.png");
+  background: url("/img/Blackberry.png") no-repeat;
   position: absolute;
   right: 0;
   top: -8.125rem;
   width: 12.3125rem;
   height: 16.5rem;
   z-index: 1; }
+  @media screen and (max-width: 480px) {
+    .page_form::after {
+      top: -6rem;
+      right: -50px;
+      background-size: 70%; } }
 
 .pagination {
   position: fixed;
@@ -951,10 +970,6 @@ a {
     @media screen and (max-width: 768px) {
       .title_form {
         margin-bottom: 1.875rem; } }
-
-@media screen and (max-width: 480px) {
-  .why-chocco {
-    height: initial; } }
 
 .why-chocco__info {
   margin-bottom: 3.125rem; }
@@ -1322,7 +1337,6 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
   width: 75%;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
@@ -1401,6 +1415,35 @@ a {
 .active .menu-accordeon__hidden-box {
   width: 100%;
   padding: 3.75rem 1.875rem; }
+
+.cross {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  width: 18px;
+  height: 18px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .cross__left, .cross__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 4px;
+    background: gray;
+    border-radius: 4px;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+    position: absolute; }
+  .cross__right {
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg); }
 
 .map {
   position: relative; }
@@ -1630,7 +1673,8 @@ a {
   display: none; }
   .form__checkbox:checked + .form__hidden_checkbox::before {
     width: 0.6875rem;
-    height: 0.5625rem; }
+    height: 0.5625rem;
+    background-size: cover; }
 
 @media screen and (max-width: 768px) {
   .form__container {

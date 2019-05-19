@@ -137,6 +137,7 @@
     &:checked + .form__hidden_checkbox::before {
       width: rem(11px);
       height: rem(9px);
+      background-size: cover;
     }
   }
 

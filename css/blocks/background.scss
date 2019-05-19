@@ -135,7 +135,7 @@
   content: '';
   background: url('/img/raspberry.png') no-repeat;
   position: absolute; 
-  left: 5%;
+  left: 0;
   bottom: rem(-50px);
   width: rem(104px);
   height: rem(114px);
@@ -159,11 +159,17 @@
 
 .page_form::after {
   content: '';
-  background: url('/img/Blackberry.png');
+  background: url('/img/Blackberry.png') no-repeat;
   position: absolute;
   right: 0;
   top: rem(-130px);
   width: rem(197px);
   height: rem(264px);
   z-index: 1;
+
+  @include phone {
+    top: -6rem;
+    right: -50px;
+    background-size: 70%
+  }
 }
