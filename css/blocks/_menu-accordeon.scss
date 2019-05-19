@@ -1,7 +1,8 @@
-
 .menu-accordeon {
   display: flex;
   height: 100%;
+  width: 75%;
+  justify-content: flex-end;
 
   &__list {
     display: flex;
@@ -14,13 +15,15 @@
 
   &__link {
     display: flex;
-    width: rem(100px);
+    min-width: rem(100px);
     align-items: flex-end;
     justify-content: center;
     background-position: 30% center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
+
 
     &:before {
       content: '';
@@ -53,6 +56,16 @@
   &__hidden-text {
     z-index: 1;
     @include text-info (AlegreyaSans-Regular, 400, normal, 1rem, 1.5rem, white);
+  }
+
+  & .active {
+    @include phone {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      z-index: 1;
+    }
   }
 }
 

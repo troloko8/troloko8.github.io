@@ -69,17 +69,33 @@
   left: 0;
   width: rem(161px);
   height: rem(315px);
+
+  @include phone {
+    bottom: -8.5rem;
+    left: -20px;
+    background-size: 90%;
+  }
 }
 
 .why-chocco {
   background-image: url('/img/leaf-phone.png');
   background-repeat: no-repeat;
   background-position: 0 50%;
+  
+  @include phone {
+    background-position: 0 23%;
+    background-size: 40%;
+  }
 
 }
 
 .reviews {
   background: url('/img/strawberry.png') top right no-repeat;
+
+  @include phone {
+  background: url('/img/strawberry.png') 108% top no-repeat;
+  background-size: 30%; 
+  }
 
   &:before {
     content: '';
@@ -90,6 +106,12 @@
     left: 0;
     width: rem(134px);
     height: rem(422px);
+
+    @include phone {
+      bottom: -14.5rem;
+      left: -20px;
+      background-size: 80%;
+    }
   }
 
   &:after {
@@ -101,6 +123,11 @@
     left: 0;
     width: rem(154px);
     height: rem(220px);
+
+    @include phone {
+      left: -20px;
+      background-size: 80%
+    }
   }
 }
 
@@ -112,7 +139,11 @@
   bottom: rem(-50px);
   width: rem(104px);
   height: rem(114px);
-  z-index: 1;
+  z-index: 2;
+
+  @include phone {
+    background-size: 80%;
+  }
 }
 
 .page_form {
@@ -120,6 +151,10 @@
    url('/img/leaf-form.png') right 80% no-repeat,
    url('/img/bg-form.jpg');
    background-size: auto,auto,cover;
+
+   @include phone {
+    background-size: 0,0,cover; 
+   }
 }
 
 .page_form::after {

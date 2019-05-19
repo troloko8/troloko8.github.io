@@ -1,6 +1,10 @@
 
 
 .why-chocco {
+
+  @include phone {
+    height: initial;
+  }
   &__info {
     margin-bottom: rem(50px);
 
