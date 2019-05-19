@@ -168,8 +168,8 @@
   z-index: 1;
 
   @include phone {
-    top: -6rem;
-    right: -50px;
-    background-size: 70%
+    top: -9rem;
+    background-size: 70%;
+    background-position: right;
   }
 }

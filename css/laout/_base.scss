@@ -55,15 +55,15 @@ a {
   text-decoration: none;
 }
 
-input {
+input, textarea {
   border: 0;
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  overflow: hidden;
+  // display: flex;
+  // flex-direction: column;
+  // // min-height: 100%;
+  // overflow: hidden;
 
   @include phone {
     overflow: scroll;
