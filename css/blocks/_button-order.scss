@@ -1,5 +1,6 @@
 .button-order{
   display: flex;
+  align-items: center;
   padding: rem(10px) rem(35px);
   background-color: white;
   border-radius: rem(30px);
@@ -18,9 +19,14 @@
     }
   }
 
-  &_form {
+  &_green {
     background-color: #0f5a47;
     color: white;
     margin-right: rem(29px);
+  }
+
+  &_green-slider {
+    background-color: #0f5a47;
+    color: white;
   }
 }

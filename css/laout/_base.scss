@@ -79,6 +79,10 @@ input, textarea {
   @include phone {
     height: 100%;
   }
+
+  &_slider {
+    background: #f8faf9;
+  }
 }
 
 .container {
@@ -96,6 +100,10 @@ input, textarea {
     align-items: flex-start;
     padding: rem(25px) 0 rem(50px) 0;
     position: relative;
+
+    @include tablets {
+      position: static;
+    }
   }
 
   &_footer {
@@ -112,6 +120,10 @@ input, textarea {
   @include tablets {
     align-items: center;
     max-width: 472px;
+  }
+
+  &_slider {
+    position: relative;
   }
 
 }

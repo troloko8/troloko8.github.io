@@ -17,6 +17,26 @@
   
   @include tablets {
     display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #2f3234;
+    opacity: .99;
+    justify-content: center;
+
+    &__list {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__item {
+      margin: 0 0 rem(15px) 0;
+    }
   }
+
+  
 }
 
