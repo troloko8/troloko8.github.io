@@ -439,11 +439,22 @@ a {
 input, textarea {
   border: 0; }
 
-@media screen and (max-width: 480px) {
-  .wrapper {
-    overflow: scroll;
-    min-height: none;
-    height: 100%; } }
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  height: 100vh; }
+  @media screen and (max-width: 480px) {
+    .wrapper {
+      overflow: scroll;
+      min-height: unset;
+      height: 100%; } }
 
 .page {
   height: 100vh;
@@ -589,7 +600,10 @@ input, textarea {
       -ms-flex-align: center;
       align-items: center; }
     .navigation__item {
-      margin: 0 0 0.9375rem 0; } }
+      margin: 0 0 0.9375rem 0; }
+    .navigation__link {
+      font-size: 2.25rem;
+      line-height: 4.5rem; } }
 
 .telephone {
   display: -webkit-box;
@@ -633,7 +647,9 @@ input, textarea {
   height: 1.5rem;
   margin-right: 0.625rem;
   z-index: 1000;
-  position: relative; }
+  position: fixed;
+  top: 20px;
+  right: 0; }
   .burger-menu__row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1235,7 +1251,8 @@ input, textarea {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 3.125rem; }
+  margin-top: 3.125rem;
+  z-index: 1; }
   .controller__item {
     margin-left: 2.5rem; }
     .controller__item:first-child {
@@ -1804,6 +1821,11 @@ input, textarea {
       @media screen and (max-width: 768px) {
         .slider__picture:before {
           left: -20%; } }
+      @media screen and (max-width: 480px) {
+        .slider__picture:before {
+          left: -18%;
+          top: 25%;
+          background-size: 70%; } }
   .slider__info {
     -webkit-box-flex: 1;
     -ms-flex: 1;
@@ -1863,7 +1885,8 @@ input, textarea {
       .slider__add-info {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
-        justify-content: center; } }
+        justify-content: center;
+        text-align: left; } }
     .slider__add-info span {
       margin-right: 3.125rem; }
       .slider__add-info span:last-child {

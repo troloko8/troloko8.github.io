@@ -34,6 +34,12 @@
       @include tablets {
         left: -20%;
       }
+
+      @include phone {
+        left: -18%;
+        top: 25%;
+        background-size: 70%;
+      }
     }
   }
 
@@ -81,6 +87,7 @@
 
     @include tablets {
       justify-content: center;
+      text-align: left;
     }
 
     & span {

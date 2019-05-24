@@ -6,7 +6,9 @@
   height: rem(24px);
   margin-right: rem(10px);
   z-index: 1000;
-  position: relative;
+  position: fixed;
+  top: 20px;
+  right: 0;
 
   &__row {
     display: flex;
