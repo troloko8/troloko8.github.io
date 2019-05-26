@@ -64,7 +64,6 @@ input, textarea {
   flex-direction: column;
   min-height: 100%;
   overflow: hidden;
-  height: 100vh;
 
   @include phone {
     overflow: scroll;
@@ -78,7 +77,8 @@ input, textarea {
   position: relative;
 
   @include phone {
-    height: 100%;
+    // height: 100%;\
+    height: 100vh;
   }
 
   &_slider {

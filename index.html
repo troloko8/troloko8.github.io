@@ -14,7 +14,7 @@
     <section class="page page-wellcome">
       <div class="container container_head">
         <header class="header">
-          <span class="logo">cho cco</span>
+          <span class="logo" id="logo">cho cco</span>
           <nav class="navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
@@ -110,9 +110,11 @@
                 </svg>
               </div>
             </div>
-            <h5 class="features__title">Полезно</h5>
+            <div class="features__box">
+              <h5 class="features__title">Полезно</h5>
             <p class="features__text">Натураьность - ключевое качество нашего продукта. Мы используем только природный
-              ингридиент</p>
+            ингридиент</p>
+          </div>
           </li>
           <li class="features__item">
             <div class="features__icon">
@@ -421,27 +423,31 @@
         <div class="container container_slider">
           <div class="slider">
               <div class="arrow-left"></div>
+              <ul class="slider__list">
+                <li class="slider__item">
+                  <div class="slider__picture">
+                    <img src="/img/candy-slider.png" class="slider__img" alt="">
+                  </div>
+                  <div class="slider__info">
+                    <h3 class="slider__title">Батончик "Морские водоросли"</h3>
+                    <div class="slider__container">
+                      <div class="slider__box">
+                        <span class="slider__composition">Состав:</span>
+                        <p class="slider__text">Гранола из морских водорослей с овсом,миндалем и тыквенными семечками. В состав также входят:сухое молоко,заменитель сахара и какао бобы</p>
+                      </div>
+                      <div class="slider__add-info">
+                        <span>Калорийность <br> <strong>120 ккал</strong></span>
+                        <span>Вес <br> <strong>98 грамм</strong></span>
+                      </div>
+                      <div class="slider__buy">
+                        <span class="slider__cost">140 ₽</span>
+                        <a href="" class="button-order button-order_green-slider">Заказать</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
               <div class="arrow-right"></div>
-            <div class="slider__picture">
-              <img src="/img/candy-slider.png" class="slider__img" alt="">
-            </div>
-            <div class="slider__info">
-              <h3 class="slider__title">Батончик "Морские водоросли"</h3>
-              <div class="slider__container">
-                <div class="slider__box">
-                  <span class="slider__composition">Состав:</span>
-                  <p class="slider__text">Гранола из морских водорослей с овсом,миндалем и тыквенными семечками. В состав также входят:сухое молоко,заменитель сахара и какао бобы</p>
-                </div>
-                <div class="slider__add-info">
-                  <span>Калорийность <br> <b>120 ккал</b></span>
-                  <span>Вес <br> <b>98 грамм</b></span>
-                </div>
-                <div class="slider__buy">
-                  <span class="slider__cost">140 ₽</span>
-                  <a href="" class="button-order button-order_green-slider">Заказать</a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

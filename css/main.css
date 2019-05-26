@@ -448,8 +448,7 @@ input, textarea {
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100%;
-  overflow: hidden;
-  height: 100vh; }
+  overflow: hidden; }
   @media screen and (max-width: 480px) {
     .wrapper {
       overflow: scroll;
@@ -461,7 +460,7 @@ input, textarea {
   position: relative; }
   @media screen and (max-width: 480px) {
     .page {
-      height: 100%; } }
+      height: 100vh; } }
   .page_slider {
     background: #f8faf9; }
 
@@ -539,7 +538,7 @@ input, textarea {
     .header .telephone {
       display: none; } }
 
-.logo {
+.logo, .logo_active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -556,6 +555,10 @@ input, textarea {
   font-size: 1.5rem;
   line-height: 1.25rem;
   color: white; }
+  .logo_active {
+    position: fixed;
+    z-index: 1001;
+    top: 1.5625rem; }
 
 .navigation__list {
   display: -webkit-box;
@@ -578,7 +581,8 @@ input, textarea {
 @media screen and (max-width: 768px) {
   .navigation {
     display: none;
-    position: absolute;
+    position: fixed;
+    z-index: 1000;
     width: 100%;
     height: 100%;
     top: 0;
@@ -1221,7 +1225,8 @@ input, textarea {
     padding: 1.5625rem 0.9375rem; }
     @media screen and (max-width: 768px) {
       .widget-reviews__container {
-        text-align: center; } }
+        text-align: center;
+        width: unset; } }
   .widget-reviews__title {
     font-family: AlegreyaSans-Medium;
     font-weight: 500;
@@ -1776,19 +1781,26 @@ input, textarea {
 .slider {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-  @media screen and (max-width: 768px) {
-    .slider {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center; } }
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .slider__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media screen and (max-width: 768px) {
+      .slider__item {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; } }
   .slider__picture {
     -webkit-box-flex: 1;
     -ms-flex: 1;
@@ -1810,26 +1822,11 @@ input, textarea {
     @media screen and (max-width: 480px) {
       .slider__picture {
         width: 70%; } }
-    .slider__picture:before {
-      content: '';
-      background: url("/img/leaves-slider.png") no-repeat;
-      width: 462px;
-      height: 326px;
-      position: absolute;
-      top: 28%;
-      left: -3%; }
-      @media screen and (max-width: 768px) {
-        .slider__picture:before {
-          left: -20%; } }
-      @media screen and (max-width: 480px) {
-        .slider__picture:before {
-          left: -18%;
-          top: 25%;
-          background-size: 70%; } }
   .slider__info {
     -webkit-box-flex: 1;
     -ms-flex: 1;
-    flex: 1; }
+    flex: 1;
+    padding-top: 2.8125rem; }
     @media screen and (max-width: 768px) {
       .slider__info {
         text-align: center; } }
@@ -1851,7 +1848,7 @@ input, textarea {
     line-height: 1.2;
     color: black;
     text-transform: uppercase;
-    margin: 2.8125rem 0 1.875rem 0; }
+    margin: 0 0 1.875rem 0; }
   .slider__box {
     margin-bottom: 2.5rem; }
   .slider__composition {
@@ -1914,7 +1911,7 @@ input, textarea {
     margin-right: 1.875rem; }
 
 .arrow-right, .arrow-left {
-  width: 15px;
+  min-width: 15px;
   height: 30px;
   overflow: hidden;
   position: absolute;

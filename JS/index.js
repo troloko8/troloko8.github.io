@@ -106,10 +106,13 @@ menu.addEventListener('click',function() {
 
 ///////
 
+const logo = document.querySelector('#logo')
 
+menu.addEventListener('click', function(menuDefault) {
+  menuDefault.preventDefault();
 
-menu.addEventListener('click', function() {
   let className = menu.getAttribute("class");
+  let nameLogo = logo.getAttribute('class');
 
   if (className == "burger-menu") {
     menu.setAttribute('class', 'burger-menu active');
@@ -117,8 +120,15 @@ menu.addEventListener('click', function() {
     menu.setAttribute('class', 'burger-menu');
   }
 
+  if (nameLogo == "logo") {
+    logo.setAttribute('class', 'logo_active');
+  } else {
+    logo.setAttribute('class', 'logo');
+  }
 
+  
 
 })
 
+/////
 
