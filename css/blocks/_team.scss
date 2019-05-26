@@ -45,6 +45,10 @@
   background-position: center center;
   background-size: cover;
   margin-bottom: rem(20px);
+
+  @include phone {
+    height: 15.125rem;
+  }
 }
 
 .team__name {

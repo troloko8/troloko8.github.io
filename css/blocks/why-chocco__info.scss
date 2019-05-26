@@ -8,6 +8,10 @@
     @include tablets {
       margin-bottom: rem(40px);
     }
+
+    @include phone {
+      margin-bottom: 1.5rem;
+    }
   }
   
   &__text {

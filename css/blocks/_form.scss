@@ -79,6 +79,10 @@
 
   &__not-call {
     margin-bottom: rem(42px);
+
+    @include phone {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__reset {
@@ -156,10 +160,18 @@
     &__row-textarea {
       width: 100%;
       margin-bottom: rem(50px);
+
+      @include phone {
+        margin-bottom:  1.5rem;
+      }
     }
 
     &__radio-box {
       margin-bottom: rem(25px);
+
+      @include phone {
+        margin-bottom: 1rem;
+      }
     }
   }
 }

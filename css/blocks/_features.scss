@@ -6,6 +6,9 @@
     flex-direction: column;
     padding: 0 20%;
   }
+  @include phone {
+    padding: 0;
+  }
 
   &__container {
     display: flex;
@@ -17,6 +20,10 @@
      width: 100%;
      display: flex;
      justify-content: center;
+
+     @include phone {
+       margin-right: 10px;
+     }
    }
 
   &__picture {
@@ -64,19 +71,38 @@
         content: none;
       }
     }
+    @include phone {
+      flex-direction: row;
+    }
   }
 
-  
+  &__box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @include phone {
+      text-align: left;
+    }
+  }
 
   &__title {
     @include text-info(AlegreyaSans-Bold, 700, normal, 1.6875rem, 1.875rem, black);
     margin-top: rem(20px);
+
+    @include phone {
+      margin: 0;
+    }
   }
 
   &__text {
     @include text-info(AlegreyaSans-Light, 300, normal, 1.125rem, 1.5625rem, #666666);
     margin-top: rem(15px);
     text-align: center;
+
+    @include phone {
+      text-align: left;
+    }
   }
 }
 
