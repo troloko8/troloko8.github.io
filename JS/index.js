@@ -92,14 +92,14 @@ const menu = document.querySelector("#burger-menu");
 const nav = document.querySelector("nav");
 
 
-menu.addEventListener('click',function() {
+menu.addEventListener('click', function () {
 
   let navDisplay = getComputedStyle(nav).display;
 
-  if (navDisplay == 'none' ) {
+  if (navDisplay == 'none') {
     nav.style.display = 'flex';
   }
-  if (navDisplay == 'flex' ) {
+  if (navDisplay == 'flex') {
     nav.style.display = 'none';
   }
 })
@@ -108,7 +108,7 @@ menu.addEventListener('click',function() {
 
 const logo = document.querySelector('#logo')
 
-menu.addEventListener('click', function(menuDefault) {
+menu.addEventListener('click', function (menuDefault) {
   menuDefault.preventDefault();
 
   let className = menu.getAttribute("class");
@@ -125,10 +125,23 @@ menu.addEventListener('click', function(menuDefault) {
   } else {
     logo.setAttribute('class', 'logo');
   }
-
-  
-
 })
 
 /////
 
+const team = document.querySelector('#team');
+const ulTeam = document.querySelector('#team').children;
+
+team.addEventListener('click', function (e) {
+
+  for (i = 0; i < ulTeam.length; i++) {
+    ulTeam[i].setAttribute('class', 'team__item');
+  }
+
+  let li = e.target.closest('li');
+  if (li.getAttribute('class') == 'team__item') {
+    li.setAttribute('class', 'team__item active');
+  } else {
+    li.setAttribute('class', 'team__item');
+  }
+})
