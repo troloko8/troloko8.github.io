@@ -1,0 +1,21 @@
+
+
+.why-chocco {
+
+  &__info {
+    margin-bottom: rem(50px);
+
+    @include tablets {
+      margin-bottom: rem(40px);
+    }
+
+    @include phone {
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  &__text {
+    @include text-info(AlegreyaSans-Regular, 400, normal, 1.125rem, 1.26rem, black);
+    text-align: center;
+  }
+}

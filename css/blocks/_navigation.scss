@@ -24,8 +24,8 @@
     top: 0;
     left: 0;
     background: #2f3234;
-    opacity: .99;
     justify-content: center;
+    transition: .5s;
 
     &__list {
       flex-direction: column;

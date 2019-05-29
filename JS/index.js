@@ -98,9 +98,11 @@ menu.addEventListener('click', function () {
 
   if (navDisplay == 'none') {
     nav.style.display = 'flex';
+    nav.style.opacity = '.99';
   }
   if (navDisplay == 'flex') {
     nav.style.display = 'none';
+    nav.style.opacity = '0';
   }
 })
 
@@ -133,15 +135,52 @@ const team = document.querySelector('#team');
 const ulTeam = document.querySelector('#team').children;
 
 team.addEventListener('click', function (e) {
-
-  for (i = 0; i < ulTeam.length; i++) {
-    ulTeam[i].setAttribute('class', 'team__item');
-  }
-
   let li = e.target.closest('li');
-  if (li.getAttribute('class') == 'team__item') {
-    li.setAttribute('class', 'team__item active');
+
+  if (!li.classList.contains("active")) {
+    for (i = 0; i < ulTeam.length; i++) {
+      ulTeam[i].classList.remove('active');
+    }
+    li.classList.add('active');
   } else {
-    li.setAttribute('class', 'team__item');
+    li.classList.remove('active');
   }
 })
+
+//////
+
+const slider = document.querySelector('#slider');
+const arrowLeft = document.querySelector('#arrow-left')
+const arrowRight = document.querySelector('#arrow-right')
+
+
+arrowRight.addEventListener('click', function () {
+  const sliderList = document.querySelector('.slider__list');
+  const sliderWidth = getComputedStyle(sliderList).width;
+  const width = parseInt(sliderWidth);
+
+  let right = getComputedStyle(slider).right;
+  let moveRight = parseInt(right)/width * 100;
+  if (moveRight < 100) {
+    slider.style.right = (moveRight + 100) + '%';
+  } else {
+    slider.style.right = (0);
+  }
+})
+
+arrowLeft.addEventListener('click', function () {
+  const sliderList = document.querySelector('.slider__list');
+  const sliderWidth = getComputedStyle(sliderList).width;
+  const width = parseInt(sliderWidth);
+
+  let right = getComputedStyle(slider).right;
+  let moveRight = parseInt(right)/width * 100;
+  console.log(moveRight);
+  if (moveRight >= 100) {
+    slider.style.right = (moveRight - 100) + '%';
+   } else {
+     slider.style.right = ('100%');
+   }
+})
+
+

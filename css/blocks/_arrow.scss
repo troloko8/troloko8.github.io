@@ -9,6 +9,7 @@
      transform: translateY(-50%);
     right: -15px;
     cursor: pointer;
+    z-index: 1;
 
     @include tablets {
       top: 30%;
