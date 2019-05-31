@@ -104,7 +104,7 @@ menu.addEventListener('click', function () {
     nav.style.display = 'none';
     nav.style.opacity = '0';
   }
-})
+});
 
 ///////
 
@@ -127,7 +127,7 @@ menu.addEventListener('click', function (menuDefault) {
   } else {
     logo.setAttribute('class', 'logo');
   }
-})
+});
 
 /////
 
@@ -145,9 +145,51 @@ team.addEventListener('click', function (e) {
   } else {
     li.classList.remove('active');
   }
-})
+});
+
+///////
+
+const menuAcc = document.querySelector('#menu-accordeon');
+const ulMenuAcc = document.querySelector('#menu-accordeon').children;
+
+menuAcc.addEventListener('click', function (e) {
+  e.preventDefault();
+  let li = e.target.closest('li');
+
+  if (!li.classList.contains("active")) {
+    for (i = 0; i < ulMenuAcc.length; i++) {
+      ulMenuAcc[i].classList.remove('active');
+    }
+    li.classList.add('active');
+  } else {
+    li.classList.remove('active');
+  }
+});
 
 //////
+const reviewsLi = document.querySelector('#reviews').children;
+const controllerLi = document.querySelector('#controller').children;
+const controller = document.querySelector('#controller');
+
+controller.addEventListener('click', function(e) {
+  e.preventDefault();
+  let li = e.target.closest('li');
+  
+  for(let i = 0; i < controllerLi.length; i++){
+    controllerLi[i].classList.remove('active');
+    if(controllerLi[i] == li) {
+      reviewsLi[i].classList.add('widget-reviews__box-active');
+    } else {
+      reviewsLi[i].classList.remove('widget-reviews__box-active');
+    }
+  }
+  li.classList.add('active')
+})
+
+
+
+
+/////
 
 const slider = document.querySelector('#slider');
 const arrowLeft = document.querySelector('#arrow-left')
@@ -155,9 +197,9 @@ const arrowRight = document.querySelector('#arrow-right')
 
 
 arrowRight.addEventListener('click', function () {
-  const sliderList = document.querySelector('.slider__list');
-  const sliderWidth = getComputedStyle(sliderList).width;
-  const width = parseInt(sliderWidth);
+  let sliderList = document.querySelector('.slider__list');
+  let sliderWidth = getComputedStyle(sliderList).width;
+  let width = parseInt(sliderWidth);
 
   let right = getComputedStyle(slider).right;
   let moveRight = parseInt(right)/width * 100;
@@ -166,12 +208,12 @@ arrowRight.addEventListener('click', function () {
   } else {
     slider.style.right = (0);
   }
-})
+});
 
 arrowLeft.addEventListener('click', function () {
-  const sliderList = document.querySelector('.slider__list');
-  const sliderWidth = getComputedStyle(sliderList).width;
-  const width = parseInt(sliderWidth);
+  let sliderList = document.querySelector('.slider__list');
+  let sliderWidth = getComputedStyle(sliderList).width;
+  let width = parseInt(sliderWidth);
 
   let right = getComputedStyle(slider).right;
   let moveRight = parseInt(right)/width * 100;
@@ -181,6 +223,61 @@ arrowLeft.addEventListener('click', function () {
    } else {
      slider.style.right = ('100%');
    }
-})
+});
 
 
+///// form 
+
+const form = document.querySelector('#form');
+const send = document.querySelector('#send');
+
+send.addEventListener('click', function(e) {
+  e.preventDefault();
+
+
+
+  if (validateForm(form)) {
+    
+    let formData = new FormData();
+    formData.append ("name", form.elements.name.value);
+    formData.append ("phone", form.elements.phone.value);
+    formData.append ("comment", form.elements.comment.value);
+    formData.append ("to", "troloko8@gmail.com");
+
+  const xhr = new XMLHttpRequest();
+  xhr.responseType = 'json';
+  xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+  xhr.send(formData);
+
+   xhr.addEventListener('load', function() {
+     alert(xhr.response.message);
+   })
+
+  }
+});
+
+
+function validateForm(f) {
+   let valid = true;
+   if (!validateField(f.elements.name)) {
+     valid = false
+   }
+   if (!validateField(f.elements.phone)) {
+     valid = false
+   }
+   if (!validateField(f.elements.comment)) {
+     valid = false
+   }
+
+   return valid;
+ }
+
+ function validateField(field) {
+  if (field.validationMessage) {
+    field.style.border = '1px solid red';
+  } else {
+    field.style.border = '';
+  }
+  
+  return field.checkValidity();
+ }

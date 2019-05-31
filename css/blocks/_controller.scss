@@ -8,11 +8,11 @@
 
 
   &__item {
-    margin-left: rem(40px);
+    padding-left: rem(40px);
     
 
     &:first-child {
-      margin-left: 0;
+      padding-left: 0;
     }
   }
 
@@ -35,4 +35,5 @@
 .active .controller__link {
   border: rem(8px) solid #0f5a47;
   box-sizing: unset;
+  transition: .3s;
 }

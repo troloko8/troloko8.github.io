@@ -74,13 +74,14 @@
   height: 0;
   overflow: hidden;
   align-items: center;
+  transition: .5s;
 
 }
 
 .active {
   
   & .team__hidden-block{
-  height: initial;
+  height: rem(70px);
   }
   
   & .team__name::after {

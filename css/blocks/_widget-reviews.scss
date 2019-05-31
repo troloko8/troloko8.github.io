@@ -7,7 +7,7 @@
   &__box {
     padding: rem(50px);
     width: 100%;
-    display: flex;
+    display: none;
     background: url('/img/gray-raspberry.png') top right no-repeat,
     url('/img/half-circle.png') 50% -45px no-repeat,
     #f8faf9;
@@ -69,3 +69,6 @@
   }
 }
 
+.widget-reviews__box-active {
+  display: flex;
+}
