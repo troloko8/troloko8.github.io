@@ -50,15 +50,23 @@ $phone: 480px;
   align-items: center;
   &__box {
     width: 20%;
-    padding: 30px;
+    padding: rem(30px);
     display: flex;
     flex-direction: column;
     background: white;
     align-items: center;
+
+    @include tablets {
+      width: 40%;
+    }
+
+    @include phone {
+      width: 50%;
+    }
   }
 
   &__text {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
   }
 }

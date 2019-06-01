@@ -2085,7 +2085,7 @@ input, textarea {
   align-items: center; }
   .modul__box {
     width: 20%;
-    padding: 30px;
+    padding: 1.875rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2097,6 +2097,12 @@ input, textarea {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+    @media screen and (max-width: 768px) {
+      .modul__box {
+        width: 40%; } }
+    @media screen and (max-width: 480px) {
+      .modul__box {
+        width: 50%; } }
   .modul__text {
     text-align: center;
-    margin-bottom: 20px; }
+    margin-bottom: 1.25rem; }
