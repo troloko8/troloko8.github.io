@@ -882,7 +882,8 @@ input, textarea {
   bottom: -7.5rem;
   left: 0;
   width: 10.0625rem;
-  height: 19.6875rem; }
+  height: 19.6875rem;
+  z-index: 1; }
   @media screen and (max-width: 480px) {
     .why-chocco::after {
       bottom: -8.5rem;
@@ -912,7 +913,8 @@ input, textarea {
     bottom: -12.5rem;
     left: 0;
     width: 8.375rem;
-    height: 26.375rem; }
+    height: 26.375rem;
+    z-index: 1; }
     @media screen and (max-width: 480px) {
       .reviews:before {
         bottom: -14.5rem;
@@ -926,7 +928,8 @@ input, textarea {
     bottom: -6.25rem;
     left: 0;
     width: 9.625rem;
-    height: 13.75rem; }
+    height: 13.75rem;
+    z-index: 1; }
     @media screen and (max-width: 480px) {
       .reviews:after {
         left: -20px;
@@ -1249,7 +1252,8 @@ input, textarea {
         width: 12.875rem;
         height: 13.125rem; } }
   .widget-reviews__photo {
-    max-width: 100%; }
+    max-width: 100%;
+    min-height: 100%; }
   .widget-reviews__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1299,7 +1303,7 @@ input, textarea {
   -ms-flex-align: center;
   align-items: center;
   margin-top: 3.125rem;
-  z-index: 1; }
+  z-index: 2; }
   .controller__item {
     padding-left: 2.5rem; }
     .controller__item:first-child {
@@ -1322,10 +1326,7 @@ input, textarea {
 .active .controller__link {
   border: 0.5rem solid #0f5a47;
   -webkit-box-sizing: unset;
-  box-sizing: unset;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s; }
+  box-sizing: unset; }
 
 .team__list {
   width: 100%;
@@ -1415,7 +1416,7 @@ input, textarea {
   transition: .5s; }
 
 .active .team__hidden-block {
-  height: 4.375rem; }
+  height: 4.6875rem; }
 
 .active .team__name::after {
   content: '';
@@ -1553,9 +1554,9 @@ input, textarea {
 .active .menu-accordeon__hidden-box {
   width: 100%;
   padding: 3.75rem 1.875rem;
-  -webkit-transition: 3s;
-  -o-transition: 3s;
-  transition: 3s; }
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
 
 .cross {
   display: block;
@@ -2044,6 +2045,13 @@ input, textarea {
     top: -11px;
     left: -50px;
     border-radius: 6px; }
+  .arrow-right:after, .arrow-left:after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%; }
 
 .arrow-left {
   right: 100%;

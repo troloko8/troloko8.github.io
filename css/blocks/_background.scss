@@ -69,6 +69,7 @@
   left: 0;
   width: rem(161px);
   height: rem(315px);
+  z-index: 1;
 
   @include phone {
     bottom: -8.5rem;
@@ -106,6 +107,7 @@
     left: 0;
     width: rem(134px);
     height: rem(422px);
+    z-index: 1;
 
     @include phone {
       bottom: -14.5rem;
@@ -123,6 +125,7 @@
     left: 0;
     width: rem(154px);
     height: rem(220px);
+    z-index: 1;
 
     @include phone {
       left: -20px;

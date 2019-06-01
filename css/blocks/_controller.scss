@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   margin-top: rem(50px);
-  z-index: 1;
+  z-index: 2;
 
 
 
@@ -35,5 +35,4 @@
 .active .controller__link {
   border: rem(8px) solid #0f5a47;
   box-sizing: unset;
-  transition: .3s;
 }

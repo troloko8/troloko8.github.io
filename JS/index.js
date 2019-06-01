@@ -129,7 +129,7 @@ menu.addEventListener('click', function (menuDefault) {
   }
 });
 
-/////
+///// acc-team
 
 const team = document.querySelector('#team');
 const ulTeam = document.querySelector('#team').children;
@@ -147,7 +147,7 @@ team.addEventListener('click', function (e) {
   }
 });
 
-///////
+/////// menu-acc
 
 const menuAcc = document.querySelector('#menu-accordeon');
 const ulMenuAcc = document.querySelector('#menu-accordeon').children;
@@ -166,7 +166,8 @@ menuAcc.addEventListener('click', function (e) {
   }
 });
 
-//////
+////// reviews
+
 const reviewsLi = document.querySelector('#reviews').children;
 const controllerLi = document.querySelector('#controller').children;
 const controller = document.querySelector('#controller');
@@ -189,7 +190,7 @@ controller.addEventListener('click', function(e) {
 
 
 
-/////
+///// slider
 
 const slider = document.querySelector('#slider');
 const arrowLeft = document.querySelector('#arrow-left')

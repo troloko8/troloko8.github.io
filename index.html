@@ -150,65 +150,68 @@
       </div>
     </section>
 
-    <section class="page reviews">
-      <div class="container">
-        <h2 class="title title_reviews">Отзывы</h2>
-        <div class="widget-reviews">
-          <ul class="widger-reviews__list" id="reviews">
-            <li class="widget-reviews__box widget-reviews__box-active">
-              <div class="widget-reviews__picture">
-                <img src="/img/big-first-people.png" alt="" class="widget-reviews__photo">
+    <section class="page page_slider">
+      <div class="container container_slider">
+        <div class="slider">
+          <div class="arrow-left" id="arrow-left"></div>
+          <ul class="slider__list">
+            <div class="slider__div-hidden">
+              <div class="slider__full-width" id="slider">
+                <li class="slider__item">
+                  <div class="slider__picture">
+                    <img src="/img/candy-slider.png" class="slider__img" alt="">
+                  </div>
+                  <div class="slider__info">
+                    <h3 class="slider__title">Батончик "Морские водоросли"</h3>
+                    <div class="slider__container">
+                      <div class="slider__box">
+                        <span class="slider__composition">Состав:</span>
+                        <p class="slider__text">Гранола из морских водорослей с овсом,миндалем и тыквенными семечками. В
+                          состав также входят:сухое молоко,заменитель сахара и какао бобы</p>
+                      </div>
+                      <div class="slider__add-info">
+                        <span>Калорийность <br> <strong>120 ккал</strong></span>
+                        <span>Вес <br> <strong>98 грамм</strong></span>
+                      </div>
+                      <div class="slider__buy">
+                        <span class="slider__cost">140 ₽</span>
+                        <a href="" class="button-order button-order_green-slider">Заказать</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="slider__item">
+                  <div class="slider__picture">
+                    <img src="/img/candy-slider2.png" class="slider__img" alt="">
+                  </div>
+                  <div class="slider__info">
+                    <h3 class="slider__title">Батончик "Гранола виноград"</h3>
+                    <div class="slider__container">
+                      <div class="slider__box">
+                        <span class="slider__composition">Состав:</span>
+                        <p class="slider__text">Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также
+                          входит:сухое молоко, заменитель сахара и какао бобы.</p>
+                      </div>
+                      <div class="slider__add-info">
+                        <span>Калорийность <br> <strong>110 ккал</strong></span>
+                        <span>Вес <br> <strong>95 грамм</strong></span>
+                      </div>
+                      <div class="slider__buy">
+                        <span class="slider__cost">140 ₽</span>
+                        <a href="" class="button-order button-order_green-slider">Заказать</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
               </div>
-              <div class="widget-reviews__container">
-                <h4 class="widget-reviews__title">Лучший перекус</h4>
-                <p class="widget-reviews__text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы.
-                  Втечения
-                  дня сижу за компъютером и часто отходить в кафе или на кухню просто себе не могу позволить. А батончик
-                  -
-                  он всегда под рукой. Это приятно и удобно</p>
-                <span class="widget-reviews__name">Алёна Хмельницкая</span>
-              </div>
-            </li>
-            <li class="widget-reviews__box">
-              <div class="widget-reviews__picture">
-                <img src="/img/second-people.png" alt="" class="widget-reviews__photo">
-              </div>
-              <div class="widget-reviews__container">
-                <h4 class="widget-reviews__title">Лучшие батончики премиум уровня</h4>
-                <p class="widget-reviews__text">Батончики понравились. На мой взгляд слегка завышена цена по сравнению с
-                  конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в
-                  руке. Ну и конечно же кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но
-                  это скорее плюс, чем минус.</p>
-                <span class="widget-reviews__name">Мария Орлова</span>
-              </div>
-            </li>
-            <li class="widget-reviews__box">
-              <div class="widget-reviews__picture">
-                <img src="/img/third-people.png" alt="" class="widget-reviews__photo">
-              </div>
-              <div class="widget-reviews__container">
-                <h4 class="widget-reviews__title">Идеально подходят для спортсменов</h4>
-                <p class="widget-reviews__text">После тренировок всегда хочется быстро закинуться чем-то белковым,
-                  потому что до дома ещё нужно доехать. А кушать хочется. Протеиновые батончики всегда выручают в этом
-                  плане. Спасибо производителю за этот качественный и экологичный продукт.
-                </p>
-                <span class="widget-reviews__name">Вадим Грачев</span>
-              </div>
-            </li>
+            </div>
+
           </ul>
-          <ul class="controller" id="controller">
-            <li class="controller__item active">
-              <a href="#" class="controller__link" style="background-image: url('/img/first-people.png');"></a>
-            </li>
-            <li class="controller__item">
-              <a href="#" class="controller__link" style="background-image: url('/img/second-people.png');"></a></li>
-            <li class="controller__item">
-              <a href="#" class="controller__link" style="background-image: url('/img/third-people.png');"></a></li>
-          </ul>
+          <div class="arrow-right" id="arrow-right"></div>
         </div>
       </div>
     </section>
-
+    
     <section class="page team">
       <div class="container">
         <h2 class="title title_team">Команда</h2>
@@ -321,6 +324,65 @@
       </div>
     </section>
 
+    <section class="page reviews">
+      <div class="container">
+        <h2 class="title title_reviews">Отзывы</h2>
+        <div class="widget-reviews">
+          <ul class="widger-reviews__list" id="reviews">
+            <li class="widget-reviews__box widget-reviews__box-active">
+              <div class="widget-reviews__picture">
+                <img src="/img/big-first-people.png" alt="" class="widget-reviews__photo">
+              </div>
+              <div class="widget-reviews__container">
+                <h4 class="widget-reviews__title">Лучший перекус</h4>
+                <p class="widget-reviews__text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы.
+                  Втечения
+                  дня сижу за компъютером и часто отходить в кафе или на кухню просто себе не могу позволить. А батончик
+                  -
+                  он всегда под рукой. Это приятно и удобно</p>
+                <span class="widget-reviews__name">Алёна Хмельницкая</span>
+              </div>
+            </li>
+            <li class="widget-reviews__box">
+              <div class="widget-reviews__picture">
+                <img src="/img/second-people.png" alt="" class="widget-reviews__photo">
+              </div>
+              <div class="widget-reviews__container">
+                <h4 class="widget-reviews__title">Лучшие батончики премиум уровня</h4>
+                <p class="widget-reviews__text">Батончики понравились. На мой взгляд слегка завышена цена по сравнению с
+                  конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в
+                  руке. Ну и конечно же кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но
+                  это скорее плюс, чем минус.</p>
+                <span class="widget-reviews__name">Мария Орлова</span>
+              </div>
+            </li>
+            <li class="widget-reviews__box">
+              <div class="widget-reviews__picture">
+                <img src="/img/third-people.png" alt="" class="widget-reviews__photo">
+              </div>
+              <div class="widget-reviews__container">
+                <h4 class="widget-reviews__title">Идеально подходят для спортсменов</h4>
+                <p class="widget-reviews__text">После тренировок всегда хочется быстро закинуться чем-то белковым,
+                  потому что до дома ещё нужно доехать. А кушать хочется. Протеиновые батончики всегда выручают в этом
+                  плане. Спасибо производителю за этот качественный и экологичный продукт.
+                </p>
+                <span class="widget-reviews__name">Вадим Грачев</span>
+              </div>
+            </li>
+          </ul>
+          <ul class="controller" id="controller">
+            <li class="controller__item active">
+              <a href="#" class="controller__link" style="background-image: url('/img/first-people.png');"></a>
+            </li>
+            <li class="controller__item">
+              <a href="#" class="controller__link" style="background-image: url('/img/second-people.png');"></a></li>
+            <li class="controller__item">
+              <a href="#" class="controller__link" style="background-image: url('/img/third-people.png');"></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section class="page page_form">
       <div class="container">
         <h2 class="title title_form">Закажите доставку</h2>
@@ -400,7 +462,6 @@
       </div>
     </section>
 
-
     <section class="page map">
       <img src="/img/map.jpg" alt="map" class="map__picture">
 
@@ -451,67 +512,7 @@
       </footer>
     </section>
 
-    <section class="page page_slider">
-      <div class="container container_slider">
-        <div class="slider">
-          <div class="arrow-left" id="arrow-left"></div>
-          <ul class="slider__list">
-            <div class="slider__div-hidden">
-              <div class="slider__full-width" id="slider">
-                <li class="slider__item">
-                  <div class="slider__picture">
-                    <img src="/img/candy-slider.png" class="slider__img" alt="">
-                  </div>
-                  <div class="slider__info">
-                    <h3 class="slider__title">Батончик "Морские водоросли"</h3>
-                    <div class="slider__container">
-                      <div class="slider__box">
-                        <span class="slider__composition">Состав:</span>
-                        <p class="slider__text">Гранола из морских водорослей с овсом,миндалем и тыквенными семечками. В
-                          состав также входят:сухое молоко,заменитель сахара и какао бобы</p>
-                      </div>
-                      <div class="slider__add-info">
-                        <span>Калорийность <br> <strong>120 ккал</strong></span>
-                        <span>Вес <br> <strong>98 грамм</strong></span>
-                      </div>
-                      <div class="slider__buy">
-                        <span class="slider__cost">140 ₽</span>
-                        <a href="" class="button-order button-order_green-slider">Заказать</a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="slider__item">
-                  <div class="slider__picture">
-                    <img src="/img/candy-slider2.png" class="slider__img" alt="">
-                  </div>
-                  <div class="slider__info">
-                    <h3 class="slider__title">Батончик "Гранола виноград"</h3>
-                    <div class="slider__container">
-                      <div class="slider__box">
-                        <span class="slider__composition">Состав:</span>
-                        <p class="slider__text">Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также
-                          входит:сухое молоко, заменитель сахара и какао бобы.</p>
-                      </div>
-                      <div class="slider__add-info">
-                        <span>Калорийность <br> <strong>110 ккал</strong></span>
-                        <span>Вес <br> <strong>95 грамм</strong></span>
-                      </div>
-                      <div class="slider__buy">
-                        <span class="slider__cost">140 ₽</span>
-                        <a href="" class="button-order button-order_green-slider">Заказать</a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </div>
-            </div>
 
-          </ul>
-          <div class="arrow-right" id="arrow-right"></div>
-        </div>
-      </div>
-    </section>
   </div>
 
 
