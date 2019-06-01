@@ -231,11 +231,10 @@ arrowLeft.addEventListener('click', function () {
 
 const form = document.querySelector('#form');
 const send = document.querySelector('#send');
+const modulWindow = document.querySelector('#modul');
 
 send.addEventListener('click', function(e) {
   e.preventDefault();
-
-
 
   if (validateForm(form)) {
     
@@ -251,7 +250,8 @@ send.addEventListener('click', function(e) {
   xhr.send(formData);
 
    xhr.addEventListener('load', function() {
-     alert(xhr.response.message);
+    modulWindow.style.display ='flex';
+    document.querySelector('#modul span').innerHTML = xhr.response.message;
    })
 
   }
@@ -276,9 +276,19 @@ function validateForm(f) {
  function validateField(field) {
   if (field.validationMessage) {
     field.style.border = '1px solid red';
+    field.setAttribute('placeholder',field.validationMessage);
   } else {
     field.style.border = '';
   }
   
   return field.checkValidity();
  }
+
+ const closeModul = document.querySelector('#close-modul');
+
+ closeModul.addEventListener('click', function(e) {
+   e.preventDefault();
+
+   modulWindow.style.display = 'none';
+ })
+ ////
