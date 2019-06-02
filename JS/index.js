@@ -117,15 +117,15 @@ menu.addEventListener('click', function (menuDefault) {
   let nameLogo = logo.getAttribute('class');
 
   if (className == "burger-menu") {
-    menu.setAttribute('class', 'burger-menu active');
+    menu.classList.add('active');
   } else {
-    menu.setAttribute('class', 'burger-menu');
+    menu.classList.remove('active');
   }
 
   if (nameLogo == "logo") {
-    logo.setAttribute('class', 'logo_active');
+    logo.classList.add('logo_active');
   } else {
-    logo.setAttribute('class', 'logo');
+    logo.classList.remove('logo_active');
   }
 });
 
@@ -150,20 +150,25 @@ team.addEventListener('click', function (e) {
 /////// menu-acc
 
 const menuAcc = document.querySelector('#menu-accordeon');
-const ulMenuAcc = document.querySelector('#menu-accordeon').children;
+const ulMenuAcc = document.querySelector('.menu-accordeon__list').children;
 
 menuAcc.addEventListener('click', function (e) {
   e.preventDefault();
-  let li = e.target.closest('li');
 
-  if (!li.classList.contains("active")) {
-    for (i = 0; i < ulMenuAcc.length; i++) {
-      ulMenuAcc[i].classList.remove('active');
+  if (e.target.closest('a')) {
+    let li = e.target.closest('li');
+
+    if (!li.classList.contains("active")) {
+      for (i = 0; i < ulMenuAcc.length; i++) {
+        ulMenuAcc[i].classList.remove('active');
+        console.log(ulMenuAcc[i])
+      }
+      li.classList.add('active');
+    } else {
+      li.classList.remove('active');
     }
-    li.classList.add('active');
-  } else {
-    li.classList.remove('active');
   }
+
 });
 
 ////// reviews
@@ -172,16 +177,16 @@ const reviewsLi = document.querySelector('#reviews').children;
 const controllerLi = document.querySelector('#controller').children;
 const controller = document.querySelector('#controller');
 
-controller.addEventListener('click', function(e) {
+controller.addEventListener('click', function (e) {
   e.preventDefault();
   let li = e.target.closest('li');
-  
-  for(let i = 0; i < controllerLi.length; i++){
+
+  for (let i = 0; i < controllerLi.length; i++) {
     controllerLi[i].classList.remove('active');
-    if(controllerLi[i] == li) {
-      reviewsLi[i].classList.add('widget-reviews__box-active');
+    if (controllerLi[i] == li) {
+      reviewsLi[i].classList.add('widget-reviews__box_active');
     } else {
-      reviewsLi[i].classList.remove('widget-reviews__box-active');
+      reviewsLi[i].classList.remove('widget-reviews__box_active');
     }
   }
   li.classList.add('active')
@@ -192,40 +197,83 @@ controller.addEventListener('click', function(e) {
 
 ///// slider
 
-const slider = document.querySelector('#slider');
-const arrowLeft = document.querySelector('#arrow-left')
-const arrowRight = document.querySelector('#arrow-right')
+// const slider = document.querySelector('#slider');
+// const arrowLeft = document.querySelector('#arrow-left')
+// const arrowRight = document.querySelector('#arrow-right')
+// const sliderItems = document.querySelector('.slider__list').children
+// const sliderList = document.querySelector('.slider__div-hidden');
 
+// arrowRight.addEventListener('click', function () {
+//   let sliderWidth = getComputedStyle(sliderList).width;
+//   let width = parseInt(sliderWidth);
 
-arrowRight.addEventListener('click', function () {
-  let sliderList = document.querySelector('.slider__list');
-  let sliderWidth = getComputedStyle(sliderList).width;
-  let width = parseInt(sliderWidth);
+//   let right = getComputedStyle(slider).right;
+//   let moveRight = parseInt(right)/width * 100;
+//   if (moveRight < 100) {
+//     slider.style.right = (moveRight + 100) + '%';
+//   } else {
+//     slider.style.right = (0);
+//   }
+// });
 
-  let right = getComputedStyle(slider).right;
-  let moveRight = parseInt(right)/width * 100;
-  if (moveRight < 100) {
-    slider.style.right = (moveRight + 100) + '%';
-  } else {
-    slider.style.right = (0);
+// arrowLeft.addEventListener('click', function () {
+//   let sliderWidth = getComputedStyle(sliderList).width;
+//   let width = parseInt(sliderWidth);
+
+//   let right = getComputedStyle(slider).right;
+//   let moveRight = parseInt(right)/width * 100;
+//   console.log(moveRight);
+//   if (moveRight >= 100) {
+//     slider.style.right = (moveRight - 100) + '%';
+//    } else {
+//      slider.style.right = ('100%');
+//    }
+// });
+
+////slider 2
+
+const slider = document.querySelector('.slider');
+const list = document.querySelector('.slider__list');
+const countItems = list.children.length;
+let currentSlide = 0;
+
+slider.addEventListener('click', function (e) {
+  const target = e.target;
+
+  if (target.classList.contains('arrow-left')) {
+    slideLeft();
   }
-});
 
-arrowLeft.addEventListener('click', function () {
-  let sliderList = document.querySelector('.slider__list');
-  let sliderWidth = getComputedStyle(sliderList).width;
-  let width = parseInt(sliderWidth);
+  if (target.classList.contains('arrow-right')) {
 
-  let right = getComputedStyle(slider).right;
-  let moveRight = parseInt(right)/width * 100;
-  console.log(moveRight);
-  if (moveRight >= 100) {
-    slider.style.right = (moveRight - 100) + '%';
-   } else {
-     slider.style.right = ('100%');
-   }
-});
+    sliderRight();
 
+  }
+})
+
+function sliderRight() {
+  if (currentSlide < countItems - 1) {
+    currentSlide++;
+    translateX(currentSlide);
+  } else {
+    currentSlide = 0;
+    translateX(currentSlide);
+  }
+}
+
+function slideLeft() {
+  if (currentSlide > 0) {
+    currentSlide--;
+    translateX(currentSlide);
+  } else {
+    currentSlide = countItems - 1;
+    translateX(currentSlide);
+  }
+}
+
+function translateX(indexSlide) {
+  list.style.transform = `translateX(${-indexSlide * 100}%)`;
+}
 
 ///// form 
 
@@ -233,62 +281,69 @@ const form = document.querySelector('#form');
 const send = document.querySelector('#send');
 const modulWindow = document.querySelector('#modul');
 
-send.addEventListener('click', function(e) {
+send.addEventListener('click', function (e) {
   e.preventDefault();
 
   if (validateForm(form)) {
-    
-    let formData = new FormData();
-    formData.append ("name", form.elements.name.value);
-    formData.append ("phone", form.elements.phone.value);
-    formData.append ("comment", form.elements.comment.value);
-    formData.append ("to", "troloko8@gmail.com");
 
-  const xhr = new XMLHttpRequest();
-  xhr.responseType = 'json';
-  xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-  xhr.send(formData);
+    let formData = new FormData(form);
+    // formData.append ("name", form.elements.name.value);
+    // formData.append ("phone", form.elements.phone.value);
+    // formData.append ("comment", form.elements.comment.value);
+    formData.append("to", "troloko8@gmail.com");
 
-   xhr.addEventListener('load', function() {
-    modulWindow.style.display ='flex';
-    document.querySelector('#modul span').innerHTML = xhr.response.message;
-   })
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.send(formData);
+
+    xhr.addEventListener('load', function () {
+      modulWindow.style.display = 'flex';
+
+
+      if (xhr.status == 200) {
+        document.querySelector('#modul span').innerHTML = xhr.response.message;
+      } else {
+        document.querySelector('#modul span').innerHTML = ('Простите ошибка - ' + xhr.status);
+      }
+    })
 
   }
 });
 
 
 function validateForm(f) {
-   let valid = true;
-   if (!validateField(f.elements.name)) {
-     valid = false
-   }
-   if (!validateField(f.elements.phone)) {
-     valid = false
-   }
-   if (!validateField(f.elements.comment)) {
-     valid = false
-   }
+  let valid = true;
+  if (!validateField(f.elements.name)) {
+    valid = false
+  }
+  if (!validateField(f.elements.phone)) {
+    valid = false
+  }
+  if (!validateField(f.elements.comment)) {
+    valid = false
+  }
 
-   return valid;
- }
+  return valid;
+}
 
- function validateField(field) {
+function validateField(field) {
   if (field.validationMessage) {
     field.style.border = '1px solid red';
-    field.setAttribute('placeholder',field.validationMessage);
+    field.setAttribute('placeholder', field.validationMessage);
   } else {
     field.style.border = '';
   }
-  
+
   return field.checkValidity();
- }
+}
 
- const closeModul = document.querySelector('#close-modul');
+const closeModul = document.querySelector('#close-modul');
 
- closeModul.addEventListener('click', function(e) {
-   e.preventDefault();
+closeModul.addEventListener('click', function (e) {
+  e.preventDefault();
 
-   modulWindow.style.display = 'none';
- })
- ////
+  modulWindow.style.display = 'none';
+  document.querySelector('.form__reset').click();
+})
+////

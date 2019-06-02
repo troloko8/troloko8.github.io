@@ -154,9 +154,9 @@
       <div class="container container_slider">
         <div class="slider">
           <div class="arrow-left" id="arrow-left"></div>
-          <ul class="slider__list">
-            <div class="slider__div-hidden">
-              <div class="slider__full-width" id="slider">
+          <div class="slider__div-hidden">
+            <div class="slider__full-width" id="slider">
+              <ul class="slider__list">
                 <li class="slider__item">
                   <div class="slider__picture">
                     <img src="/img/candy-slider.png" class="slider__img" alt="">
@@ -203,10 +203,57 @@
                     </div>
                   </div>
                 </li>
-              </div>
+                <li class="slider__item">
+                  <div class="slider__picture">
+                    <img src="/img/candy-slider.png" class="slider__img" alt="">
+                  </div>
+                  <div class="slider__info">
+                    <h3 class="slider__title">Батончик "Морские водоросли"</h3>
+                    <div class="slider__container">
+                      <div class="slider__box">
+                        <span class="slider__composition">Состав:</span>
+                        <p class="slider__text">Гранола из морских водорослей с овсом,миндалем и тыквенными семечками. В
+                          состав также входят:сухое молоко,заменитель сахара и какао бобы</p>
+                      </div>
+                      <div class="slider__add-info">
+                        <span>Калорийность <br> <strong>120 ккал</strong></span>
+                        <span>Вес <br> <strong>98 грамм</strong></span>
+                      </div>
+                      <div class="slider__buy">
+                        <span class="slider__cost">140 ₽</span>
+                        <a href="" class="button-order button-order_green-slider">Заказать</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="slider__item">
+                  <div class="slider__picture">
+                    <img src="/img/candy-slider.png" class="slider__img" alt="">
+                  </div>
+                  <div class="slider__info">
+                    <h3 class="slider__title">Батончик "Морские водоросли"</h3>
+                    <div class="slider__container">
+                      <div class="slider__box">
+                        <span class="slider__composition">Состав:</span>
+                        <p class="slider__text">Гранола из морских водорослей с овсом,миндалем и тыквенными семечками. В
+                          состав также входят:сухое молоко,заменитель сахара и какао бобы</p>
+                      </div>
+                      <div class="slider__add-info">
+                        <span>Калорийность <br> <strong>120 ккал</strong></span>
+                        <span>Вес <br> <strong>98 грамм</strong></span>
+                      </div>
+                      <div class="slider__buy">
+                        <span class="slider__cost">140 ₽</span>
+                        <a href="" class="button-order button-order_green-slider">Заказать</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
+          </div>
 
-          </ul>
+
           <div class="arrow-right" id="arrow-right"></div>
         </div>
       </div>
@@ -298,6 +345,10 @@
                 dicta! Nisi perspiciatis excepturi corporis velit impedit mollitia quaerat necessitatibus, nobis odio
                 corrupti
                 omnis labore nostrum</p>
+              <a href="#" class="cross">
+                <span class="cross__left"></span>
+                <span class="cross__right"></span>
+              </a>
             </div>
           </li>
           <li class="menu-accordeon__item">
@@ -318,6 +369,10 @@
                 dicta! Nisi perspiciatis excepturi corporis velit impedit mollitia quaerat necessitatibus, nobis odio
                 corrupti
                 omnis labore nostrum</p>
+              <a href="#" class="cross">
+                <span class="cross__left"></span>
+                <span class="cross__right"></span>
+              </a>
             </div>
           </li>
         </ul>
@@ -329,7 +384,7 @@
         <h2 class="title title_reviews">Отзывы</h2>
         <div class="widget-reviews">
           <ul class="widger-reviews__list" id="reviews">
-            <li class="widget-reviews__box widget-reviews__box-active">
+            <li class="widget-reviews__box widget-reviews__box_active">
               <div class="widget-reviews__picture">
                 <img src="/img/big-first-people.png" alt="" class="widget-reviews__photo">
               </div>
@@ -432,14 +487,14 @@
               <div class="form__radio-box">
                 <div class="form__radio-button">
                   <label class="form__control">
-                    <input type="radio" class="form__radio" name="payment">
+                    <input type="radio" class="form__radio" name="payment" value="cash">
                     <span class="form__hidden"></span>
                     <span class="form__text-input">Потребуется сдача</span>
                   </label>
                 </div>
                 <div class="form__radio-button">
                   <label class="form__control">
-                    <input type="radio" class="form__radio" name="payment" checked>
+                    <input type="radio" class="form__radio" name="payment" value="card" checked>
                     <span class="form__hidden"></span>
                     <span class="form__text-input">Оплата по карте</span>
                   </label>
@@ -447,7 +502,7 @@
               </div>
               <div class="form__not-call">
                 <label class="form__control">
-                  <input type="checkbox" class="form__checkbox">
+                  <input type="checkbox" class="form__checkbox" name="call">
                   <span class="form__hidden form__hidden_checkbox"></span>
                   <span class="form__text-input">Не перезванивать</span>
                 </label>
@@ -516,7 +571,7 @@
   </div>
 
   <div class="modul" id="modul">
-    <div class="modul__box"><span class="modul__text">sjdjsdjskjdsdksjkd</span>
+    <div class="modul__box"><span class="modul__text"></span>
       <div class="modul__botton">
         <a href="" class="button-order button-order_modul" id="close-modul">Закрыть</a>
       </div>

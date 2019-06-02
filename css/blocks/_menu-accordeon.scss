@@ -11,6 +11,7 @@
   &__item {
     display: flex;
     justify-content: flex-end;
+    position: relative;
   }
 
   &__link {
@@ -52,11 +53,25 @@
     background-color: #000000;
     opacity: .75;
     transition: .5s;
+
+    @include phone {
+      transition: none;
+    }
   }
 
   &__hidden-text {
     z-index: 1;
+    min-width: 540px;
+    padding: rem(60px) rem(30px);
     @include text-info (AlegreyaSans-Regular, 400, normal, 1rem, 1.5rem, white);
+  
+    @include tablets {
+      min-width: 480px;
+    }
+
+    @include phone {
+      min-width: 100%;
+    }
   }
 
   & .active {
@@ -73,13 +88,27 @@
 .active {
 
   & .menu-accordeon__hidden-box {
-    width: 100%;
-    padding: rem(60px) rem(30px);
+    // width: 100%;
+    // padding: rem(60px) rem(30px);
+    width: 540px;
     transition: .5s;
+
+    @include tablets {
+      width: 480px;
+    }
+    @include phone {
+      width: 100%;
+      transition: none;
+    }
   }
 }
 
 .cross {
+  opacity: 0;
+  transition: .5s;
+}
+
+.active .cross {
   display: block;
   position: absolute;
   top: 20px;
@@ -88,6 +117,7 @@
   width: 18px;
   height: 18px;
   flex-direction: column;
+  opacity: 1;
 
 
   &__left {
