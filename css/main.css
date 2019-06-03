@@ -1570,6 +1570,12 @@ input, textarea {
       height: 100%;
       z-index: 1; } }
 
+.cross {
+  opacity: 0;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+
 .active .menu-accordeon__hidden-box {
   width: 540px;
   -webkit-transition: .5s;
@@ -1585,14 +1591,8 @@ input, textarea {
       -o-transition: none;
       transition: none; } }
 
-.cross {
-  opacity: 0;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s; }
-
 .active .cross {
-  display: block;
+  display: none;
   position: absolute;
   top: 20px;
   right: 20px;
@@ -1604,6 +1604,9 @@ input, textarea {
   -ms-flex-direction: column;
   flex-direction: column;
   opacity: 1; }
+  @media screen and (max-width: 768px) {
+    .active .cross {
+      display: block; } }
   .active .cross__left, .active .cross__right {
     display: -webkit-box;
     display: -ms-flexbox;

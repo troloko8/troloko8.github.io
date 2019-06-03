@@ -90,6 +90,7 @@
 
 const menu = document.querySelector("#burger-menu");
 const nav = document.querySelector("nav");
+const body = document.querySelector('body');
 
 
 menu.addEventListener('click', function () {
@@ -99,10 +100,12 @@ menu.addEventListener('click', function () {
   if (navDisplay == 'none') {
     nav.style.display = 'flex';
     nav.style.opacity = '.99';
+    body.style.overflow = 'hidden';
   }
   if (navDisplay == 'flex') {
     nav.style.display = 'none';
     nav.style.opacity = '0';
+    body.style.overflow = 'visible';
   }
 });
 
