@@ -2140,3 +2140,29 @@ input, textarea {
   .modul__text {
     text-align: center;
     margin-bottom: 1.25rem; }
+
+.slider__list-dot {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 99999; }
+  .slider__list-dot .active {
+    background-color: red; }
+
+.slider__item-dot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: purple; }

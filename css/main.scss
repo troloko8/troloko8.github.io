@@ -37,3 +37,27 @@ $phone: 480px;
 @import 'blocks/arrow';
 @import 'blocks/modul';
 
+.slider {
+
+  &__list-dot {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99999;
+
+    & .active {
+      background-color: red;
+    }
+  }
+
+  &__item-dot {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: purple;
+  }
+}

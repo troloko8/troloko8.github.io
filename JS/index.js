@@ -1,93 +1,3 @@
-// //Number
-// //String
-// //bulean
-// //object
-// //undefined
-
-// var name = "Анатолий";
-
-// console.log (name);
-
-// name = "Logan";
-
-// console.log (name);
-
-// ////////
-
-// if (name == "Logan") {
-//   console.log ("Логан так Логан");
-// }
-// else {
-//   console.log ("Не Логан")
-// }
-// ///////
-
-// for (i=0; i<10; i++) {
-//   console.log(i);
-// }
-
-// //////////
-
-// function sum(p1,p2,p3) {
-//   return x = p1+p2+p3; 
-// }
-//  var y = sum(10,20,30);
-// console.log (y);
-
-// var i = sum(23.23, 1.2121, 11.11);
-// console.log (i);
-
-// ///////
-
-// var hello = ["Привет", "loftschool"];
-
-// hello.push(", я изучаю", "javascript");
-
-// console.log (hello.length);
-
-// for(i = 0; i < hello.length; i++) {
-//   console.log(hello[i]);
-// }
-
-// ////
-
-// var num = [1,322,22,33,232,44,33,444,555,55];
-
-// for( i = 0; i < num.length; i++) {
-//   if (num[i] > 100) {
-//     console.log(num[i]);
-//   }
-// }
-
-// //////
-
-// var obj = {name:"Anatolii", lastName:"Tytarenko", age:23};
-
-// console.log(obj.name);
-// console.log(obj.lastName);
-// console.log(obj.age);
-
-// obj.name = "Oksana";
-
-// console.log(obj.name);
-// console.log(obj.lastName);
-// console.log(obj.age);
-
-// ////////
-
-//  function hell0(human) {
-//    return  ("Привет меня зовут " + human.name+ " "+ human.lastName + " " + "и мне " + obj.age + " " + "лет!");
-//  }
-
-//  var f = hell0(obj);
-
-
-//  console.log(f);
-
-
-
-/////// task 
-
 const menu = document.querySelector("#burger-menu");
 const nav = document.querySelector("nav");
 const body = document.querySelector('body');
@@ -235,48 +145,150 @@ controller.addEventListener('click', function (e) {
 
 ////slider 2
 
-const slider = document.querySelector('.slider');
-const list = document.querySelector('.slider__list');
-const countItems = list.children.length;
-let currentSlide = 0;
+// const slider = document.querySelector('.slider');
+// const list = document.querySelector('.slider__list');
+// const countItems = list.children.length;
+// let currentSlide = 0;
 
-slider.addEventListener('click', function (e) {
-  const target = e.target;
+// slider.addEventListener('click', function (e) {
+//   const target = e.target;
 
-  if (target.classList.contains('arrow-left')) {
-    slideLeft();
+//   if (target.classList.contains('arrow-left')) {
+//     slideLeft();
+//   }
+
+//   if (target.classList.contains('arrow-right')) {
+
+//     sliderRight();
+
+//   }
+// })
+
+// function sliderRight() {
+//   if (currentSlide < countItems - 1) {
+//     currentSlide++;
+//     translateX(currentSlide);
+//   } else {
+//     currentSlide = 0;
+//     translateX(currentSlide);
+//   }
+// }
+
+// function slideLeft() {
+//   if (currentSlide > 0) {
+//     currentSlide--;
+//     translateX(currentSlide);
+//   } else {
+//     currentSlide = countItems - 1;
+//     translateX(currentSlide);
+//   }
+// }
+
+// function translateX(indexSlide) {
+//   list.style.transform = `translateX(${-indexSlide * 100}%)`;
+// }
+
+////slider Jquery
+
+$(function () {
+
+  var coloringDots = function(index) {
+    $('.slider')
+      .find('.slider__item-dot')
+      .eq(index)
+      .addClass('active')
+      .siblings()
+      .removeClass('active');
   }
 
-  if (target.classList.contains('arrow-right')) {
+  var generateDots = function () {
+    $('.slider__item').each(function () {
+      var dot = $('<li>', {
+        attr : {
+          class : 'slider__item-dot'
+        }
+      });
 
-    sliderRight();
+      $('.slider__list-dot').append(dot);
 
+    })
   }
-})
 
-function sliderRight() {
-  if (currentSlide < countItems - 1) {
-    currentSlide++;
-    translateX(currentSlide);
-  } else {
-    currentSlide = 0;
-    translateX(currentSlide);
+  generateDots();
+
+  var moveSlide = function (container, slideNum) {
+
+    var
+    items = container.find('.slider__item'),
+      activeSlide = items.filter('.active'),
+      reqItem = items.eq(slideNum),
+      reqIndex = reqItem.index(),
+      list = container.find('.slider__list'),
+      duration = 500;
+
+    if (reqItem.length) {
+      list.animate({
+        'left': -reqIndex * 100 + '%'
+      }, duration, function () {
+
+        activeSlide.removeClass('active');
+        reqItem.addClass('active');
+        coloringDots(slideNum);
+
+      });
+    }
   }
-}
 
-function slideLeft() {
-  if (currentSlide > 0) {
-    currentSlide--;
-    translateX(currentSlide);
-  } else {
-    currentSlide = countItems - 1;
-    translateX(currentSlide);
-  }
-}
 
-function translateX(indexSlide) {
-  list.style.transform = `translateX(${-indexSlide * 100}%)`;
-}
+  $('.arrow').on('click', function (e) {
+    e.preventDefault();
+
+    var $this = $(this),
+      container = $this.closest('.slider'),
+      items = container.find('.slider__item'),
+      activeItem = items.filter('.active'),
+      nextItem = activeItem.next(),
+      prevItem = activeItem.prev();
+
+
+    if ($this.hasClass('arrow-right')) {
+
+      if(nextItem.length) {
+        moveSlide(container, nextItem.index());
+      } else {
+        moveSlide(container, items.first().index());
+
+      }
+    } else {
+
+      if (prevItem.length) {
+        moveSlide(container, prevItem.index());
+      } else {
+        moveSlide(container, items.last().index());
+      }
+    }
+
+  });
+
+
+  $('body').on('click', '.slider__item-dot', function () {
+
+      var $this = $(this),
+      container = $this.closest('.slider'),
+      index = $this.index();
+
+      console.log($this);
+      moveSlide(container, index);
+      coloringDots(index);
+
+  });
+
+
+
+});
+
+//// onePageScroll
+
 
 ///// form 
 
