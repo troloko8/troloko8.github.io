@@ -343,7 +343,7 @@ $(function () {
       nextSection = activeSection.next(),
       prevSection = activeSection.prev();
 
-    if (e.originalEvent.wheelDelta >= 0) {
+    if (e.originalEvent.wheelDelta <= 0) {
 
       if (nextSection.length) {
         onePageScroll($this, nextSection.index());
@@ -370,6 +370,24 @@ $(function () {
     
     onePageScroll($('body'), index);
     activePagination(index);
+  })
+
+  $('body').on('click', '.navigation__item', function (){
+    
+    var  $this = $(this),
+    index = $this.index();
+    console.log(index++);
+    
+    onePageScroll($('body'), index++);
+  })
+
+  $('body').on('click', '.logo', function (){
+    
+    var  $this = $(this),
+    index = $this.index();
+    console.log(index);
+    
+    onePageScroll($('body'), index);
   })
 
 })

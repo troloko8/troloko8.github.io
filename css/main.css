@@ -545,6 +545,7 @@ input, textarea {
   line-height: 1.3125rem;
   text-transform: uppercase;
   color: white;
+  cursor: default;
   font-family: MuseoSansCyrl-500;
   font-weight: 500;
   font-style: normal;
@@ -554,7 +555,8 @@ input, textarea {
   .logo_active {
     position: fixed;
     z-index: 1001;
-    top: 1.5625rem; }
+    top: 1.5625rem;
+    cursor: pointer; }
 
 .navigation__list {
   display: -webkit-box;
@@ -657,7 +659,7 @@ input, textarea {
     display: -ms-flexbox;
     display: flex;
     height: 0.25rem;
-    background-color: white;
+    background-color: #24a4ee;
     border-radius: 0.125rem;
     -webkit-transition: .5s;
     -o-transition: .5s;
