@@ -5,6 +5,15 @@
   top: 50%;
   transform: translate(0, -50%);
 
+  &__list {
+    & .active {
+      border: rem(1px) solid greenyellow;
+      border-radius: 50%;
+      background-color: transparent;
+      background-repeat: no-repeat;
+    }
+  }
+
   &__item {
     margin-top: rem(5px);
   }
@@ -16,17 +25,12 @@
     width: rem(20px);
     height: rem(20px);
 
-    &-active {
-      border: rem(1px) solid white;
-      border-radius: 50%;
-      background-color: transparent;
-      background-repeat: no-repeat;
-    }
+   
 
     &:before {
       content: "";
       display: flex;
-      background-color: white;
+      background-color: greenyellow;
       width: rem(6px);
       height: rem(6px);
       border-radius: 50%;
@@ -34,7 +38,7 @@
     }
 
     &:hover {
-      border: rem(1px) solid white;
+      border: rem(1px) solid rgb(255, 0, 170);
       border-radius: 50%;
       background-color: transparent;
       background-repeat: no-repeat;

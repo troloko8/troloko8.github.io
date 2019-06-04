@@ -192,7 +192,7 @@ controller.addEventListener('click', function (e) {
 
 $(function () {
 
-  var coloringDots = function(index) {
+  var coloringDots = function (index) {
     $('.slider')
       .find('.slider__item-dot')
       .eq(index)
@@ -204,8 +204,8 @@ $(function () {
   var generateDots = function () {
     $('.slider__item').each(function () {
       var dot = $('<li>', {
-        attr : {
-          class : 'slider__item-dot'
+        attr: {
+          class: 'slider__item-dot'
         }
       });
 
@@ -219,7 +219,7 @@ $(function () {
   var moveSlide = function (container, slideNum) {
 
     var
-    items = container.find('.slider__item'),
+      items = container.find('.slider__item'),
       activeSlide = items.filter('.active'),
       reqItem = items.eq(slideNum),
       reqIndex = reqItem.index(),
@@ -253,7 +253,7 @@ $(function () {
 
     if ($this.hasClass('arrow-right')) {
 
-      if(nextItem.length) {
+      if (nextItem.length) {
         moveSlide(container, nextItem.index());
       } else {
         moveSlide(container, items.first().index());
@@ -273,13 +273,13 @@ $(function () {
 
   $('body').on('click', '.slider__item-dot', function () {
 
-      var $this = $(this),
+    var $this = $(this),
       container = $this.closest('.slider'),
       index = $this.index();
 
-      console.log($this);
-      moveSlide(container, index);
-      coloringDots(index);
+    console.log($this);
+    moveSlide(container, index);
+    coloringDots(index);
 
   });
 
@@ -289,6 +289,90 @@ $(function () {
 
 //// onePageScroll
 
+$(function () {
+
+  var activePagination = function (index) {
+    $('.pagination')
+      .find('.pagination__item')
+      .eq(index)
+      .addClass('active')
+      .siblings()
+      .removeClass('active');
+  }
+
+  var generatePagination = function () {
+    $('.page').each(function () {
+      var dot = $('<li>', {
+        attr: {
+          class: 'pagination__item'
+        },
+        html : '<a href="#" class="pagination__link pagination__link"></a>'
+      });
+
+      $('.pagination__list').append(dot);
+    })
+  }
+
+  generatePagination();
+
+  var onePageScroll = function ($this, sectionNum) {
+    var
+      section = $this.find('.page'),
+      activeSection = section.filter('.act'),
+      reqSection = section.eq(sectionNum),
+      reqIndex = reqSection.index(),
+      maincontent = $this.find('.maincontent');
+
+    if (reqSection.length) {
+      maincontent.animate({
+        'top': -reqIndex * 100 + "%"
+      }, 500, function () {
+
+        activeSection.removeClass('act');
+        reqSection.addClass('act');
+        activePagination(sectionNum);
+      })
+    }
+  }
+
+  $('body').on('mousewheel', function (e) {
+
+    var $this = $(this),
+      section = $this.find('.page'),
+      activeSection = section.filter('.act'),
+      nextSection = activeSection.next(),
+      prevSection = activeSection.prev();
+
+    if (e.originalEvent.wheelDelta >= 0) {
+
+      if (nextSection.length) {
+        onePageScroll($this, nextSection.index());
+        console.log(e.originalEvent.wheelDelta);
+      } else {
+        onePageScroll($this, section.first().index());
+      }
+
+    } else {
+
+      if (prevSection.length) {
+        onePageScroll($this, prevSection.index());
+      } else {
+        onePageScroll($this, section.last().index());
+      }
+    }
+
+  })
+
+  $('body').on('click', '.pagination__item', function (){
+    
+    var  $this = $(this),
+    index = $this.index();
+    
+    onePageScroll($('body'), index);
+    activePagination(index);
+  })
+
+})
 
 ///// form 
 
