@@ -335,7 +335,7 @@ $(function () {
     }
   }
 
-  $('body').on('mousewheel', function (e) {
+  $('body').on('wheel', function (e) {
 
     var $this = $(this),
       section = $this.find('.page'),

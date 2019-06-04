@@ -67,7 +67,7 @@ input, textarea {
   overflow: hidden;
 
   @include phone {
-    overflow: scroll;
+    // overflow: scroll;
     min-height: unset;
     height: 100%;
   }

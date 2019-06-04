@@ -451,7 +451,6 @@ input, textarea {
   overflow: hidden; }
   @media screen and (max-width: 480px) {
     .wrapper {
-      overflow: scroll;
       min-height: unset;
       height: 100%; } }
 
