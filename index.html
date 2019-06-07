@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="./css/main.css">
   <title>Document</title>
 </head>
 
@@ -12,6 +12,36 @@
   <div class="wrapper">
 
     <div class="maincontent">
+        <section class="page page_video">
+            <div class="container">
+              <div class="video">
+                  <video  src="/img/video.mp4" class="video__player" ></video>
+                <div class="video__controls">
+                  <div class="video__pause">
+                    <svg class="video__pause-icon">
+                      <use xlink:href="./img/icons/sprite.svg#play"></use>
+                    </svg>
+                  </div>
+                  <div class="video__progress">
+                    <span class="video__total">
+                      <span class="video__current"></span>
+                    </span>
+                  </div>
+                  <div class="video__volume">
+                  <div class="video__volume-control">
+                    <svg class="video__volume-icon">
+                      <use xlink:href="./img/icons/sprite.svg#volume"></use>
+                    </svg>
+                  </div>
+                  <div class="video__volume-progress">
+                    <span class="video__volume-current"></span>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </section>
       <section class="page page-wellcome act">
         <div class="container container_head">
           <header class="header">
@@ -439,6 +469,8 @@
           </div>
         </div>
       </section>
+
+
   
       <section class="page page_form">
         <div class="container">
@@ -568,6 +600,7 @@
           </div>
         </footer>
       </section>
+
     </div>
 
 
@@ -589,9 +622,8 @@
     </ul>
   </nav>
 
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="/JS/index.js"></script>
+  <script src="./JS/index.js"></script>
 </body>
 
 </html>
