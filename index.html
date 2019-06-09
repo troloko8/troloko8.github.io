@@ -10,38 +10,7 @@
 
 <body>
   <div class="wrapper">
-
     <div class="maincontent">
-        <section class="page page_video">
-            <div class="container">
-              <div class="video">
-                  <video  src="/img/video.mp4" class="video__player" ></video>
-                <div class="video__controls">
-                  <div class="video__pause">
-                    <svg class="video__pause-icon">
-                      <use xlink:href="./img/icons/sprite.svg#play"></use>
-                    </svg>
-                  </div>
-                  <div class="video__progress">
-                    <span class="video__total">
-                      <span class="video__current"></span>
-                    </span>
-                  </div>
-                  <div class="video__volume">
-                  <div class="video__volume-control">
-                    <svg class="video__volume-icon">
-                      <use xlink:href="./img/icons/sprite.svg#volume"></use>
-                    </svg>
-                  </div>
-                  <div class="video__volume-progress">
-                    <span class="video__volume-current"></span>
-                  </div>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-          </section>
       <section class="page page-wellcome act">
         <div class="container container_head">
           <header class="header">
@@ -470,7 +439,42 @@
         </div>
       </section>
 
-
+      <section class="page page-video">
+        <div class="container">
+          <h2 class="title title_video">Как мы работаем</h2>
+          <div class="video">
+              <video  src="/img/video.mp4" class="video__player" poster="/img/video-poster.jpg"></video>
+            <div class="video__controls">
+              <div class="video__pause">
+                <svg class="video__pause-icon">
+                  <use xlink:href="./img/icons/sprite.svg#play"></use>
+                </svg>
+              </div>
+              <div class="video__pause video__pause-big ">
+                <svg class="video__pause-icon video__pause-icon-big">
+                  <use xlink:href="./img/icons/sprite.svg#play"></use>
+                </svg>
+              </div>
+              <div class="video__progress">
+                <span class="video__total">
+                  <span class="video__current"></span>
+                </span>
+              </div>
+              <div class="video__volume">
+              <div class="video__volume-control">
+                <svg class="video__volume-icon">
+                  <use xlink:href="./img/icons/sprite.svg#volume"></use>
+                </svg>
+              </div>
+              <div class="video__volume-progress">
+                <span class="video__volume-current"></span>
+              </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
   
       <section class="page page_form">
         <div class="container">
@@ -551,59 +555,57 @@
         </div>
       </section>
   
-      <section class="page map">
-        <img src="/img/map.jpg" alt="map" class="map__picture">
-  
-        <footer class="footer">
-          <div class="container container_footer">
-            <div class="contact">
-              <span class="address">Москва ул.Новый Арбат,д.31/12</span>
-              <a href="tel:8 800 903 90 90" class="telephone telephone_footer">
-                <svg class="telephone__icon">
-                  <use xlink:href="./img/icons/sprite.svg#phone"></use>
-                </svg>
-                8 800 903 90 90
-              </a>
-            </div>
-            <div class="socials">
-              <ul class="socials__list">
-                <li class="socials__item">
-                  <a href="#" class="socials__link">
-                    <svg class="socials__icon">
-                      <use xlink:href="./img/icons/sprite.svg#vk"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a href="#" class="socials__link">
-                    <svg class="socials__icon">
-                      <use xlink:href="./img/icons/sprite.svg#fb"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a href="#" class="socials__link">
-                    <svg class="socials__icon">
-                      <use xlink:href="./img/icons/sprite.svg#inst"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a href="#" class="socials__link">
-                    <svg class="socials__icon">
-                      <use xlink:href="./img/icons/sprite.svg#tw"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
+      <section class="page page-map">
+          <div class="map-container">
+            <div id="map" class="map" ></div>
           </div>
-        </footer>
-      </section>
-
+            <footer class="footer">
+              <div class="container container_footer">
+                <div class="contact">
+                  <span class="address">Москва ул.Новый Арбат,д.31/12</span>
+                  <a href="tel:8 800 903 90 90" class="telephone telephone_footer">
+                    <svg class="telephone__icon">
+                      <use xlink:href="./img/icons/sprite.svg#phone"></use>
+                    </svg>
+                    8 800 903 90 90
+                  </a>
+                </div>
+                <div class="socials">
+                  <ul class="socials__list">
+                    <li class="socials__item">
+                      <a href="#" class="socials__link">
+                        <svg class="socials__icon">
+                          <use xlink:href="./img/icons/sprite.svg#vk"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials__item">
+                      <a href="#" class="socials__link">
+                        <svg class="socials__icon">
+                          <use xlink:href="./img/icons/sprite.svg#fb"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials__item">
+                      <a href="#" class="socials__link">
+                        <svg class="socials__icon">
+                          <use xlink:href="./img/icons/sprite.svg#inst"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="socials__item">
+                      <a href="#" class="socials__link">
+                        <svg class="socials__icon">
+                          <use xlink:href="./img/icons/sprite.svg#tw"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </footer>
+          </section>
     </div>
-
-
   </div>
 
   <div class="modul" id="modul">
@@ -621,9 +623,8 @@
       </li> -->
     </ul>
   </nav>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=7d290513-5ec3-42a0-8902-1f1a75d49b3f&lang=ru_RU" type="text/javascript"></script>
   <script src="./JS/index.js"></script>
 </body>
 
