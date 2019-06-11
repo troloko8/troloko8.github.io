@@ -73,9 +73,18 @@ input, textarea {
   }
 }
 
+.maincontent {
+  height: 100%;
+  position: relative;
+}
+
 .page {
   height: 100vh;
   position: relative;
+
+  @include phone {
+    height: 100%;
+  }
 
   &_slider {
     background: #f8faf9;

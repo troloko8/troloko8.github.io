@@ -176,3 +176,18 @@
     background-position: right;
   }
 }
+
+.page_slider::after {
+  content: '';
+  background: url('/img/leaf-and-blackberryes.png') no-repeat;
+  position: absolute; 
+  right: 0;
+  bottom: -320px;
+  width: rem(196px);
+  height: rem(578px);
+  
+  @include phone {
+   right: -66px;
+   background-size: 70%
+  }
+}
