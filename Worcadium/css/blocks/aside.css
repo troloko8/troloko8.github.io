@@ -1,0 +1,81 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  align-items: flex-end;
+
+}
+.aside__telephone {
+  font-family: Gothampro,sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 21px;
+  text-decoration: none;
+  color:white;
+}
+
+.aside__link {
+  font-family: OpenSans;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+  color: #ec1e79;
+  opacity: .7;
+  cursor: default;
+  text-decoration: underline;
+  transition: .5s;
+}
+
+.aside__schedule:hover .aside__link{
+  color: #5dd1f8;
+  transition: .5s;
+}
+.aside__hidden-block {
+  display: block;
+  width: 180px;
+  opacity: 0;
+  position: absolute;
+  background: white;
+  position: absolute;
+  border-radius: 3px;
+  top:45px;
+  right: 0;
+  padding: 17px 20px;
+  box-shadow: 2px 4px 5px rgba(0,0,0, .3);
+}
+
+.aside__schedule {
+  text-align: right;
+  position: relative;
+  width: 120px
+}
+
+.aside__schedule:hover .aside__hidden-block{
+  transition: .5s;
+  opacity: 1;
+}
+
+.aside__hidden-block::after {
+  content: '';
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  display: block;
+  bottom: 100%;
+}
+  
+.aside__work-time {
+  font-size: 14px;
+  font-family: "GothamPro";
+  color: rgb(236, 30, 121);
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.aside__lunch {
+  font-size: 14px;
+  font-family: "GothamPro";
+  color: rgb(0, 0, 0);
+  font-weight: 300;
+  text-align: left;
+}

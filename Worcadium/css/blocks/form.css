@@ -1,0 +1,141 @@
+
+.feedback {
+  display: flex;
+  padding: 50px 0;
+}
+
+.form {
+  background-color: #f5f5f5;
+  padding: 45px 100px;
+}
+
+.form__row {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__block {
+  margin-right: 20px;
+  flex: 1;
+}
+
+.form__block:last-child {
+  margin-right:0;
+}
+
+.form__field {
+  width: 100%;
+  background-color:white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 15px;
+  font-family: GothamPro;
+  font-weight: normal;
+  font-size: 14px;
+  outline: none;
+}
+
+.form__field::placeholder {
+  opacity: .5;
+}
+
+.form__field_opacity {
+  height: 90px;
+  resize: none;
+}
+
+.form__field_opacity::placeholder {
+  opacity: 1;
+}
+
+.form__input {
+  width: 270px;
+}
+
+.form__button {
+  width: 135px;
+  height: 45px;
+  background-color: #27273e;
+  border-radius: 5px;
+  color:white;
+  font-family: GothamPro;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: .4s;
+}
+ 
+.form__button:hover {
+  background-color: #ec1e79;
+}
+
+.form__heading {
+  margin-bottom: 18px;
+}
+
+.form__title , .radio__title{
+  font-family: GothamPro;
+  font-size: 14px;
+  margin-bottom: 14px;
+  flex-basis: 100%;
+}
+
+.form__field:focus {
+  background-color: white;
+  border: 1px solid #ec1e79;
+}
+
+.radio__button {
+  display: none;
+}
+
+.radio__label_name {
+  font-family: GothamPro;
+}
+
+.radio__fake {
+  display: flex;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.radio__fake::before {
+  content: '';
+  display: flex;
+  background-color: #ec1e79;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+.radio__button:checked + .radio__fake {
+  border-color: #ec1e79;
+}
+
+.radio__button:checked + .radio__fake::before {
+  width: 8px;
+  height: 8px;
+}
+
+.radio__button:checked + .radio__fake + .radio__label_name {
+  color: #ec1e79;
+}
+
+.radio__label {
+  display: flex;
+  margin-right: 15px;
+}
+
+.radio {
+  display: flex;
+  flex-wrap: wrap;
+}
+

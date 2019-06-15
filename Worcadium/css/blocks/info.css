@@ -1,0 +1,18 @@
+.info {
+  color: white;
+  max-width: 265px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: GothamPro;
+  font-weight: 300;
+}
+
+.info__link-loftschool {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.info__avtor {
+  font-weight: bold;
+}
