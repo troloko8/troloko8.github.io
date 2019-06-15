@@ -45,7 +45,7 @@
 .pagination__next, .pagination__prev {
   width: 6px;
   height: 10px;
-  background-image: url('/img/fragments/vector.png');
+  background-image: url('../..//img/fragments/vector.png');
 }
 .pagination__prev {
   transform: rotate(180deg)

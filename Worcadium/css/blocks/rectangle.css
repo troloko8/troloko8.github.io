@@ -1,6 +1,6 @@
 .rectangle {
   background-color: #27273e;
-  background-image: url('/img/fragments/pattern.png');
+  background-image: url('../..//img/fragments/pattern.png');
   
   display: flex;
   justify-content: center;

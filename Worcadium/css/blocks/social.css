@@ -29,7 +29,7 @@
   border-radius: 50%;
   background-position: center center;
   transition: .5s;
-  background-image: url('/img/fragments/social/css_sprites.png');
+  background-image: url('../..//img/fragments/social/css_sprites.png');
   
 }
 
