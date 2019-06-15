@@ -31,7 +31,7 @@
 }
 
 .uniq-icon::before, .prem-icon::before, .luxury-icon::before {
-  background-image: url('Worcadium/img/fragments/social/css_sprites_features.png');
+  background-image: url('img/fragments/social/css_sprites_features.png');
   background-position: -60px -10px; ;
   background-repeat: no-repeat;
   width: 32px;
