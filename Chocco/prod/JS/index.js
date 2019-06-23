@@ -11242,7 +11242,7 @@ function init() {
   },
   {
     iconLayout: 'default#image',
-    iconImageHref: '/../img/point.png',
+    iconImageHref: 'https://troloko8.github.io/Chocco/prod/img/point.png',
     iconImageSize: [46,57],
     iconImageOffset:[-23, -57]
   });
@@ -11252,7 +11252,7 @@ function init() {
   var clusterer = new ymaps.Clusterer({
     clusterIcons: [
       {
-        href: '../img/point.png',
+        href: 'https://troloko8.github.io/Chocco/prod/img/point.png',
         size: [46,57],
         offset: [-23,-57]
       }
