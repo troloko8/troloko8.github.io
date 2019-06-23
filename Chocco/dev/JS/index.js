@@ -11242,7 +11242,7 @@ function init() {
   },
   {
     iconLayout: 'default#image',
-    iconImageHref: '/img/point.png',
+    iconImageHref: 'https://troloko8.github.io/Chocco/prod/img/point.png',
     iconImageSize: [46,57],
     iconImageOffset:[-23, -57]
   });
