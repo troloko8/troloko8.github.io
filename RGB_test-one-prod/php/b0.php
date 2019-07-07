@@ -22,7 +22,7 @@ $text=stripslashes($text);
 $text=htmlspecialchars($text);
 }
 // адрес почты куда придет письмо
-$address="troloko8@gmail.com";
+$address="troloko8@gmail.com, trolllo1612@gmail.com";
 // текст письма 
 $note_text="Тема : $urok \r\nИмя : $name1 \r\n Email : $email1 \r\n Дополнительная информация : $text";
 
