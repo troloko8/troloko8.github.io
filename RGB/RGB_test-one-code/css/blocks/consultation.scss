@@ -1,0 +1,15 @@
+.consultation {
+  margin-left: 10px;
+  @include text-info(Akrobatbold, bold, normal, 16px, 1, #117af7);
+  text-transform: uppercase;
+   padding: 15px 23px;
+  border-radius: 25px;
+  border: 2px solid $blue;
+  letter-spacing: 3px;
+
+  &:hover {
+    color: white;
+    border-color: #17a4fd;
+    background-color: #17a4fd;
+  }
+}

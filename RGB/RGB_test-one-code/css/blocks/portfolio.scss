@@ -1,0 +1,106 @@
+.portfolio {
+  max-width: 1200px;
+  width: 95%;
+  margin-bottom: 20px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    height: 360px;
+    width: 100%;
+    display: flex;
+    // margin-bottom: 30px;
+  }
+
+  &__hidden-text {
+    opacity: 0;
+    @include text-info (ubuntulight, 300, normal, 14px, 25px,white);
+    transition: 0.3s;
+
+    &_black {
+      color: black;
+    }
+  }
+
+  &__container {
+    display: flex;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 15px solid white;
+    position: relative;
+
+    &:hover .portfolio__hidden-text {
+      opacity: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      background:rgba(0, 0, 0, 0.1 );
+      transition: 0.3s;
+    }
+
+    &:hover::after {
+      background:rgba(0, 0, 0, 0.5 );
+    }
+
+
+
+    &_25percent {
+      flex: 1;
+    }
+
+    &_33percent {
+      flex: 2;
+    }
+
+    &_75percent {
+      flex: 3;
+    }
+  }
+
+  &__text {
+    @include text-info(Akrobatbold, bold, normal, 20px, 30px, white);
+    width: 260px;
+    // padding: 20px;
+    text-transform: uppercase;
+
+    &_color-black {
+      color: black;
+    }
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    padding: 20px;
+    width: 300px;
+  }
+
+  &__box {
+    display: flex;
+  }
+
+  &__site-type {
+    @include text-info(MyriadProRegular, 400, normal, 13px, 30px, white);
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+
+    &_color-black {
+      color: black;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.menu {
+  display: flex;
+  align-items: center;
+  margin-left: 300px;
+
+  @include phone {
+    margin-left: 200px;
+  }
+
+  &__item {
+    margin-left: 30px;
+
+    &:first-child {
+      margin: 0;
+    }
+
+    :hover {
+      color: #117af7;
+    }
+  }
+
+  &__link {
+    @include text-info(Akrobatbold, bold, normal, 18px, 65px, #42515b );
+    text-transform: uppercase;
+  }
+}

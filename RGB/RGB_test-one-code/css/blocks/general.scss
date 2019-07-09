@@ -1,0 +1,41 @@
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.box {
+  max-width: 1200px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.head {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 53px;
+}
+
+html {
+   font-size: 62px;
+
+  @include tablets {
+    font-size: 30px;
+  }
+
+  @include phone {
+    font-size: 19px;
+  }
+
+}

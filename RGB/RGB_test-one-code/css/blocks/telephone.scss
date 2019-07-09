@@ -1,0 +1,5 @@
+.telephone {
+  margin-left: 50px;
+  letter-spacing: 3px;
+  @include text-info(Akrobatbold, bold, normal, 16px, 65px, #117af7)
+}

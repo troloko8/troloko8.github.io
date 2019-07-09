@@ -1,0 +1,30 @@
+.close {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 60px;
+  height: 60px;
+  background: #117af7;
+  border-radius: 50%;
+  display: block;
+  cursor: pointer;
+  
+
+  &__row {
+    display: flex;
+    background: white;
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    right: 32%;
+
+    &-left {
+      transform:rotate(45deg);
+    }
+
+    &-right {
+      transform:rotate(-45deg);
+    }
+  }
+}

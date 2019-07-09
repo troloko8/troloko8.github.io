@@ -1,0 +1,51 @@
+.button {
+  @include text-info(Akrobatbold, bold, normal, 16px, 1, #ffffff);
+  padding: 20px 40px;
+  border-radius: 30px;
+  background-color: $blue;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+
+  &_slider {
+    margin-bottom: 164px;
+
+    &::after {
+      content: '';
+      display: flex;
+      margin-left: 10px;
+      background: url('../img/arrow.png') no-repeat;
+      width: 17px;
+      height: 12px;
+    }
+
+    &:hover {
+      background-color: #17a4fd;
+      border-color: #17a4fd;
+    }
+  }
+
+  &_more {
+    padding: 20px 50px;
+
+    &::after {
+      content: '';
+      display: flex;
+      margin-left: 15px;
+      background: url('../img/plus.png') no-repeat;
+      width: 12px;
+      height: 12px;
+    }
+  }  
+
+
+
+  &_form {
+    background-color: white;
+    color: #17a4fd;
+    margin-right: 55px;
+    padding: 20px 90px;
+    border-radius: 30px;
+  }
+}

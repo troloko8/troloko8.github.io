@@ -1,0 +1,33 @@
+.points {
+  display: flex;
+  // position: absolute;
+
+
+  &__item {
+    margin-left: 13px;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    background: #83a1b2;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+  
+
+}
+
+.active .points__link {
+  background: transparent;
+  border: 2px solid $blue;
+}

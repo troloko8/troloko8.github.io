@@ -1,0 +1,129 @@
+.container_form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 80%;
+  height: 800px;
+  background: url('../img/popup.jpg') no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: 100px;
+}
+
+.form {
+
+  &__box {
+    display: flex;
+    width: 750px;
+    flex-direction: column;
+    margin-right: 57px;
+    margin-bottom: 30px;
+  }
+
+  &__container {
+  display: flex;
+  }
+  
+
+  &__table {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    &:last-child {
+      margin-left: 30px;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    @include text-info (Akrobatbold, bold, normal, 50px, 1.3, white);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+  }
+
+  &__input {
+    background: transparent;
+    @include text-info (ubuntulight, 300, normal, 16px, 1, rgba(255, 255, 255, 0.5));
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5 );
+    margin-bottom: 30px;
+
+    &_textarea {
+      height: 148px;
+      resize: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.5 );
+    }
+  }
+
+  &__text {
+    @include text-info (ubuntulight, 300, normal, 16px, 30px, rgba(255, 255, 255, 0.5));
+  }
+
+  &__plus-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__check {
+    display: flex;
+    align-items: center;
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked + .form__hidden::after {
+      width: 100%;
+      transform: scale(1);
+    }
+  }
+
+  &__hidden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    
+
+    &::after {
+      content: '';
+      background: url('../img/check-mark.png');
+      width: 100%;
+      height: 100%;
+      transform: scale(0);
+      transition: 0.3s;
+    }
+  }
+
+  &__file {
+    margin-bottom: 50px;
+  }
+
+  &__input-file {
+    display: none;
+  }
+
+  &__file-text {
+    @include text-info (Akrobatbold, bold, normal, 16px, 1, white);
+    text-transform: uppercase;
+    display: flex;
+    letter-spacing: 1.8px;
+    cursor:pointer;
+
+    &::before {
+      content: '';
+      margin-right: 19px;
+      background: url('../img/file-icon.png');
+      width: 16px;
+      height: 20px;
+    }
+  }
+}
