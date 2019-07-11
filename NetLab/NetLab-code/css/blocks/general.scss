@@ -1,0 +1,79 @@
+html {
+  font-size: 64px;
+
+  @include tablets {
+    font-size: 32px;
+  }
+
+  @include phone {
+    font-size: 26px;
+  }
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  // max-width: 1920px;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1140px;
+  justify-content: center;
+
+  &_slider {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  &_presentation {
+    height: 100%;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  &_footer {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0 0 5px;
+  }
+}
+
+.section {
+  width: 100vw;
+  margin-bottom: 30px;
+
+  &_news {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+  }
+
+  &_presentation {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    height: 560px;
+    background: url('../../img/presentation.jpg') center center no-repeat;
+    margin-bottom: 70px;
+    
+    @include tablets {
+      background-size: cover;
+    }
+  }
+
+  &_facebook {
+    margin-bottom: 70px;
+    justify-content: center;
+    display: flex;
+  }
+}
+

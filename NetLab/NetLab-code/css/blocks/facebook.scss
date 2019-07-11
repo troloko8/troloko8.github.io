@@ -1,0 +1,21 @@
+.facebook {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  padding: 25px 35px;
+  width: 358px;
+  margin-right: 30px;
+
+  &__text {
+    @include text-info(CormorantInfant-SemiBoldItalic, bold, normal, 24px, 25px, #262626);
+    margin-bottom: 20px;
+  }
+  
+  &__link {
+    // width: 290px;
+    height: 150px;
+    background: url('../img/facebook-page.jpg') center center no-repeat;
+    background-size: cover;
+    margin-bottom: 15px;
+  }
+}

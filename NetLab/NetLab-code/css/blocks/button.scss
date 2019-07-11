@@ -1,0 +1,50 @@
+.button {
+  @include text-info(ptsansbold, bold, normal, 14px, 24px, #48974c);
+  text-transform: uppercase;
+  padding: 15px 40px;
+  background: transparent;
+  border: 1px solid #48974c;
+
+  &:hover {
+    color: #ffffff;
+    background: #48974c;
+  }
+
+  &_before {
+    margin-left: 27px;
+    color: #ffffff;
+    background: #48974c;
+    display: flex;
+    align-items: center;
+    padding: 15px 50px;
+
+    &::after {
+      content: "";
+      background: url('../../img/arrow.png');
+      width: 6px;
+      height: 10px;
+      margin-left: 10px;
+    }
+  }
+
+  &_pagination {
+    @include text-info(ptsans, normal, normal, 16px, 22px, #262626);
+    // padding: 15px 24px;
+    padding: 0;
+    width: 57px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border:none;
+  }
+
+  &_presentation {
+    color: #ffffff;
+    background: #48974c;
+    display: flex;
+    align-items: center;
+    padding: 15px 35px;
+  }
+}

@@ -1,0 +1,19 @@
+$font-family: (ProximaNova-Regular: (normal,normal),
+CormorantInfant-Bold: (bold,normal),
+CormorantInfant-LightItalic: (300,italic),
+CormorantInfant-SemiBoldItalic: (bold,normal),
+ptsans: (normal,normal),
+ptsansbold: (bold,normal));
+
+
+@each  $font,$font-info in $font-family {
+ $font-weight: nth($font-info, 1);
+ $font-style: nth($font-info, 2);
+ @font-face {
+   font-family: #{$font};
+   src: url('../fonts/#{$font}.woff') format('woff'),
+   url('../fonts/#{$font}.woff2') format('woff2');
+   font-weight: $font-weight;
+   font-style: $font-style;
+ }
+}

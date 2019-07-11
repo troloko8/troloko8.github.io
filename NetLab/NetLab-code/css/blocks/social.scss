@@ -1,0 +1,106 @@
+ @function em($px) {
+   @return $px / 64px + 0em;
+ }
+
+.social {
+  display: flex;
+  align-items: center;
+  font-size: 64px;
+
+  @include tablets {
+    font-size: 128px;
+    transform: scale(0.5) translateX(50%);
+  }
+
+  @include phone {
+    font-size: 157.5px;
+  }
+
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    margin-left: 24px;
+    align-items: center;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    // width: em(23px);
+    // height: em(19px);
+    background: url('../img/css_sprites.png') no-repeat;
+
+
+    &_vk {
+      width: em(23px);
+      height: em(13px);
+      background-position: em(-10px) em(-10px);
+
+
+      &:hover {
+        background-position: em(-53px) em(-10px);
+      }
+    }
+
+    &_fb {
+      width: em(8px);
+      height: em(19px);
+      background-position: em(-131px) em(-49px);
+
+      &:hover {
+        background-position: em(-131px) em(-10px);
+      }
+    }
+
+    &_tw {
+      width: em(16px);
+      height: em(13px);
+      background-position: em(-46px) em(-82px);
+
+      &:hover {
+        background-position: em(-10px) em(-82px);
+      }
+    }
+
+    &_ins {
+      width: em(15px);
+      height: em(15px);
+      background-position: em(-96px) em(-45px);
+
+      &:hover {
+        background-position: em(-96px) em(-10px);
+      }
+    }
+
+    &_odn {
+      width: em(12px);
+      height: em(19px);
+      background-position: em(-42px) em(-43px);
+
+      &:hover {
+        background-position: em(-10px) em(-43px);
+      }
+    }
+  }
+
+  &_footer {
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin-top: em(13px);
+    align-items: flex-start;
+
+    @include tablets {
+      margin: 0;
+    }
+
+    @include phone {
+      margin-right: 20px;
+    }
+  }
+}

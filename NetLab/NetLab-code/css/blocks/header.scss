@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    @include text-info(CormorantInfant-Bold, bold, normal, 36px, 1, $black);
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @include text-info(CormorantInfant-LightItalic, 300, italic, 16px, 24px, #595959);
+    margin-bottom: 54px;
+
+    @include phone {
+      font-size: 19px;
+      margin-bottom: 30px;
+    }
+  }
+}

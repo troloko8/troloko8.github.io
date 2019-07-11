@@ -1,0 +1,11 @@
+.presentation {
+  display: flex;
+  align-items: center;
+  margin: 0 0 25px 5px;
+
+  &__text {
+    @include text-info(ptsans, normal, normal, 18px, 24px, #262626);
+    background: #ffffff;
+    padding: 15px 47px 15px 20px;;
+  }
+}

@@ -1,0 +1,8 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  width: 746px;
+  @include text-info(CormorantInfant-SemiBoldItalic, bold, normal, 24px, 25px, #262626);
+}

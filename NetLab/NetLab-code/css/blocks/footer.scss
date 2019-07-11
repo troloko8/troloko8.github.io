@@ -1,0 +1,47 @@
+.footer {
+  height: 360px;
+  background: #262626;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  &__box {
+    display: flex;
+    height: initial;
+
+    @include tablets {
+      align-items: flex-start;
+    }
+  }
+
+  &__container {
+    display: flex;
+    width: 455px;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include text-info(CormorantInfant-Bold, bold, normal, 36px, 1.2, $black);
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @include text-info(CormorantInfant-LightItalic, 300, italic, 16px, 24px, #595959);
+    color: #ffffff;
+    width: 70%;
+
+    @include phone {
+      width: 100%;
+      font-size: 17px;
+    }
+  } 
+
+  &__corporation {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    @include text-info(ptsans, normal, normal, 14px, 2px, #999999);
+    border-top: 1px solid #999999;
+  }
+}

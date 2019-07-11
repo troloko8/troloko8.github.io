@@ -1,0 +1,28 @@
+.points {
+  display: flex;
+  margin-left: 50px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-left: 9px;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    width: 13px;
+    height: 13px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+  }
+
+  & .active .points__link {
+    background: rgba(255, 255, 255, 1);
+  }
+}

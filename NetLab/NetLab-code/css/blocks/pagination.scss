@@ -1,0 +1,43 @@
+.pagination {
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      background: url('../img/arrow.png');
+      width: 6px;
+      height: 10px;
+      margin: 0 20px 0 0px;
+      filter: brightness(0%) alpha(.5);
+      transform: translateY(50%) rotate(180deg);
+    }
+
+    &::after {
+      @extend .pagination__list::before;
+      margin: 0 0 0 15px;
+      transform: translateY(50%) rotate(0deg);
+      filter: brightness(0%) alpha(1);
+    }
+  }
+
+  &__item {
+    margin-left: 10px;
+    display: flex;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  &__points {
+    margin-left: 10px;
+    transform: translateY(-25%);
+  }
+
+  & .active .button {
+    color: #ffffff;
+    background: #48974c;
+  }
+}
