@@ -7,6 +7,10 @@
   color: $color;
 }
 
+@function em($px) {
+  @return $px / 64px + 0em;
+}
+
 @mixin tablets {
   @media screen and (max-width: 768px) {
     @content;

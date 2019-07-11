@@ -6,12 +6,24 @@
 
     &::before {
       content: '';
-      background: url('../img/arrow.png');
+      background: url('../img/arrow.png') no-repeat;
       width: 6px;
       height: 10px;
-      margin: 0 20px 0 0px;
+      margin: 0 20px 0 0;
       filter: brightness(0%) alpha(.5);
       transform: translateY(50%) rotate(180deg);
+
+      @include tablets {
+        width: 12px;
+        height: 20px;
+        transform: translateY(0) rotate(180deg);
+      }
+
+      @include phone {
+        width: 15px;
+        height: 25px;
+        transform: translateY(0) rotate(180deg);
+      }
     }
 
     &::after {
@@ -19,6 +31,10 @@
       margin: 0 0 0 15px;
       transform: translateY(50%) rotate(0deg);
       filter: brightness(0%) alpha(1);
+
+      @include tablets {
+        transform: none;
+      }
     }
   }
 
