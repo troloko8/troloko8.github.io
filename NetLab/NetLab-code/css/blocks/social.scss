@@ -7,7 +7,7 @@
 
   @include tablets {
     font-size: 128px;
-    transform: scale(0.5) translateX(50%);
+    transform: scale(.8) translateX(10%);
   }
 
   @include phone {
@@ -102,3 +102,4 @@
     }
   }
 }
+

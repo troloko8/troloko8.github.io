@@ -33,7 +33,7 @@
 
     @include phone {
       width: 100%;
-      font-size: 17px;
+      font-size: 23px;
     }
   } 
 
@@ -43,5 +43,9 @@
     height: 50px;
     @include text-info(ptsans, normal, normal, 14px, 2px, #999999);
     border-top: 1px solid #999999;
+
+    @include phone {
+      font-size: 18px;
+    }
   }
 }

@@ -5,6 +5,10 @@
   background: transparent;
   border: 1px solid #48974c;
 
+  @include phone {
+    font-size: 18px;
+  }
+
   &:hover {
     color: #ffffff;
     background: #48974c;
@@ -20,10 +24,23 @@
 
     &::after {
       content: "";
-      background: url('../../img/arrow.png');
+      background: url('../../img/arrow.png') no-repeat;
       width: 6px;
       height: 10px;
       margin-left: 10px;
+
+      @include tablets {
+        width: 12px;
+        height: 20px;
+        background-size: cover;
+      }
+      
+      @include phone {
+        width: 10px;
+        height: 16px;
+        background-size: 90%;
+      }
+      
     }
   }
 
@@ -38,6 +55,10 @@
     align-items: center;
     background: #ffffff;
     border:none;
+
+    @include phone {
+      font-size: 22px;
+    }
   }
 
   &_presentation {
