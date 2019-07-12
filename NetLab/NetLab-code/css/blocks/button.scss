@@ -5,6 +5,11 @@
   background: transparent;
   border: 1px solid #48974c;
 
+  @include tablets {
+    font-size: 18px;
+    padding: 25px 40px;
+  }
+
   @include phone {
     font-size: 32px;
     padding: 50px 70px;
@@ -22,6 +27,11 @@
     display: flex;
     align-items: center;
     padding: 15px 50px;
+
+    @include tablets {
+      font-size: 18px;
+      padding: 25px 50px;
+    }
 
     @include phone {
       font-size: 32px;
@@ -62,11 +72,16 @@
     background: #ffffff;
     border:none;
 
+    @include tablets {
+      font-size: 26px;
+      width: 79px;
+      height: 79px;
+    }
+
     @include phone {
       font-size: 32px;
       width: 100px;
       height: 100px;
-
     }
   }
 
@@ -77,9 +92,14 @@
     align-items: center;
     padding: 15px 35px;
 
+    @include tablets {
+      font-size: 24px;
+      padding: 23px 40px;
+    }
+
     @include phone {
       font-size: 32px;
-      padding: 30px 60px;
+      padding: 41px 60px;
     }
   }
 }

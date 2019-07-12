@@ -35,12 +35,10 @@
     padding: 25px;
     background-color: #ffffff;
     margin-bottom: 30px;
-    //  height: 50%;
   }
 
   &__picture {
     max-height: 320px;
-    //  height: 50%;
     max-width: 100%;
     margin-bottom: 20px;
 
@@ -73,6 +71,10 @@
     align-items: center;
     margin-bottom: 15px;
 
+    @include tablets {
+      font-size: 24px;
+    }
+
     @include phone {
       font-size: 31px;
       margin-bottom: 30px;
@@ -97,6 +99,10 @@
     @include text-info(CormorantInfant-SemiBoldItalic, bold, normal, 30px, 1, $black);
     margin-bottom: 10px;
 
+    @include tablets {
+      font-size: 38px;
+    }
+
     @include phone {
       font-size: 42px;
       margin-bottom: 30px;
@@ -104,6 +110,10 @@
 
     &_right {
       font-size: 28px;
+
+      @include tablets {
+        font-size: 28px;
+      }
 
       @include phone {
         font-size: 42px;
@@ -114,6 +124,11 @@
   &__text {
     @include text-info(ptsans, normal, normal, 16px, 1.65, #737373);
   
+    @include tablets {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+
     @include phone {
       font-size: 32px;
       line-height: 1.5;
@@ -142,6 +157,11 @@
     flex: 0 0 50%;
     max-height: 355px;
 
+    @include tablets {
+      max-height: 500px;
+      justify-content: space-between
+    }
+    
     @include phone {
       max-height: 660px;
       justify-content: space-between
@@ -155,6 +175,11 @@
     @include text-info(ptsansbold, bold, normal, 12px, 24px, #48974c);
     text-transform: uppercase;
     
+    @include tablets {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
     @include phone {
       font-size: 32px;
       margin-top: 20px;
@@ -170,12 +195,13 @@
       border-radius: 50%;
 
        @include tablets {
-        background-size: 50%;
+        // background-size: 50%;
+        width: 27px;
+        height: 27px; 
         background-position-x: 55%; 
        }
 
        @include phone {
-        // background-size: 40%;
         background-position-x: 58%;
         width: 35px;
         height: 35px; 

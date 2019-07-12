@@ -17,6 +17,9 @@
     text-transform: uppercase;
     letter-spacing: 2px;
 
+    @include tablets {
+      font-size: 18px;
+    }
 
     &_footer {
       color: #ffffff;
