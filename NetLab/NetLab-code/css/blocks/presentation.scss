@@ -7,5 +7,9 @@
     @include text-info(ptsans, normal, normal, 18px, 24px, #262626);
     background: #ffffff;
     padding: 15px 47px 15px 20px;;
+
+    @include phone {
+      font-size: 24px;
+    }
   }
 }
