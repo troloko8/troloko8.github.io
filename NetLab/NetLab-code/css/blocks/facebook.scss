@@ -12,7 +12,7 @@
   }
 
   &__text {
-    @include text-info(CormorantInfant-SemiBoldItalic, bold, normal, 24px, 25px, #262626);
+    @include text-info(CormorantInfant-SemiBoldItalic, bold, normal, 24px, 1.05, #262626);
     margin-bottom: 20px;
   }
   

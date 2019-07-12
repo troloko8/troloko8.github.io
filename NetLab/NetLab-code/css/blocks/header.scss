@@ -16,12 +16,13 @@
   }
 
   &__text {
-    @include text-info(CormorantInfant-LightItalic, 300, italic, 16px, 24px, #595959);
+    @include text-info(CormorantInfant-LightItalic, 300, italic, 16px, 1.5, #595959);
     margin-bottom: 54px;
 
     @include phone {
       font-size: 32px;
       margin-bottom: 30px;
+      // line-height: 1.1;
     }
   }
 }
