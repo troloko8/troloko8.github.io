@@ -6,7 +6,8 @@
   border: 1px solid #48974c;
 
   @include phone {
-    font-size: 18px;
+    font-size: 32px;
+    padding: 50px 70px;
   }
 
   &:hover {
@@ -22,9 +23,14 @@
     align-items: center;
     padding: 15px 50px;
 
+    @include phone {
+      font-size: 32px;
+      padding: 50px 95px;
+    }
+
     &::after {
       content: "";
-      background: url('../../img/arrow.png') no-repeat;
+      background: url('../img/arrow.png') no-repeat;
       width: 6px;
       height: 10px;
       margin-left: 10px;
@@ -36,14 +42,14 @@
       }
       
       @include phone {
-        width: 10px;
-        height: 16px;
-        background-size: 90%;
+        width: 16px;
+        height: 28px;
+        background-size: cover;
+        margin-left: 17px;
       }
       
     }
   }
-
   &_pagination {
     @include text-info(ptsans, normal, normal, 16px, 22px, #262626);
     // padding: 15px 24px;
@@ -57,7 +63,10 @@
     border:none;
 
     @include phone {
-      font-size: 22px;
+      font-size: 32px;
+      width: 100px;
+      height: 100px;
+
     }
   }
 
@@ -67,5 +76,10 @@
     display: flex;
     align-items: center;
     padding: 15px 35px;
+
+    @include phone {
+      font-size: 32px;
+      padding: 30px 60px;
+    }
   }
 }

@@ -17,6 +17,10 @@
     background: url('../img/slider.jpg') 50% 50% no-repeat;
     justify-content: center;
     background-size: cover;
+
+    @include phone {
+      justify-content: center;
+    }
   }
 
   &__container {
@@ -26,6 +30,10 @@
     padding: 40px;
     margin-top: 80px;
     margin-bottom: 30px;
+
+    @include phone {
+      height: 400px;
+    }
   }
 
   &__title {
@@ -38,7 +46,7 @@
     @include text-info(ptsans, normal, normal, 18px, 28px, $black);
 
     @include phone {
-      font-size: 22px;
+      font-size: 29px;
     }
   }
 }

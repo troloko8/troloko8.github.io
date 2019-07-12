@@ -7,7 +7,7 @@
 
   @include tablets {
     font-size: 128px;
-    transform: scale(.8) translateX(10%);
+    // transform: scale(.8) translateX(10%);
   }
 
   @include phone {
@@ -23,6 +23,10 @@
     display: flex;
     margin-left: 24px;
     align-items: center;
+
+    @include phone {
+      margin-left: 40px;
+    }
 
     &:first-child {
       margin: 0;
@@ -86,6 +90,9 @@
       }
     }
   }
+}
+
+.social {
 
   &_footer {
     flex-grow: 1;
@@ -99,7 +106,23 @@
 
     @include phone {
       margin-right: 20px;
+      height: 100%;
+    }
+  }
+
+  &__list_footer {
+
+    @include phone {
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      align-items: center;
+    }
+  }
+
+  &__item_footer {
+    @include phone {
+      margin: 0;
     }
   }
 }
-

@@ -45,6 +45,12 @@ body {
     justify-content: space-between;
     padding: 40px 0 0 5px;
   }
+
+  &_facebook {
+    @include phone {
+      // flex-direction: column;
+    }
+  }
 }
 
 .section {

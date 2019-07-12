@@ -20,6 +20,10 @@
 
     &_footer {
       color: #ffffff;
+
+      @include phone {
+        font-size: 20px;
+      }
     }
 
     &:hover {
@@ -30,6 +34,10 @@
   &_footer {
     width: initial;
     margin-left: 85px;
+
+    @include phone {
+      margin-left: 50px;
+    }
   }
 
   &_fixed {

@@ -18,12 +18,20 @@
     display: flex;
     width: 455px;
     flex-direction: column;
+
+    @include phone {
+      width: 50%;
+    }
   }
 
   &__title {
     @include text-info(CormorantInfant-Bold, bold, normal, 36px, 1.2, $black);
     color: #ffffff;
     margin-bottom: 10px;
+
+    @include phone {
+      font-size: 34px;
+    }
   }
 
   &__text {
@@ -33,7 +41,8 @@
 
     @include phone {
       width: 100%;
-      font-size: 23px;
+      font-size: 30px;
+      line-height: 30px;
     }
   } 
 
@@ -45,7 +54,7 @@
     border-top: 1px solid #999999;
 
     @include phone {
-      font-size: 18px;
+      font-size: 30px;
     }
   }
 }
