@@ -1,0 +1,47 @@
+.button {
+  @include text-info (ProximaNova-Bold, bold, normal, 15px, 2, #576b87);
+  text-transform: uppercase;
+  padding: 5px 27px;
+  border-radius: 5px;
+  letter-spacing: 3px;
+
+  @include tablets {
+    font-size: 17px;
+    padding: 8px 32px;
+  }
+
+  @include phone {
+    font-size: 19px;
+    padding: 10px 35px;
+  }
+
+  &_cencel {
+    border: 2px solid #576b87;
+    margin-right: 15px;
+
+    &:hover {
+      color: #ffffff;
+      background: #4c6b89;
+    }
+
+    &:active {
+      background: #243244;
+    }
+  }
+
+  &_add {
+    background-color: #faed4c;
+    color: #243244;
+    border: 2px solid #faed4c;
+
+    &:hover {
+      color: #ffffff;
+      opacity: .7;
+    }
+
+    &:active {
+      opacity: .7;
+      background: #c1c1be;
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.label {
+	@include text-info (ProximaNova-Regular, normal, normal, 14px, 1.9, rgb(0, 0, 0));
+
+	&:after {
+		content: '*';
+		color: red;
+		margin-left: 3px;
+	}
+
+	@include tablets {
+		font-size: 16px;
+	}
+
+	@include phone {
+		font-size: 18px;
+	}
+}
+
+.form__label p {
+	position: relative;
+}
+
+.dropcontainer {
+	position: absolute;
+	width: 100%;
+}
+
+.trigger {
+	@include text-info (ProximaNova-Regular, normal, normal, 14px, 1, rgb(0, 0, 0));
+	padding: 3px 0;
+	background: #fff url('../img/arrow.png') 98% center no-repeat;
+	display: block;
+	border-bottom: 1px solid #dbdcdd;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+
+	@include tablets {
+		font-size: 16px;
+	}
+
+	@include phone {
+		font-size: 18px;
+	}
+
+}
+
+.activetrigger {
+	@include text-info (ProximaNova-Regular, normal, normal, 14px, 1, rgb(0, 0, 0));
+	padding: 3px 0;
+	background: url('../img/arrow.png') 98% center no-repeat;
+	display: block;
+
+	@include tablets {
+		font-size: 16px;
+	}
+
+	@include phone {
+		font-size: 18px;
+	}
+}
+
+.dropcontainer ul {
+	@include text-info (ProximaNova-Regular, normal, normal, 14px, 1.9, rgb(0, 0, 0));
+	list-style-type: none;
+	padding: 0 19px;
+	margin: 0;
+	z-index: 100;
+}
+
+.dropcontainer ul li {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	opacity: .5;
+
+	& a {
+		@include text-info (ProximaNova-LightIt, normal, italic, 14px, 2.2, black);
+
+		@include tablets {
+			font-size: 16px;
+		}
+
+		@include phone {
+			font-size: 18px;
+		}
+	}
+}
+
+.dropcontainer ul li:hover {
+	outline: none;
+	opacity: 1;
+}
+
+.dropcontainer ul li:first-child {
+	display: none;
+}
+
+.dropcontainer ul li:last-child {
+	border-bottom: none;
+}
+
+.dropdownhidden {
+	display: none;
+}
+
+.dropdownvisible {
+	height: auto;
+	background: #ffffff;
+}
+
+.project__data p {
+	width: 90px;
+}
+
+
+.select {
+  border: none;
+  border-bottom: 1px solid #dbdcdd;
+  padding: 5px 0;
+  appearance: none;
+  @include text-info (ProximaNova-Regular, normal, normal, 14px, 1.9,rgb(0, 0, 0));
+  background: url('../img/arrow.png') center 40% no-repeat;
+  background-size: 9px 5px;
+  outline: none;
+
+  &_project {
+    width: 90px;
+
+    @include tablets {
+      font-size: 16px;
+    }
+    @include phone {
+      font-size: 18px;
+    }
+  }
+}

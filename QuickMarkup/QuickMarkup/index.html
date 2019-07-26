@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- <link rel="stylesheet" href="./css/style.css"> -->
+</head>
+<body>
+
+  <div class="wrapper">
+
+      <div class="container">
+          <section class="project">
+            <h1 class="project__title">Project</h1>
+              <table class="project__table">
+            <tr class="project__row">
+            <th class="project__data">  
+                <label class="project__input">
+                <input type="checkbox" class="project__checkbox" id="checkbox">
+                <span class="project__hidden"></span>
+              </label>
+            </th>
+            <th class="project__data arrow">#</th>
+            <th class="project__data arrow">Client</th>
+            <th class="project__data arrow">Status</th>
+            </tr>
+            <tr class="project__row active">
+            <td class="project__data">
+                <label class="project__input">
+                    <input type="checkbox" class="project__checkbox">
+                    <span class="project__hidden"></span>
+                  </label>
+            </td>
+            <td class="project__data">Project #1723</td>
+            <td class="project__data">Stella</td>
+            <td class="project__data">
+              <select name="Admin" class="select select_project">
+                <option value="" class="select__option">Sent</option>
+                <option value="" class="select__option">Draft</option>
+              </select>
+            </td>
+            </tr>
+            <tr class="project__row">
+            <td class="project__data">
+                <label class="project__input">
+                    <input type="checkbox" class="project__checkbox">
+                    <span class="project__hidden"></span>
+                  </label>
+            </td>
+            <td class="project__data">Project #1720</td>
+            <td class="project__data">IT corp International</td>
+            <td class="project__data">
+              <select name="Admin" class="select select_project">
+                <option value="" class="select__option">Sent</option>
+                <option value="" class="select__option">Draft</option>
+              </select>
+            </td>
+            </tr>
+            </table>
+          </section>
+
+        <section class="type">
+          <div class="type__box">
+            <div class="type__picture" style="background-image: url('../img/figure1.png');"></div>
+            <div class="type__info">
+              <h2 class="type__title">Project #1</h2>
+              <p class="type__text">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+          </div>
+          <div class="type__box">
+            <div class="type__picture" style="background-image: url('../img/figure2.png');"></div>
+            <div class="type__info">
+              <h2 class="type__title">Project #1</h2>
+              <p class="type__text">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+          </div>
+          <div class="type__box">
+            <div class="type__picture" style="background-image: url('../img/figure3.png');"></div>
+            <div class="type__info">
+              <h2 class="type__title">Project #1</h2>
+              <p class="type__text">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+          </div>
+          <div class="type__box">
+            <div class="type__picture" style="background-image: url('../img/figure4.png');"></div>
+            <div class="type__info">
+              <h2 class="type__title">Project #1</h2>
+              <p class="type__text">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="form">
+          <form action="" class="form__block">
+            <h3 class="form__title">Add project</h3>
+            <div class="form__container">
+              <div class="form__box">
+                <label class="form__label">
+                  <span class="form__text">Name</span>
+                  <input type="text" class="form__input" required>
+                </label>
+                <label class="form__label">
+                  <span class="form__text">E-mail</span>
+                  <input type="email" class="form__input" required>
+                </label>
+              </div>
+              <div class="form__box">
+                <label class="form__label">
+                  <span class="form__text">Client</span>
+                  <input type="text" class="form__input" required>
+                </label>
+                <label class="form__label">
+                  <!-- <span class="form__text">Admin</span>
+                  <select name="Admin" class="select">
+                    <option value="" class="select__option">Admin</option>
+                    <option value="" class="select__option">Select1</option>
+                    <option value="" class="select__option">Select2</option>
+                    <option value="" class="select__option">Select2</option>
+                    <option value="" class="select__option">Select2</option>
+                    <option value="" class="select__option">Select2</option>
+                    <option value="" class="select__option">Select2</option>
+                    <option value="" class="select__option">Select2</option>
+                  </select> -->
+                  <p>
+                    <label class="label">Admin</label>
+                    <select class="turnintodropdown" required>
+                        <option>Admin</option>
+                        <option>select data #1</option>
+                        <option>select data #2</option>
+                        <option>select data #3</option>
+                        <option>select data #4</option>
+                    </select>
+                </p>
+                </label>
+              </div>
+            </div>
+            <div class="form__buttons">
+                <button class="button button_cencel" type="reset">Cancel</button>
+                <button class="button button_add">Add</button>
+              </div>
+          </form>
+        </section>
+
+
+      </div>
+  </div>
+  <script src="./JS/index.js"></script>
+  <!-- <script type='text/javascript' src='./JS/select.js'></script> -->
+</body>
+</html>
