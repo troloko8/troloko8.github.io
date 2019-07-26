@@ -1,10 +1,4 @@
-// $('.form__input').on('focus', function(e) {
-//   var label = $(this).closest('label');
-//   console.log(label);
-//   label.css('opacity', '1');
-//    label.siblings().css('opacity', '.5')
-// })
-
+// Стилизация select
 function tamingselect() {
   if (!document.getElementById && !document.createTextNode) {
     return;
@@ -121,7 +115,7 @@ window.onload = function () {
   // add more functions if necessary
 }
 
-
+// Маштабирование select
 $(function () {
 
   $('body').on('click', function (e) {
@@ -135,7 +129,7 @@ $(function () {
 
 });
 
-
+// Эффект при фокусе input
 $(function() {
 
   $('.form__input').on('focus', function() {
@@ -151,6 +145,7 @@ $(function() {
   });
 });
 
+// Выбрать все checkbox в таблице
 $(function() {
 
   $('#checkbox').on('click', function() {
