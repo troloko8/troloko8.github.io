@@ -1,0 +1,18 @@
+.button {
+  @include text-info(Montserrat-SemiBold, 600, normal, 18px, 2.2, white);
+  background-color: #f0003e;
+  padding: 5px 70px;
+  border-radius: 30px;
+
+  @include phone {
+    padding: 7px 80px;
+  }
+
+  &_info {
+    margin-bottom: 30px;
+
+    @include phone320 {
+      margin: auto;
+    }
+  }
+}

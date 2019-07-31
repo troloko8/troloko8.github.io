@@ -1,0 +1,9 @@
+.title {
+  @include text-info(Monsserat-Bold, bold, normal, 36px, 1, black);
+  margin: 60px 0 45px 40px;
+
+  @include tablets {
+    margin: 30px 0;
+    text-align: center;
+  }
+}

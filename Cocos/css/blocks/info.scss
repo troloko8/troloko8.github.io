@@ -1,0 +1,165 @@
+.info {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  padding: 10px 5px;
+  align-items: flex-start;
+  margin-left: 15px;
+
+  @include tablets {
+    width: 100%;
+    margin: 0;
+  }
+
+  &__title {
+    @include text-info(Montserrat-Regular, normal, normal, 20px, 2, black);
+
+    @include phone {
+      font-size: 22px;
+    }
+
+    @include phone320 {
+      margin: auto;
+    }
+
+    & span {
+      @include text-info(Montserrat-Bold, normal, normal, 24px, 1.8, black);
+    
+      @include phone {
+        font-size: 26px;
+      }
+    }
+
+    &_second {
+      font-size: 14px;
+      line-height: 2.6;
+      opacity: .7;
+      margin-bottom: 20px;
+
+      @include phone {
+        font-size: 16px;
+      }
+
+      @include phone320 {
+        margin: auto;
+      }
+
+      & span {
+        font-size: 16px;
+        line-height: 2.4;
+
+        @include phone {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  &__size {
+    @include text-info(Montserrat-Italic, normal, italic, 16px, 2.5, black);
+    opacity: .7;
+
+    @include phone {
+      font-size: 18px;
+    }
+  }
+
+  &__text {
+    @include text-info(Montserrat-Regular, normal, normal, 14px, 1.3, black);
+    margin-bottom: 10px;
+
+    @include phone {
+      font-size: 16px;
+    }
+  }
+
+  &__box {
+    display: flex;
+
+    @include phone {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    flex: 1;
+    margin-bottom: 20px;
+
+    @include phone {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    @include text-info(Montserrat-Regular, normal, normal, 14px, 1.3, black);
+
+    @include phone {
+      font-size: 16px;
+    }
+
+    &::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      margin-right: 3px;
+      background-color: #4c7391;
+      display: inline-block;
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  &__dop {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  &__circs {
+    @include text-info(Montserrat-Italic, normal, italic, 14px, 1, black);
+    margin-bottom: 10px;
+
+    @include phone {
+      font-size: 16px;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &::before {
+      content: '';
+      margin-right: 10px;
+      background-image: url('../img/check-mark.png');
+      width: 1.125em;
+      height: 0.9375em;
+      display: inline-block;
+      font-size: 16px;
+      
+      @include phone {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__download {
+    @include text-info(Montserrat-Italic, normal, italic, 14px, 1, #4c7391);
+    
+    &::before {
+      content: '';
+      display: inline-block;
+      background-image: url('../img/doc.png');
+      width: 1.5625em;
+      height: 1.5625em;
+      vertical-align: middle;
+      margin-right: 10px;
+      font-size: 16px;
+      
+      @include phone {
+        font-size: 18px;
+      }
+    }
+  }
+}

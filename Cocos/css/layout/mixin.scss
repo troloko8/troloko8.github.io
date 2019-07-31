@@ -1,0 +1,37 @@
+@mixin text-info ($font, $font-weight, $font-style, $font-size, $line-height, $color) {
+  font-family: $font;
+  font-weight: $font-weight;
+  font-style: $font-style;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@function em($px) {
+  @return $px / 64px + 0em;
+}
+
+@mixin tablets {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablets600 {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin phone320 {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+

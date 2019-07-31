@@ -1,0 +1,21 @@
+ $font-family:
+ (Montserrat-Bold: (bold,normal),
+ Montserrat-Italic: (normal,italic),
+ Montserrat-LightItalic: (300,italic),
+ Montserrat-Regular: (normal,normal),
+ Montserrat-SemiBold: (600,normal),
+ );
+
+
+ @each  $font,$font-info in $font-family {
+  $font-weight: nth($font-info, 1);
+  $font-style: nth($font-info, 2);
+  @font-face {
+    font-family: #{$font};
+    src: url('../fonts/#{$font}.woff') format('woff'),
+    url('../fonts/#{$font}.woff2') format('woff2');
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: fallback ;
+  }
+ }

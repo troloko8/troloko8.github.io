@@ -1,0 +1,27 @@
+.video {
+  margin-right: 15px;
+  border-radius: 15px;
+  flex: 1;
+
+  @include tablets {
+    margin: 0 0 20px 0;
+  }
+  &__player {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 10px;
+    outline: none;
+  }
+}
+
+
+iframe {
+  border-radius: 10px;
+  @include tablets {
+    height: 400px;
+  }
+  @include tablets {
+    height: 300px;
+  }
+}

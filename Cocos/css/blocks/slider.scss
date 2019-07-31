@@ -1,0 +1,79 @@
+.slider {
+  display: flex;
+  width: calc(50% - 15px);
+  flex-direction: column;
+  position: relative;
+  margin-right: 15px;
+
+  @include tablets {
+    width: 100%;
+    margin: 0;
+  }
+
+  &__main {
+    margin-bottom: 20px;
+  }
+
+  &__nav {
+    margin-left: -10px;
+  }
+
+  &__box {
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    outline: none;
+    border: 1px solid rgba(128, 128, 128, 0.507);
+
+    &_nav {
+      height: 100px;
+      margin: 0 10px;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    max-width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    position: absolute;
+    top: 3%;
+    left: 0;
+    z-index: 1000;
+    background-color: #4c7391;
+    padding: 15px 25px 15px 15px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+
+    @include phone {
+      font-size: 16px;
+    }
+
+    & span {
+      font-weight: bold;
+    }
+  }
+}
+
+.slick-track {
+  margin: 0;
+}
+
+.slick-active {
+  outline: none;
+}
+
+.slider__nav .slick-current {
+  border: 2px solid #4c7391;
+  transition: .3s ease;
+  opacity: .5;
+}
