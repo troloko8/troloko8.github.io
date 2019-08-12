@@ -105,9 +105,7 @@ table.addEventListener('mouseover', function (e) {
 
 document.querySelector('body').addEventListener('mouseover', function (e) {
   let targetTable = e.target.closest('tbody') == table,
-    targetButton = e.target.classList.contains('button_minus');
-
-    console.log(targetTable);
+    targetButton = e.target.classList.contains('button');
 
   if (targetTable || targetButton) {
     minusRow.style.opacity = 1;
