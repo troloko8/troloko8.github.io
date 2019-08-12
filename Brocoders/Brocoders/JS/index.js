@@ -105,12 +105,16 @@ table.addEventListener('mouseover', function (e) {
 
 document.querySelector('body').addEventListener('mouseover', function (e) {
   let targetTable = e.target.closest('tbody') == table,
-    targetButton = e.target.classList.contains('button_minus')
+    targetButton = e.target.classList.contains('button_minus');
+
+    console.log(targetTable);
 
   if (targetTable || targetButton) {
     minusRow.style.opacity = 1;
     minusData.style.opacity = 1;
-  } else {
+  } if (targetButton) {
+    e.target.style.opacity = 0.8;
+  } if(!targetTable && !targetButton) {
     minusRow.style.opacity = 0;
     minusData.style.opacity = 0;
   }
