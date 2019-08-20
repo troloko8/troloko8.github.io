@@ -1,0 +1,31 @@
+.plus-info {
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 15px;
+  animation: info 1s infinite;
+  margin-bottom: 25px;
+  display: none;
+
+  @include phone {
+    display: initial;
+  }
+
+  &__link {
+    @include text-info (Mavenprobold, bold, normal, 22px, 1.1, white);
+    text-transform: uppercase;
+  }
+}
+
+@keyframes info {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.01)
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}

@@ -8,6 +8,10 @@
     text-align: center;
   }
 
+  @include phone {
+    height: 870px;;
+  }
+
   &__left {
     display: flex;
     align-items: center;

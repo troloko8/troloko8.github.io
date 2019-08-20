@@ -34,6 +34,10 @@ html {
     flex-direction: column;
     height: 840px;
     position: relative;
+
+    @include tablets {
+      height: initial;
+    }
   }
 
   &_categories {
