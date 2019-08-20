@@ -27,14 +27,15 @@ function deleteData(index, indexMove) {
   }
 }
 
-function dispFlex(display) {
-  minusRow.style.display = display;
+function changeDisplay(display, elem) {
+  elem.style.display = display;
 }
 
 plusData.addEventListener('click', function () {
   let index = tableRowAll.length;
 
   addData(index, tableRowAll)
+  changeDisplay('flex', minusData);
 })
 
 function buttonMove(elem, axis, index) {
@@ -43,6 +44,7 @@ function buttonMove(elem, axis, index) {
 
 minusData.addEventListener('click', function () {
   let index = tableRowAll.length,
+    indexData = tableRowAll[0].children.length,
     indexMove = Number(minusData.style.webkitTransform.replace(/\D+/g, "")) / 100;
 
   deleteData(index, indexMove);
@@ -50,6 +52,10 @@ minusData.addEventListener('click', function () {
   if (tableRow.children.length == indexMove) {
     buttonMove(minusData, 'translateX', indexMove);
   }
+
+   if (indexData == 2) {
+     changeDisplay('none', minusData);
+   }
 
 })
 
@@ -61,8 +67,7 @@ plusRow.addEventListener('click', function () {
   table.appendChild(rowPlus);
 
   addData(index, rowPlus);
-  dispFlex('flex');
-
+  changeDisplay('flex', minusRow);
 })
 
 minusRow.addEventListener('click', function () {
@@ -73,10 +78,10 @@ minusRow.addEventListener('click', function () {
 
   table.removeChild(tr);
 
-  dispFlex('flex');
+  changeDisplay('flex', minusRow);
 
   if (index == 2) {
-    dispFlex('none');
+    changeDisplay('none', minusRow);
   }
 
   if (tableRowAll.length == indexMove) {
@@ -97,7 +102,7 @@ table.addEventListener('mouseover', function (e) {
   }
 
   for (i = 0; i < row.children.length; i++) {
-    if (e.target.closest('tr').children[i] == e.target) {
+    if (row.children[i] == e.target) {
       minusData.style.transform = `translateX(${i * 100}%)`;
     }
   }
@@ -105,15 +110,18 @@ table.addEventListener('mouseover', function (e) {
 
 document.querySelector('body').addEventListener('mouseover', function (e) {
   let targetTable = e.target.closest('tbody') == table,
-    targetButton = e.target.classList.contains('button');
+    targetButton = e.target.closest('.button_minus');
 
   if (targetTable || targetButton) {
-    minusRow.style.opacity = 1;
-    minusData.style.opacity = 1;
+    minusRow.classList.add('opacity');
+    minusRow.classList.remove('opacity_none', 'opacity_hulf');
+    minusData.classList.add('opacity');
+    minusData.classList.remove('opacity_none', 'opacity_hulf');
   } if (targetButton) {
-    e.target.style.opacity = 0.8;
+    e.target.classList.add('opacity_hulf');
+    e.target.classList.remove('opacity_none', 'opacity');
   } if(!targetTable && !targetButton) {
-    minusRow.style.opacity = 0;
-    minusData.style.opacity = 0;
+    minusRow.classList.add('opacity_none');
+    minusData.classList.add('opacity_none');
   }
 })
