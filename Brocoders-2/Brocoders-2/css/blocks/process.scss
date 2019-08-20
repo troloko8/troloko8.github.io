@@ -1,0 +1,134 @@
+.process {
+  display: flex;
+  height: 870px;
+  background-color: #66cfcf;
+  align-items: center;
+  padding: 0 60px;
+  
+  @include tablets {
+    font-size: 19px;
+    flex-direction: column;
+    height: initial;
+    padding: 50px 50px;
+  }
+
+  &__left {
+    flex: 1;
+
+    @include tablets {
+      text-align: center;
+    }
+  }
+
+  &__right {
+    flex: 1;
+  }
+
+  &__list {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 60px
+  }
+
+  &__item {
+    width: 240px;
+    height: 178px;
+    position: relative;
+
+    @include tablets {
+      height: 17vw;
+    }
+
+    @include phone {
+      height: initial;
+      margin-bottom: 20px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      background: url('../img/connection-arrow.png') no-repeat;
+      width: 270px;
+      height: 200px;
+      top: 10px;
+      left: 102%;
+
+    @include tablets {
+      background-size: contain;
+      width: 25vw;
+    }
+
+    @include phone {
+      background: none;
+    }
+  }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &:nth-child(even) {
+      text-align: right;
+      // margin-left: 55px;
+      align-self: flex-end;
+
+      & .process__picture {
+        left: unset;
+        right: -5em;
+      }
+
+      &::after {
+        background: url('../img/connection-arrow-2.png') no-repeat;
+        left: unset;
+        right: 91%;
+
+        @include tablets {
+          background-size: contain;
+          right: 100%;
+          // background: unset;
+        }
+
+        @include phone {
+          background: none;
+        }
+      }
+    }
+  }
+
+  &__title {
+    @include text-info (Mavenprobold, bold, normal, 22px, 1.2, white);
+    margin-bottom: 15px;
+    // width: 68%;
+
+    @include phone {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    @include text-info (Mavenproregular, normal, normal, 16px, 1.4, white);
+  
+    @include phone {
+      font-size: 18px;
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    top: -0.9375em;
+    left: -4.6875em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    width: 3.75em;
+    height: 3.75em;
+    border: 3px dotted white;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,84 @@
+.why-beast {
+  display: flex;
+  background-color: #005173;
+  height: 870px;
+
+  @include tablets {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+    @include tablets {
+    order: 2;
+    }
+  }
+
+  &__right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    background: url('../img/logo-background.png') right 150% no-repeat;
+    background-size: 82%;
+
+     @include tablets {
+      order: 1;
+      background-size: contain;
+      }
+
+
+  }
+
+  &__list {
+    max-width: 505px;
+
+    @include tablets {
+      max-width: unset;
+    }
+
+    @include phone {
+      text-align: left;
+      padding: 0 10px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 35px;
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: -10px;
+      content: '';
+      width: 50px;
+      height: 1px;
+      background: #8ae2e2;
+    }
+  }
+
+  &__text {
+    @include text-info(Mavenproregular, normal, normal, 16px, 1.4, white);
+  
+    @include phone {
+      font-size: 18px;
+    }
+  }
+
+  &__container {
+    margin-left: 57px;
+    margin-bottom: 30px;
+
+    @include tablets {
+      margin: auto;
+    }
+  }
+}

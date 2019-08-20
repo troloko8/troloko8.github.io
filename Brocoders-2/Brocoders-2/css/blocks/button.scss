@@ -1,0 +1,64 @@
+
+.button {
+  @include text-info (Mavenprobold, bold, normal, 1em, 2.2, #ffffff);
+  padding: 0px 0.9375em;
+  text-transform: uppercase;
+  border: 2px solid #ffffff;
+  border-radius: 0.3125em;
+  
+  &_what {
+    display: flex;
+     align-items: center;
+     margin-right: 0.625em;
+
+     @include phone {
+       margin-bottom: 10px;
+     }
+
+    &::before {
+      content: '?';
+      line-height: 0.9375em;
+      color: #7a925e;
+      text-align: center;
+      background-color: #ffffff;
+      border-radius: 50%;
+      width: 0.9375em;
+      height: 0.9375em;
+      margin-right: 0.625em;
+
+      @include phone {
+        font-size: 21px;
+      }
+    }
+  }
+
+  &_red {
+    background-color: #ff6262;
+  }
+
+  &-main {
+    @include text-info (Mavenprobold, bold, normal, 1.125em, 1.4, #ffffff);
+    text-transform: uppercase;
+    background: transparent;
+    padding: 1.25em 2.8125em;
+    // border-radius: 5px;
+
+    &_red {
+      background: #ff5151;
+    }
+
+    &_transperent {
+      border: 2px solid #ffffff;
+    }
+  }
+
+  &_blackblue {
+    display: none;
+    color: #004d80;
+    border-color: #004d80;
+  }
+}
+
+#number {
+  display: none;
+}

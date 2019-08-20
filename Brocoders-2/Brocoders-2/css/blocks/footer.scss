@@ -1,0 +1,132 @@
+.footer {
+  display: flex;
+  background: #0b2a37;
+  height: 320px;
+  align-items: center;
+  padding-bottom: 15px;
+
+  @include tablets {
+    position: relative;
+    flex-direction: column;
+    padding-top: 30px;
+  }
+
+  &__container {
+    flex: 1;
+    display: flex;
+
+    @include tablets {
+      width: 100%;
+      justify-content: space-around;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &_left{
+      @include tablets {
+        order: 2;
+        justify-content: center;
+      }
+    }
+
+    &_right {
+
+      @include tablets {
+        order: 1;
+        justify-content: space-between;
+      }
+
+      @include phone {
+        display: none;
+        text-align: center;
+      }
+    }
+
+
+
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+
+    @include tablets {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
+    }
+  }
+
+  &__corporation {
+    @include text-info(Mavenproregular, normal, normal, 14px, 1.4, rgba(255, 255, 255, 0.5));
+    margin-left: 5px;
+
+    @include tablets {
+      position: absolute;
+      bottom: 0;
+    }
+
+    @include phone {
+      font-size: 18px;
+    }
+  }
+
+  &__box {
+    flex: 1;
+    margin-right: 20px;
+
+    @include tablets {
+      margin-right: 0;
+      flex: unset;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-left: 15px;
+
+      @include tablets {
+        margin: 0;
+      }
+    }
+  }
+
+  &__title {
+    @include text-info(Mavenprobold, bold, normal, 22px, 1.1, white);
+    margin-bottom: 40px;
+
+    @include tablets {
+      margin-bottom: 25px;
+    }
+
+    @include phone {
+      font-size: 26px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__item {
+    margin-bottom: 13px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    @include text-info(Mavenproregular, normal, normal, 16px, 1, rgba(255, 255, 255, 0.5));
+  
+    @include phone {
+      font-size: 20px;
+    }
+  }
+}

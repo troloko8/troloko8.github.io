@@ -1,0 +1,102 @@
+.active-help {
+
+  & .header {
+    background-color: white;
+  }
+
+  & #help {
+    background: white;
+    color: #004d80;
+    border-color: #004d80;
+
+    &::before {
+      color: white;
+      background: #004d80;
+    }
+  }
+
+  & #call {
+    display: none;
+
+    @include phone {
+      display: initial;
+      visibility: hidden;
+    }
+  }
+
+  & .logo{
+    background: url('../img/logo-3.png') no-repeat;
+    background-size: contain;
+  }
+
+  & .interplay {
+    color: #0b2a37;
+
+    &_burger::before {
+      filter: invert(100%);
+    }
+  }
+
+  & .main #number {
+    display: flex;
+    position: absolute;
+     bottom: 30px;
+     right: 30px;
+
+    @include tablets {
+      bottom: 5px;
+      right: unset;
+    }
+
+    @include phone {
+      bottom: unset;
+      top: -10%;
+      color: #004d80;
+      border-color: #004d80;
+    }
+  }
+}
+
+.active-call {
+
+  & .header {
+    background-color: white;
+  }
+
+  & .logo{
+    background: url('../img/logo-2.png') no-repeat;
+    width: 150px;
+    background-size: contain;
+  }
+
+  & .header #number {
+    display: flex;
+
+    @include phone {
+      margin-bottom: 10px;
+    }
+  }
+
+  & #help {
+    display: none;
+  }
+
+  & #call {
+    display: none;
+
+    @include phone {
+      display: initial;
+      visibility: hidden;
+    }
+  }
+
+  & .interplay {
+    color: #0b2a37;
+
+    &_burger::before {
+      filter: invert(100%);
+    }
+  }
+}
+
+

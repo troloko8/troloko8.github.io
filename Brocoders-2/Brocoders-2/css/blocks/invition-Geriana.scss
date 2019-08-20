@@ -1,0 +1,10 @@
+.invitation-Geriana {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #eff7f7;
+  text-align: center;
+
+  &__text {
+    @include text-info (Mavenproregular, normal, normal, 18px, 2, black);
+  }
+}

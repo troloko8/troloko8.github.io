@@ -1,0 +1,66 @@
+.title {
+  @include text-info (Mavenproblack, 900, normal, 58px, 1.2, #ffffff);
+
+
+  &_main {
+    width: 90%;
+    margin-bottom: 30px;
+
+    & span {
+      letter-spacing: 2px;
+    }
+  }
+
+  &_size {
+    font-size: 80px;
+  }
+
+  &_categories {
+    color: black;
+    margin-bottom: 70px;
+    font-size: 36px;
+    line-height: 1;
+
+    @include tablets {
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+  &_process {
+    margin-bottom: 70px;
+    font-size: 80px;
+    width: 90%;
+
+    @include tablets {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    @include phone {
+      font-size: 60px
+    }
+  }
+
+  &_comments {
+    font-size: 36px;
+    margin-bottom: 80px;
+    color: black;
+    text-align: center;
+  }
+
+  &_why-beast {
+    font-size: 80px;
+    margin-bottom: 55px;
+
+    @include phone {
+      font-size: 60px
+    }
+  }
+
+  &_feedback {
+    font-size: 40px;
+    color: #0b2a37;
+    letter-spacing: -2px
+  }
+}

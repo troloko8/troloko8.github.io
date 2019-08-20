@@ -1,0 +1,24 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+
+  &__left {
+    display: flex;
+    align-items: center;
+
+    @include phone {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  &__right {
+    @extend .header__left ;
+
+    @include tablets {
+      display: none;
+    }
+  }
+}

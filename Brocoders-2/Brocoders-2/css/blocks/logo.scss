@@ -1,0 +1,25 @@
+.logo {
+  width: 270px;
+  height: 60px;
+  margin-right: 20px;
+  background: url('../img/logo-1.png') no-repeat;
+  cursor: pointer;
+  background-size: contain;
+
+  @include phone {
+    margin-bottom: 10px;
+  }
+
+  &_footer {
+    width: 230px;
+    margin: 0 0 25px 0;
+
+    @include tablets {
+      margin: 0 20px 0 0;
+    }
+
+    @include phone {
+      display: none;
+    }
+  }
+}

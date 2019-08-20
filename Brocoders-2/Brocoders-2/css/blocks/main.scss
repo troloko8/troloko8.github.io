@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+
+  &__container {
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    @include text-info (Mavenproregular, normal, normal, 26px, 1.5, #ffffff);
+    margin-bottom: 40px;
+  }
+}

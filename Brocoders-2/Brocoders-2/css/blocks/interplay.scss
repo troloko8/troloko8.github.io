@@ -1,0 +1,24 @@
+.interplay {
+  @include text-info (Mavenproregular, normal, normal, 16px, 2.2, #ffffff);
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &_burger:before {
+    content: '';
+    display: inline-block;
+    background-image: url('../img/hamburger-menu.png');
+    width: 30px;
+    height: 23px;
+    margin-right: 10px;
+    transform: translateY(25%);
+
+    @include tablets {
+      width: 37px;
+      height: 28px;
+      display: none;
+    }
+  }
+}
