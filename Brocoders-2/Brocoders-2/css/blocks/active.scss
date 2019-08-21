@@ -37,7 +37,7 @@
     }
   }
 
-  & .main #number {
+  & .main .number {
     display: flex;
     position: absolute;
      bottom: 30px;
@@ -69,7 +69,7 @@
     background-size: contain;
   }
 
-  & .header #number {
+  & .header .number {
     display: flex;
 
     @include phone {
