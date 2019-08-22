@@ -9,7 +9,7 @@ const tableRowAll = table.children;
 
 function addData(index, element,) {
   for (let i = 0; i < index; i++) {
-    var dataPlus = document.createElement('td');
+    const dataPlus = document.createElement('td');
     dataPlus.className = 'table__data';
 
     if (element == tableRowAll) {
@@ -22,7 +22,7 @@ function addData(index, element,) {
 
 function deleteData(index, indexMove) {
   for (let i = 0; i < index; i++) {
-    var td = tableRowAll[i].children[indexMove];
+    const td = tableRowAll[i].children[indexMove];
     tableRowAll[i].removeChild(td);
   }
 }
@@ -32,7 +32,7 @@ function changeDisplay(display, elem) {
 }
 
 plusData.addEventListener('click', function () {
-  let index = tableRowAll.length;
+  const index = tableRowAll.length;
 
   addData(index, tableRowAll)
   changeDisplay('flex', minusData);
@@ -43,7 +43,7 @@ function buttonMove(elem, axis, index) {
 }
 
 minusData.addEventListener('click', function () {
-  let index = tableRowAll.length,
+  const index = tableRowAll.length,
     indexData = tableRowAll[0].children.length,
     indexMove = Number(minusData.style.webkitTransform.replace(/\D+/g, "")) / 100;
 
@@ -60,7 +60,7 @@ minusData.addEventListener('click', function () {
 })
 
 plusRow.addEventListener('click', function () {
-  let index = tableRowAll[0].children.length,
+  const index = tableRowAll[0].children.length,
     rowPlus = document.createElement('tr');
 
   rowPlus.className = 'table__row';
@@ -71,8 +71,7 @@ plusRow.addEventListener('click', function () {
 })
 
 minusRow.addEventListener('click', function () {
-
-  let index = tableRowAll.length,
+  const index = tableRowAll.length,
     indexMove = Number(minusRow.style.webkitTransform.replace(/\D+/g, "")) / 100,
     tr = tableRowAll[indexMove];
 
@@ -91,10 +90,10 @@ minusRow.addEventListener('click', function () {
 })
 
 table.addEventListener('mouseover', function (e) {
-  let index = tableRowAll.length,
+  const index = tableRowAll.length,
     row = e.target.closest('tr');
 
-  for (i = 0; i < index; i++) {
+  for (let i = 0; i < index; i++) {
 
     if (row.parentElement.children[i] == row) {
       minusRow.style.transform = `translateY(${i * 100}%)`;
@@ -109,7 +108,7 @@ table.addEventListener('mouseover', function (e) {
 })
 
 document.querySelector('body').addEventListener('mouseover', function (e) {
-  let targetTable = e.target.closest('tbody') == table,
+  const targetTable = e.target.closest('tbody') == table,
     targetButton = e.target.closest('.button_minus');
 
   if (targetTable || targetButton) {
