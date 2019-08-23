@@ -7,7 +7,7 @@ const table = document.querySelector('tbody');
 const tableRowAll = table.children;
 
 
-function addData(index, element,) {
+function addData(index, element, ) {
   for (let i = 0; i < index; i++) {
     const dataPlus = document.createElement('td');
     dataPlus.className = 'table__data';
@@ -53,9 +53,9 @@ minusData.addEventListener('click', function () {
     buttonMove(minusData, 'translateX', indexMove);
   }
 
-   if (indexData == 2) {
-     changeDisplay('none', minusData);
-   }
+  if (indexData == 2) {
+    changeDisplay('none', minusData);
+  }
 
 })
 
@@ -112,15 +112,11 @@ document.querySelector('body').addEventListener('mouseover', function (e) {
     targetButton = e.target.closest('.button_minus');
 
   if (targetTable || targetButton) {
-    minusRow.classList.add('opacity');
-    minusRow.classList.remove('opacity_none', 'opacity_hulf');
-    minusData.classList.add('opacity');
-    minusData.classList.remove('opacity_none', 'opacity_hulf');
-  } if (targetButton) {
-    e.target.classList.add('opacity_hulf');
-    e.target.classList.remove('opacity_none', 'opacity');
-  } if(!targetTable && !targetButton) {
-    minusRow.classList.add('opacity_none');
-    minusData.classList.add('opacity_none');
+    changeDisplay('flex', minusData)
+    changeDisplay('flex', minusRow)
+  }
+  if (!targetTable && !targetButton) {
+    changeDisplay('none', minusData)
+    changeDisplay('none', minusRow)
   }
 })
