@@ -6,19 +6,20 @@ table, tr,td {
    box-sizing: unset;
 }
 
-
-
 .table {
   border: 1px solid #48aae6;
   position: relative;
   border-collapse: unset;
   padding: 1px;
-
+  
   &:hover .button_minus {
     opacity: 1;
+    visibility: visible;
   }
+
   & .button_minus:hover {
     opacity: .8;
+    visibility: visible;
   }
 
 
@@ -54,7 +55,6 @@ table, tr,td {
   transition: .3s;
 
   &:hover {
-    // box-shadow: 0 0 1px 1px #48aae6;
     opacity: .8; 
   }
 
@@ -69,9 +69,10 @@ table, tr,td {
   }
 
   &_minus {
+    visibility: hidden;
     opacity: 0;
     background-color: #b20000;
-    
+
     &::after {
       content: '';
       position: absolute;

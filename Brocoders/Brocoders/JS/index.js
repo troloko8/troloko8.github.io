@@ -107,16 +107,20 @@ table.addEventListener('mouseover', function (e) {
   }
 })
 
+function changeVisible (elem, visibility) {
+  elem.style.visibility = visibility;
+}
+
 document.querySelector('body').addEventListener('mouseover', function (e) {
   const targetTable = e.target.closest('tbody') == table,
     targetButton = e.target.closest('.button_minus');
 
   if (targetTable || targetButton) {
-    changeDisplay('flex', minusData)
-    changeDisplay('flex', minusRow)
+    changeVisible(minusData,'visible');
+    changeVisible(minusRow,'visible');
   }
   if (!targetTable && !targetButton) {
-    changeDisplay('none', minusData)
-    changeDisplay('none', minusRow)
+    changeVisible(minusRow,'hidden')
+    changeVisible(minusData,'hidden')
   }
 })
