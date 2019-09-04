@@ -3,6 +3,9 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 30px;
+  width: 100%;
+  max-width: 1400px;
+  z-index: 1000;
 
   &__left {
     display: flex;

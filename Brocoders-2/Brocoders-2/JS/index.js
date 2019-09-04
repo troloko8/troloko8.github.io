@@ -76,4 +76,19 @@ $(function() {
 
     $('.footer__container_right').addClass('active-dop-info');
   })
+
+  $(window).on('scroll', function() {
+    console.log($('header').css('height'));
+    let mainBlock = $('.main'),
+        headerHight = $('header').css('height');
+
+    if($(this).scrollTop() > 100) {
+      $('header').css('position', 'fixed');
+      mainBlock.css(`padding-top`, `${headerHight} `)
+    } else {
+      $('header').css('position', 'static');
+      mainBlock.css(`padding-top`, `0 `)
+    }
+  })
 })
+
