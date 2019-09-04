@@ -1,94 +1,152 @@
-$(function () {
+  const slider = document.querySelector('.slider');
+  const slides = slider.children;
+ 
+   let i = 1;
 
-  var i = 1;
+   function slide(num) {
+    
+    for(let x = 0; x < 3; x++) {
+      slides[x].classList.remove('active');
+     };
+     slides[num].classList.add('active');
+   }
 
-  function slide(num) {
-    $('.slider')
-      .find('.slider__picture')
-      .eq(num)
-      .addClass('active')
-      .siblings()
-      .removeClass('active');
-  }
+   function timerSlide() {
+     setTimeout(function () {
 
-  function timerSlide() {
-    setTimeout(function () {
+       slide(i)
+       i++
+       if (i < 3) {
+         timerSlide();
+       } else {
+         i = 0;
+         timerSlide();
+       }
+     }, 10000)
+   }
 
-      slide(i)
-      i++
-      if (i < 3) {
-        timerSlide();
-      } else {
-        i = 0;
-        timerSlide();
-      }
-    }, 10000)
-  }
+   timerSlide();
 
-  timerSlide();
 
-});
 
-$(function() {
 
-  $('#help').on('click', function(e) {
+  // $('#help').on('click', function(e) {
+  //   e.preventDefault();
+
+  //   $(this)
+  //   .closest('main')
+  //   .addClass('active-help')
+  // })
+
+  const help = document.querySelector('#help')
+
+  help.addEventListener('click', function(e) {
     e.preventDefault();
 
-    $(this)
-    .closest('main')
-    .addClass('active-help')
+    this.closest('main').classList.add('active-help');
   })
 
-  $('#call').on('click', function(e) {
+  const call = document.querySelector('#call')
+
+  call.addEventListener('click', function(e) {
     e.preventDefault();
 
-    $(this)
-    .closest('main')
-    .addClass('active-call')
+    this.closest('main').classList.add('active-call');
   })
 
-  $('.logo').on('click', function(e) {
+
+  // $('#call').on('click', function(e) {
+  //   e.preventDefault();
+
+  //   $(this)
+  //   .closest('main')
+  //   .addClass('active-call')
+  // })
+
+  // $('.logo').on('click', function(e) {
+  //   e.preventDefault();
+
+  //   $(this)
+  //   .closest('main')
+  //   .removeClass('active-call active-help')
+  // })
+
+  const logo = document.querySelector('.logo')
+
+  logo.addEventListener('click', function(e) {
     e.preventDefault();
 
-    $(this)
-    .closest('main')
-    .removeClass('active-call active-help')
+    this.closest('main').classList.remove('active-call', 'active-help');
   })
 
-  $('.menu').on('click', function (e) {
+  // $('.menu').on('click', function (e) {
+  //   e.preventDefault();
+
+  //   if ($('.footer__container_right').hasClass('active-dop-info')) {
+  //     $('.footer__container_right').removeClass('active-dop-info');
+  //   } else {
+  //     if ( $('.header__right').hasClass('active-popup')) {
+  //       $('.header__right').removeClass('active-popup');      
+  //     } else {
+  //       $('.header__right').addClass('active-popup');
+  //     }
+  //   }
+  // })
+
+  const menu = document.querySelector('.menu'),
+        footerRight = document.querySelector('.footer__container_right'),
+        headerRight = document.querySelector('.header__right');
+             
+  menu.addEventListener('click', function(e) {
     e.preventDefault();
 
-
-    if ($('.footer__container_right').hasClass('active-dop-info')) {
-      $('.footer__container_right').removeClass('active-dop-info');
+    if (footerRight.classList.contains('active-dop-info')) {
+      footerRight.classList.remove('active-dop-info')
     } else {
-      if ( $('.header__right').hasClass('active-popup')) {
-        $('.header__right').removeClass('active-popup');      
+      if (headerRight.classList.contains('active-popup') ) {
+        headerRight.classList.remove('active-popup')
       } else {
-        $('.header__right').addClass('active-popup');
+        headerRight.classList.add('active-popup')
       }
     }
   })
 
+  const plusInfo = document.querySelector('.plus-info');
 
-  $('.plus-info').on('click', function (e) {
+  plusInfo.addEventListener('click', function(e) {
     e.preventDefault();
 
-    $('.footer__container_right').addClass('active-dop-info');
+    footerRight.classList.add('active-dop-info')
   })
 
-  $(window).on('scroll', function() {
-    console.log($('header').css('height'));
-    let mainBlock = $('.main'),
-        headerHight = $('header').css('height');
+  const mainBlock = document.querySelector('.main');
+  const header = document.querySelector('.header');
+  const headerHeight = header.clientHeight ;
 
-    if($(this).scrollTop() > 100) {
-      $('header').css('position', 'fixed');
-      mainBlock.css(`padding-top`, `${headerHight} `)
-    } else {
-      $('header').css('position', 'static');
-      mainBlock.css(`padding-top`, `0 `)
-    }
+
+  window.addEventListener('scroll', function() {
+     if (this.pageYOffset > headerHeight) {
+      header.classList.add('fixed-header');
+       mainBlock.style.paddingTop = `${headerHeight}px`
+     } else {
+      header.classList.remove('fixed-header');
+      mainBlock.style.paddingTop = '0'
+     }
+    //  console.log(mainBlock.style.padding = `${headerHight}px`)
   })
-})
+
+  // $(window).on('scroll', function() {
+
+  //   let mainBlock = $('.main'),
+  //       headerHight = $('header').css('height');
+
+  //   if($(this).scrollTop() > 100) {
+  //     $('header').addClass('fixed-header');
+  //     mainBlock.css(`padding-top`, `${headerHight} `);
+  //   } else {
+  //     $('header').removeClass('fixed-header');
+  //     mainBlock.css(`padding-top`, `0 `)
+  //   }
+  // })
+
 

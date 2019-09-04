@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding: 20px 30px;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1440px;
   z-index: 1000;
 
   &__left {
@@ -22,6 +22,33 @@
 
     @include tablets {
       display: none;
+    }
+  }
+}
+
+.fixed-header {
+  background-color: white;
+  position: fixed;
+
+  & .button {
+    color: #004d80;
+    border-color: #004d80;
+  } 
+
+  & .logo {
+    background: url('../img/logo-3.png') no-repeat;
+    background-size: contain;
+  }
+
+  & .interplay {
+    color: #004d80;
+
+    @include tablets {
+      color: white
+    }
+
+    &_burger::before {
+      background-image: url('../img/hamburger-menu-2.png')
     }
   }
 }

@@ -12,7 +12,7 @@
 
 .active-popup {
 
-  @include phone {
+  @include tablets {
     position: fixed;
     top: 0;
     right: 0;
