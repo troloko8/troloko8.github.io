@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https:/stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https:/cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <section class="section container">
+      <header class="header px-3 px-sm-0 d-flex justify-content-between align-items-center">
+        <div class="logo col-5 col-sm-2 p-0">
+          <img src="./img/loggo.svg" alt="logo" class="logo__picture">
+        </div>
+        <div class="nav d-none d-lg-flex col-lg-5 col-12 p-0">
+          <ul class="nav__list font__mazzardH-bold d-flex justify-content-lg-between">
+            <li class="nav__item ">
+              <a href="#" class="nav__link">services</a>
+            </li>
+            <li class="nav__item ">
+              <a href="#" class="nav__link">blog</a>
+            </li>
+            <li class="nav__item ">
+              <a href="#" class="nav__link">how we work</a>
+            </li>
+            <li class="nav__item ">
+              <a href="#" class="nav__link">portfolio</a>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown font__sf-medium">
+          <div class="dropdown__hidden-container"></div>
+          <a href="#" class="dropdown__btn dropdown__select-en"></a>
+          <div class="dropdown__box">
+            <a href="#" class="dropdown__select dropdown__select-en dropdown__active"></a>
+            <a href="#" class="dropdown__select dropdown__select-ru"></a>
+          </div>
+        </div>
+        <a href="#" class="burger-menu d-flex d-lg-none">
+          <span class="burger-menu__row"></span>
+          <span class="burger-menu__row"></span>
+          <span class="burger-menu__row"></span>
+        </a>
+
+        <button class="button font__mazzardH-bold button-hover_pink d-none d-lg-block">Brif</button>
+      </header>
+
+      <div class="banner container d-flex p-0">
+        <div
+          class="banner__container col-12 col-lg-7 p-0 d-flex flex-column align-items-lg-start align-items-center mb-4 mb-md-0">
+          <h1 class="banner__title font__mazzardH-semiBold">WE make android & IOS apps</h1>
+          <ul class="banner__list font__sf-regular">
+            <li class="banner__item">
+              <span class="banner__visible-checkbox"></span>
+              <span class="banner__text">Your Personal Team of Devs and Designers</span>
+            </li>
+            <li class="banner__item">
+              <span class="banner__visible-checkbox"></span>
+              <span class="banner__text" name="prototype">Get a Prototype in 2 weeks</span>
+            </li>
+            <li class="banner__item">
+              <span class="banner__visible-checkbox"></span>
+              <span class="banner__text" name="cost">From 990 $</span>
+            </li>
+          </ul>
+          <button class="button font__mazzardH-bold button-banner button-hover_orange">Order an app</button>
+        </div>
+        <div class="banner__container col-12 col-lg-5 p-0">
+          <div class="video">
+            <div class="video__list">
+              <img src="./img/numbers.svg" alt="soc" class="svg svg__numbers" data-speed="40">
+              <img src="./img/pink_lines.svg" alt="soc" class="svg svg__pink-lines" data-speed="35">
+              <img src="./img/blue_lines.svg" alt="soc" class="svg svg__blue-lines" data-speed="30">
+              <img src="./img/cubes.svg" alt="soc" class="svg svg__cubes" data-speed="50">
+              <img src="./img/apple_picture.svg" alt="soc" class="svg svg__apple" data-speed="40">
+              <img src="./img/android.svg" alt="soc" class="svg svg__android" data-speed="100">
+              <span class="video__text svg svg__text" data-speed="25">UX/UI <br /> Design</span>
+              <img src="./img/phone_picture.svg" alt="soc" class="svg svg__gadget" data-speed="35">
+              <div class="video__item svg-item-play">
+                <img src="./img/play_picture.svg" alt="soc" class="svg__play">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section offer">
+      <h2 class="title font__mazzardH-semiBold  title__offer title__offer_deact"> What We Offer</h2>
+      <p class="text-under-title font__sf-regular text-under-title_offer text-under-title_offer_deact">Our mission is to
+        help businesses
+        to perform the best digital
+        transformation with
+        competitive solutions and the most powerful technologies in <span class="read-more_dots">.. </span> <span
+          class="read-more" onclick="moreText(this)"> read more</span> <span class="read-more_text">
+          Mobile Development.
+          Team
+          of “Start
+          technologies” is
+          ready to provide you an outstanding service 24/7 and share our experience.</span></p>
+      <div class="offer__container font__sf-regular col-12 col-lg-11">
+        <ul class="offer__list d-flex justify-content-lg-between justify-content-md-between justify-content-center ">
+          <li class="offer__item offer__item-color_pink">
+            <div class="offer__picture">
+              <img src="./img/offer_apple.svg" alt="soc" class="offer__svg">
+            </div>
+            <span class="offer__text">Native IOS App</span>
+          </li>
+          <li class="offer__item offer__item-color_orange">
+            <div class="offer__picture">
+              <img src="./img/android.svg" alt="soc" class="offer__svg">
+            </div>
+            <span class="offer__text">Native Android App</span>
+          </li>
+          <li class="offer__item offer__item-color_blue">
+            <div class="offer__picture">
+              <img src="./img/offer_H.svg" alt="soc" class="offer__svg">
+            </div>
+            <span class="offer__text">Hybrid App</span>
+          </li>
+          <li class="offer__item offer__item-color_pink">
+            <div class="offer__picture">
+              <img src="./img/offer_gear.svg" class="offer__svg" alt="image format png" />
+            </div>
+            <span class="offer__text">App Support</span>
+          </li>
+        </ul>
+
+        <ul class="offer__list d-flex justify-content-lg-between justify-content-md-around justify-content-center">
+          <li class="offer__item offer__item-color_orange">
+            <div class="offer__picture">
+              <img src="./img/offer_search.svg" alt="soc" class="offer__svg">
+            </div>
+            <span class="offer__text">Market Research</span>
+          </li>
+          <li class="offer__item offer__item-color_blue">
+            <div class="offer__picture">
+              <img src="./img/offer_gadget.svg" alt="soc" class="offer__svg">
+            </div>
+            <span class="offer__text">UX/UI Design</span>
+          </li>
+          <li class="offer__item offer__item-color_pink">
+            <div class="offer__picture">
+              <img src="./img/offer_diplay.svg" alt="soc" class="offer__svg">
+            </div>
+            <span class="offer__text">Back-End</span>
+          </li>
+          <li class="offer__item offer__item-color_orange">
+            <div class="offer__picture">
+              <img src="./img/offer_virus.svg" alt="soc" class="offer__svg">
+            </div>
+            <span class="offer__text">QA</span>
+          </li>
+          <li class="offer__item offer__item-color_blue mx-auto mx-md-0">
+            <div class="offer__picture">
+              <img src="./img/offer_doc.svg" class="offer__svg" width="50" height="50" alt="some problems" />
+            </div>
+            <span class="offer__text">App Audit</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section steps text-md-left">
+
+      <div class="lines lines_steps align-self-end">
+        <img src="./img/steps_blue.svg" class="svg svg__steps-blue" data-speed="20" alt="some problems" />
+        <img src="./img/steps_pink.svg" class="svg svg__steps-pink" data-speed="40" alt="some problems" />
+        <img src="./img/num_steps.svg" class="svg svg__steps-numbers" data-speed="50" alt="some problems" />
+        <img src="./img/steps_brackets.svg" class="svg svg__steps-brackets" data-speed="100" alt="some problems" />
+      </div>
+
+      <div class="steps__box steps__box_deact container">
+        <div class="steps__title-box col-lg-11 col-12 px-0">
+          <h2 class="title font__mazzardH-semiBold title__steps">5 Steps To Launch Your App In</h2>
+          <ul class="steps__list ">
+            <li class="steps__item">
+              <img src="./img/app-store.svg" class="steps__svg" alt="some problems" />
+            </li>
+            <li class="steps__item">
+              <img src="./img/google-play.svg" class="steps__svg" alt="some problems" />
+            </li>
+            <li class="steps__item">
+              <img src="./img/app-galery.svg" class="steps__svg" alt="some problems" />
+            </li>
+          </ul>
+        </div>
+        <p class="text-under-title font__sf-regular text-under-title_steps col-lg-7 p-0">We organize a team of
+          Developers, UX-designer
+          and
+          your
+          personal project manager.
+          Prototype in 2-3 weeks</p>
+      </div>
+      <div class="steps__container font__mazzardH-regular steps__container_deact d-flex flex-column align-items-center">
+        <div class="steps__button-box">
+          <button class="button font__mazzardH-bold button_steps_brif button-hover_orange">
+            Brif Us a Line
+          </button>
+          <img src="./img/tech_first-line.svg" alt="not found" class="steps__first-line"></img>
+        </div>
+        <ul class="steps__list-container d-flex flex-column container p-0">
+          <li class="steps__item-container pl_first">
+            <div class="steps__description">
+              <span class="steps__description-text">CJM</span>
+              <span class="steps__description-text">Technical requirements </span>
+              <span class="steps__description-text">Analysis SWOT</span>
+              <div>
+                <h4 class="steps__description-title font__mazzardH-bold">Analysis & Prototype</h4>
+                <img src="./img/line_from-button.svg" alt="not found" class="steps__line-for-btn"></img>
+
+              </div>
+            </div>
+            <div class="steps__tech d-flex ">
+              <img src="./img/tech_trello 3.svg" class="steps__tech-svg" alt="some problems" />
+              <img src="./img/tech_slack.svg" class="steps__tech-svg" alt="some problems" />
+              <img src="./img/git-1a9d20d4952f01b15fd5d5081016f499431e76bd55b3b8f56e3eb2a2815e029a 1.svg"
+                class="steps__tech-svg" alt="some problems" />
+
+              <img src="./img/line_tech.svg" class="steps__tech-line" alt="some problems" />
+              <span class="steps__tech-line"></span>
+              <img src="./img/ellipse_orange.svg" class="steps__tech-ellipse" alt="some problems" />
+              <img src="./img/ellipse_orange.svg" class="steps__tech-ellipse" alt="some problems" />
+
+            </div>
+            <img src="./img/lineEllipse_mob.svg" class="steps__line-ellipse steps__line-ellipse_top"
+              alt="some problems" />
+            <img src="./img/lineEllipse_mob.svg" class="steps__line-ellipse" alt="some problems" />
+            <span class="steps__weeks font__sf-bold">1 week</span>
+          </li>
+          <li class="steps__item-container pl pl_100">
+            <div class="steps__description ">
+              <span class="steps__description-text">Product architecture</span>
+              <span class="steps__description-text">Prototype</span>
+              <span class="steps__description-text">Brandbook</span>
+              <div>
+                <h4 class="steps__description-title font__mazzardH-bold">UX/UI - Design</h4>
+                <img src="./img/line_from-button.svg" alt="not found" class="steps__line-for-btn"></img>
+              </div>
+            </div>
+            <div class="steps__tech d-flex ">
+              <img src="./img/tech_Ai.svg" class="steps__tech-svg" alt="some problems" />
+              <img src="./img/tech_logos_sketch.svg" class="steps__tech-svg" alt="some problems" />
+              <img src="./img/tech_logo-principle 3.svg" class="steps__tech-svg" alt="some problems" />
+              <img src="./img/tech_figma.svg" class="steps__tech-svg" alt="some problems" />
+
+              <img src="./img/line_tech.svg" class="steps__tech-line" alt="some problems" />
+              <span class="steps__tech-line"></span>
+              <img src="./img/ellipse_orange.svg" class="steps__tech-ellipse" alt="some problems" />
+              <img src="./img/ellipse_orange.svg" class="steps__tech-ellipse" alt="some problems" />
+
+            </div>
+            <img src="./img/lineEllipse_mob.svg" class="steps__line-ellipse" alt="some problems" />
+            <span class="steps__weeks font__sf-bold">2 weeks</span>
+          </li>
+          <li class="steps__item-container pl pl_200">
+            <div class="steps__description">
+              <span class="steps__description-text">Front-End</span>
+              <span class="steps__description-text">Back-End</span>
+              <span class="steps__description-text">APIs</span>
+              <div>
+                <h4 class="steps__description-title font__mazzardH-bold">Development</h4>
+                <img src="./img/line_from-button.svg" alt="not found" class="steps__line-for-btn"></img>
+              </div>
+            </div>
+            <div class="steps__tech d-flex ">
+              <img src="./img/tech_android_Studio 3.svg" class="steps__tech-svg" alt="some problems" />
+              <img src="./img/tech_Xcode 3.svg" class="steps__tech-svg" alt="some problems" />
+              <img src="./img/tech_logos_phpstorm.svg" class="steps__tech-svg" alt="some problems" />
+
+              <img src="./img/line_tech.svg" class="steps__tech-line" alt="some problems" />
+              <span class="steps__tech-line"></span>
+              <img src="./img/ellipse_orange.svg" class="steps__tech-ellipse" alt="some problems" />
+              <img src="./img/ellipse_orange.svg" class="steps__tech-ellipse" alt="some problems" />
+
+            </div>
+            <img src="./img/lineEllipse_mob.svg" class="steps__line-ellipse" alt="some problems" />
+            <img src="./img/lineEllipse_mob.svg" class="steps__line-ellipse" alt="some problems" />
+            <span class="steps__weeks font__sf-bold">4 weeks</span>
+          </li>
+          <li class="steps__item-container pl pl_300">
+            <div class="steps__description ">
+              <span class="steps__description-text">Unit Tests</span>
+              <span class="steps__description-text">A/B Tests</span>
+              <span class="steps__description-text">Auto Tests</span>
+              <div>
+                <h4 class="steps__description-title font__mazzardH-bold">qa</h4>
+                <img src="./img/line_from-button.svg" alt="not found" class="steps__line-for-btn"></img>
+              </div>
+            </div>
+            <div class="steps__tech d-flex ">
+              <img src="./img/tech_postman 1.svg" class="steps__tech-svg" alt="some problems" />
+              <img src="./img/testrail 1.svg" class="steps__tech-svg" alt="some problems" />
+
+              <img src="./img/line_tech.svg" class="steps__tech-line" alt="some problems" />
+              <span class="steps__tech-line"></span>
+              <img src="./img/ellipse_orange.svg" class="steps__tech-ellipse" alt="some problems" />
+              <img src="./img/ellipse_orange.svg" class="steps__tech-ellipse" alt="some problems" />
+
+            </div>
+            <img src="./img/lineEllipse_mob.svg" class="steps__line-ellipse" alt="some problems" />
+            <span class="steps__weeks font__sf-bold">1 week</span>
+          </li>
+          <li class="steps__item-container pl pl_400">
+            <div class="steps__description">
+              <span class="steps__description-text">Prepare to launch in App</span>
+              <span class="steps__description-text">Store and Google Play</span>
+              <div>
+                <h4 class="steps__description-title font__mazzardH-bold">Deployment</h4>
+                <img src="./img/tech_last-line.svg" alt="not found" class="steps__last-line"></img>
+
+              </div>
+            </div>
+            <div class="steps__tech d-flex">
+              <img src="./img/line_tech.svg" class="steps__tech-line" alt="some problems" />
+              <span class="steps__tech-line"></span>
+              <img src="./img/ellipse_orange.svg" class="steps__tech-ellipse" alt="some problems" />
+              <img src="./img/ellipse_orange.svg" class="steps__tech-ellipse d-none d-lg-block" alt="some problems" />
+            </div>
+
+            <img src="./img/lineEllipse_mob.svg" class="steps__line-ellipse" alt="some problems" />
+            <span class="steps__weeks font__sf-bold">1 week</span>
+          </li>
+        </ul>
+        <button class="button font__mazzardH-bold button_steps_order button-hover_pink">Order an app</button>
+      </div>
+      <div class="steps__technologies steps__technologies_deact container text-center text-lg-left">
+        <span class="text-under-title font__sf-regular steps__tech-text mb-3 mb-lg-0">We also use these
+          technologies:</span>
+        <ul class="steps__list">
+          <li class="steps__item">
+            <img src="./img/swift-81b84a79d2c4d2d1b038b264ab9c71bc7803629ab08c8733af238ae877958f0d 1.svg"
+              class="steps__svg" alt="some problems" />
+          </li>
+          <li class="steps__item">
+            <img src="./img/kotlin-e7c3d5067b662758ced4f17a68c9fd3a196d79c658ae9b6a8d6a84846dd0b9e6 1.svg"
+              class="steps__svg" alt="some problems" />
+          </li>
+          <li class="steps__item">
+            <img src="./img/java_core-b3e6b4c2c09c8c9319ae667a42b060980cc5c7845b4af009f7ae29ce82e48a88 1.svg"
+              class="steps__svg" alt="some problems" />
+          </li>
+          <li class="steps__item">
+            <img src="./img/sql-3912ea284f8799304c24c611e815c3409d64353979565aa6acdb5e403e269928 1.svg"
+              class="steps__svg" alt="some problems" />
+          </li>
+          <li class="steps__item">
+            <img src="./img/git-1a9d20d4952f01b15fd5d5081016f499431e76bd55b3b8f56e3eb2a2815e029a 1.svg"
+              class="steps__svg" alt="some problems" />
+          </li>
+          <li class="steps__item">
+            <img src="./img/node.svg" class="steps__svg" alt="some problems" />
+          </li>
+          <li class="steps__item">
+            <img src="./img/react.svg" class="steps__svg" alt="some problems" />
+          </li>
+          <li class="steps__item">
+            <img src="./img/postman 2.svg" class="steps__svg" alt="some problems" />
+          </li>
+          <li class="steps__item">
+            <img src="./img/kanban_flow-3e52b0cf7b69e09e9a031f293d516705543471a81d76eeb78fead2d4c90d7871.svg"
+              class="steps__svg" alt="some problems" />
+          </li>
+          <li class="steps__item">
+            <img src="./img/testrail 1.svg" class="steps__svg" alt="some problems" />
+          </li>
+          <li class="steps__item">
+            <img src="./img/asana-bff9bfc95c2d32b8b46dd6c6438037f664f95975ba2e20bf811e9c34cbcc1db4.svg"
+              class="steps__svg" alt="some problems" />
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section portfolio">
+      <div class="portfolio__head portfolio__head_deact container d-flex align-items-center flex-column flex-xl-row">
+        <div class="portfolio__title col-12 col-lg-6 text-center text-lg-left mb-4 mb-xl-0">
+          <h2 class="title font__mazzardH-semiBold ">Our portfolio</h2>
+          <p class="text-under-title font__sf-regular text-under-title_portfolio">More then 500+ work in our portfolio
+          </p>
+        </div>
+        <div class="portfolio__menu font__sf-medium menu col-12 col-lg-6" align-items-center>
+          <ul class="menu__list d-flex justify-content-between">
+            <li class="menu__item active-menu">
+              <a href="#" class="menu__link active-menu">all</a>
+            </li>
+            <li class="menu__item ">
+              <a href="#" class="menu__link">apps</a>
+            </li>
+            <li class="menu__item ">
+              <a href="#" class="menu__link">ux-design</a>
+            </li>
+            <li class="menu__item ">
+              <a href="#" class="menu__link">web</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="portfolio__container portfolio__container_deact">
+
+        <div class="arrow arrow_portfolio">
+          <img src="./img/team_arrow.svg" class="arrow_svg" alt="arrow" />
+        </div>
+        <ul class="portfolio__list">
+          <li class="portfolio__item all ux-design" style="background-color: orange;">
+            <div class="portfolio__picture container" style="background-image: url('./img/portfolio-item57.jpg')">
+            </div>
+            <button class="button font__mazzardH-bold button_portfolio button_portfolio_blue button-hover_blue ">see
+              more</button>
+            <div class="portfolio__text container d-none d-lg-flex">
+              <div class="portfolio__text-box">
+                <p class="portfolio__hashtags font__mazzardH-regular">#appdevelopment #webdevelopment
+                  #mobileappdevelopment
+                  #appdesign
+                  #appdeveloper
+                  #android #mobileapp #ios #webdesign #app #digitalmarketing #seo #mobileapps #business #coding
+                  #programming
+                  #startup #webdeveloper #softwaredevelopment #developers #developer #androiddeveloper #entrepreneur
+                  #technology #apps #uidesign #iosappdevelopment #mobileappdevelopmentcompany #androidapps #bhfyp</p>
+              </div>
+            </div>
+          </li>
+          <li class="portfolio__item all apps web" style="background-color: pink;">
+            <div class="portfolio__picture container" style="background-image: url('./img/portfolio-item58.jpg')">
+            </div>
+            <button class="button font__mazzardH-bold button_portfolio button_portfolio_blue button-hover_blue ">see
+              more</button>
+            <div class="portfolio__text container d-none d-lg-flex">
+              <div class="portfolio__text-box">
+                <p class="portfolio__hashtags font__mazzardH-regular">#appdevelopment #webdevelopment
+                  #mobileappdevelopment
+                  #appdesign
+                  #appdeveloper
+                  #android #mobileapp #ios #webdesign #app #digitalmarketing #seo #mobileapps #business #coding
+                  #programming
+                  #startup #webdeveloper #softwaredevelopment #developers #developer #androiddeveloper #entrepreneur
+                  #technology #apps #uidesign #iosappdevelopment #mobileappdevelopmentcompany #androidapps #bhfyp</p>
+              </div>
+            </div>
+          </li>
+          <li class="portfolio__item all web ux-design" style="background-color: greenyellow;">
+            <div class="portfolio__picture container" style="background-image: url('./img/portfolio.jpg')">
+            </div>
+            <button class="button font__mazzardH-bold button_portfolio button_portfolio_blue button-hover_blue ">see
+              more</button>
+            <div class="portfolio__text container d-none d-lg-flex">
+              <div class="portfolio__text-box">
+                <p class="portfolio__hashtags font__mazzardH-regular">#appdevelopment #webdevelopment
+                  #mobileappdevelopment
+                  #appdesign
+                  #appdeveloper
+                  #android #mobileapp #ios #webdesign #app #digitalmarketing #seo #mobileapps #business #coding
+                  #programming
+                  #startup #webdeveloper #softwaredevelopment #developers #developer #androiddeveloper #entrepreneur
+                  #technology #apps #uidesign #iosappdevelopment #mobileappdevelopmentcompany #androidapps #bhfyp</p>
+              </div>
+            </div>
+          </li>
+          <li class="portfolio__item all ux-design" style="background-color: red;">
+            <div class="portfolio__picture container" style="background-image: url('./img/portfolio-item62.jpg')">
+            </div>
+            <button class="button font__mazzardH-bold button_portfolio button_portfolio_blue button-hover_blue ">see
+              more</button>
+            <div class="portfolio__text container d-none d-lg-flex">
+              <div class="portfolio__text-box">
+                <p class="portfolio__hashtags font__mazzardH-regular">#appdevelopment #webdevelopment
+                  #mobileappdevelopment
+                  #appdesign
+                  #appdeveloper
+                  #android #mobileapp #ios #webdesign #app #digitalmarketing #seo #mobileapps #business #coding
+                  #programming
+                  #startup #webdeveloper #softwaredevelopment #developers #developer #androiddeveloper #entrepreneur
+                  #technology #apps #uidesign #iosappdevelopment #mobileappdevelopmentcompany #androidapps #bhfyp</p>
+              </div>
+            </div>
+          </li>
+          <li class="portfolio__item all ux-design" style="background-color: green;">
+            <div class="portfolio__picture container" style="background-image: url('./img/portfolio-item61.jpg')">
+            </div>
+            <button class="button font__mazzardH-bold button_portfolio button_portfolio_blue button-hover_blue ">see
+              more</button>
+            <div class="portfolio__text container d-none d-lg-flex">
+              <div class="portfolio__text-box">
+                <p class="portfolio__hashtags font__mazzardH-regular">#appdevelopment #webdevelopment
+                  #mobileappdevelopment
+                  #appdesign
+                  #appdeveloper
+                  #android #mobileapp #ios #webdesign #app #digitalmarketing #seo #mobileapps #business #coding
+                  #programming
+                  #startup #webdeveloper #softwaredevelopment #developers #developer #androiddeveloper #entrepreneur
+                  #technology #apps #uidesign #iosappdevelopment #mobileappdevelopmentcompany #androidapps #bhfyp</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="portfolio__bottom container d-flex justify-content-center">
+        <button class="button font__mazzardH-bold button_portfolio button-hover_orange">Brif Us a Line</button>
+      </div>
+    </section>
+
+    <section class="section team d-flex flex-column">
+      <div class="lines lines_team">
+        <div class="lines__list">
+          <img src="./img/portf_blue_lines.svg" class="svg svg__portf-b-lines" data-speed="30" alt="some problems" />
+          <img src="./img/portf_pink_lines.svg" class="svg svg__portf-p-lines" data-speed="15" alt="some problems" />
+          <img src="./img/portf_numbers.svg" class="svg svg__portf-num" data-speed="30" alt="some problems" />
+          <img src="./img/portf_numbers2.svg" class="svg svg__portf-num2" data-speed="80" alt="some problems" />
+          <img src="./img/portf_cubes.svg" class="svg svg__portf-cubes" data-speed="100" alt="some problems" />
+          <img src="./img/portf_cubes2.svg" class="svg svg__portf-cubes2" data-speed="50" alt="some problems" />
+          <img src="./img/portf_apple.svg" class="svg svg__portf-apple" data-speed="130" alt="some problems" />
+          <img src="./img/offer_gear.svg" class="svg svg__portf-gear" data-speed="40" alt="some problems" />
+        </div>
+      </div>
+      <div class="team__info team__info_deact container">
+        <h2 class="title font__mazzardH-semiBold  title_team text-center text-lg-left">Our Team</h2>
+        <p class="text-under-title font__sf-regular text-under-title_team">Meet the creators of your digital supremacy.
+          Your new mobile
+          IT-department.</p>
+        <p class="text-under-title font__sf-regular">In START TECHNOLOGIES we are trying to provide our customers with
+          the best possible
+          mobile products. Our IOS and Android developers together with market analytics and UX-designers are able to
+          launch
+          <span class="read-more_dots">.. </span>
+          <span class="read-more" onclick="moreText(this)"" > read more</span>
+          <span class=" read-more_text">
+            any kind of your business needs through the cutting-edge IT technologies. It is time to join the App
+            side.</span>
+        </p>
+      </div>
+
+      <div class="team__container font__sf-regular team__container_deact container">
+        <div class="arrow arrow_team">
+          <img src="./img/team_arrow.svg" class="arrow__svg" alt="arrow" />
+        </div>
+        <ul class="team__list d-flex flex-wrap flex-xl-nowrap">
+          <li class="team__item d-flex flex-column">
+            <div class="team__picture" style="background-image: url('./img/team.jpg');"></div>
+            <span class="team__text">Igor</span>
+            <span class="team__text">Co-founder & СЕО</span>
+          </li>
+          <li class="team__item d-flex flex-column">
+            <div class="team__picture" style="background-image: url('./img/team.jpg');"></div>
+            <span class="team__text">Igor</span>
+            <span class="team__text">Co-founder & СЕО</span>
+          </li>
+          <li class="team__item d-flex flex-column">
+            <div class="team__picture" style="background-image: url('./img/team2.jpg');"></div>
+            <span class="team__text">Igor</span>
+            <span class="team__text">Co-founder & СЕО</span>
+          </li>
+          <li class="team__item d-flex flex-column">
+            <div class="team__picture" style="background-image: url('./img/team3.jpg');"></div>
+            <span class="team__text">Igor</span>
+            <span class="team__text">Co-founder & СЕО</span>
+          </li>
+          <li class="team__item d-flex flex-column">
+            <div class="team__picture" style="background-image: url('./img/team3.jpg');"></div>
+            <span class="team__text">Igor</span>
+            <span class="team__text">Co-founder & СЕО</span>
+          </li>
+          <li class="team__item d-flex flex-column">
+            <div class="team__picture" style="background-image: url('./img/team3.jpg');"></div>
+            <span class="team__text">Igor</span>
+            <span class="team__text">Co-founder & СЕО</span>
+          </li>
+        </ul>
+      </div>
+
+      <button
+        class="button font__mazzardH-bold button_present button-hover_blue d-block d-lg-none mx-auto"><span>Presentation</span>
+    </section>
+
+    <section class="section mb-0">
+      <form action="" class="form form_deact container needs-validation needs-validation">
+        <div class="form__container d-flex flex-column">
+          <div class="form__section d-flex">
+            <div class="form__box font__sf-regular col-12 col-lg-4 d-flex flex-column">
+              <div class="form__info">
+                <img src="./img/form_mail.svg" alt="icon" class="form__picture">
+                <span class="form__info-text form__info_email">info@starttech.pro</span>
+              </div>
+              <div class="form__info">
+                <img src="./img/form_tel.svg" alt="icon" class="form__picture">
+                <span class=" form__info-text form__info_num">+7 111 222 44 55</span>
+              </div>
+              <div class="form__info">
+                <img src="./img/form_site.svg" alt="icon" class="form__picture">
+                <span class="form__info-text form__info_site">www.starttech.pro</span>
+              </div>
+            </div>
+            <div class="form__box font__sf-semiBold col-12 py-5 py-lg-0 col-lg-4">
+              <span class="form__title">Drop </br> us a line</span>
+            </div>
+            <div class="form__box font__mazzardH-regular col-12 col-lg-4">
+              <div class="form__input-box">
+                <input autocomplete="off" type="text" name="name" placeholder="Name*" class="form__input " required>
+              </div>
+              <div class="form__input-box">
+                <input autocomplete="off" type="tel" name="phone" placeholder="Phone*" id="phone" class="form__input"
+                  required>
+              </div>
+              <div class="form__input-box">
+                <input autocomplete="off" type="email" name="name" placeholder="E-mail*" id="email" class="form__input"
+                  required>
+              </div>
+              <div class="form__input-box">
+                <textarea name="" id="" cols="30" rows="5" placeholder="Text"
+                  class="form__input form__input_textarea"></textarea>
+              </div>
+              <div class="form__input-box">
+                <label class="form__label d-flex align-content-center">
+                  <input type="checkbox" name='agreement' class="form__checkbox" required>
+                  <span class="form__visible-checkbox"></span>
+                  <span class="form__text_input font__mazzardH-medium" name="cost">I agree to the privacy policy</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form__section  mx-1 mx-md-0 d-none d-lg-block">
+            <div class="form__drop">
+              <label class="form__drop-label">
+                <img src="./img/drop.svg" alt="drop icon" class="form__img">
+                <input type="file" class="form__file-input">
+                <span class="form__text-drop font__mazzardH-regular">Drag and drop file or click to attach</span>
+              </label>
+            </div>
+          </div>
+          <div class="form__section d-flex justify-content-between align-items-center align-items-xl-start">
+            <button
+              class="button font__mazzardH-bold button_present button-hover_blue d-none d-lg-block"><span>Presentation</span>
+            </button>
+            <button class="button font__mazzardH-bold button_send button-hover_pink">Send</button>
+          </div>
+        </div>
+      </form>
+      <div class="lines lines_form  ">
+        <div class="lines__list">
+          <img src="./img/lines_form.svg" class="svg svg__form-lines" data-speed="80" alt="some problems" />
+          <img src="./img/lines2_form.svg" class="svg svg__form-lines2" data-speed="15" alt="some problems" />
+          <img src="./img/lines3_form.svg" class="svg svg__form-lines3" data-speed="40" alt="some problems" />
+          <img src="./img/lines4_form.svg" class="svg svg__form-lines4" data-speed="120" alt="some problems" />
+          <img src="./img/cube_form.svg" class="svg svg__form-cube" data-speed="29" alt="some problems" />
+          <img src="./img/cube2_form.svg" class="svg svg__form-cube2" data-speed="60" alt="some problems" />
+          <img src="./img/num_form.svg" class="svg svg__form-num" data-speed="100" alt="some problems" />
+          <img src="./img/num2_form.svg" class="svg svg__form-num2" data-speed="50" alt="some problems" />
+          <img src="./img/android.svg" class="svg svg__form-android" data-speed="40" alt="some problems" />
+          <img src="./img/phone_picture.svg" class="svg svg__form-gadget" data-speed="80" alt="some problems" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section awards awards_deact container">
+      <h2 class="title font__mazzardH-semiBold  title_awards">Our Awards</h2>
+      <ul class="awards__list col-12 col-xl-10 d-flex justify-content-between">
+        <li class="awards__item">
+          <img src="./img/awards_clutch.svg" alt="awards picture" class="awards__picture">
+        </li>
+        <li class="awards__item">
+          <img src="./img/awards_CMS.svg" alt="awards picture" class="awards__picture">
+        </li>
+        <li class="awards__item">
+          <img src="./img/awards_upworkNew2.svg" alt="awards picture" class="awards__picture">
+        </li>
+        <li class="awards__item">
+          <img src="./img/awards_ru-runet1.svg" alt="awards picture" class="awards__picture">
+        </li>
+        <li class="awards__item">
+          <img src="./img/awards_Subtract.svg" alt="awards picture" class="awards__picture">
+        </li>
+        <li class="awards__item">
+          <img src="./img/awards_IST.svg" alt="awards picture" class="awards__picture">
+        </li>
+      </ul>
+    </section>
+
+    <section class="container">
+      <footer class="footer">
+        <div class="footer__top footer__top_deact d-flex">
+          <div class="footer__box col-12 col-lg-8 mb-4 mb-lg-0">
+            <h2 class="title font__sf-bold title_footer">let's make something great together</h2>
+            <p class="text-under-title font__sf-regular text-under-title_footer">Get it touch with us and send some
+              basic info for a
+              quick
+              quote</p>
+          </div>
+          <div class="footer__box flex col-12 col-lg-4 pt-lg-3">
+            <button
+              class="button font__mazzardH-bold button_present ml-xl-auto mx-auto button-hover_blue active-btn">start
+              a
+              project</button>
+          </div>
+        </div>
+        <div class="footer__bottom footer__bottom_deact d-flex">
+          <p class="footer__company-name font__mazzardH-regular mb-3 mb-lg-0">© 2020 LLC Start Technologies. All rights
+            reserved.</p>
+          <ul
+            class="socials d-flex px-0 py-4 py-lg-0 col-12 col-sm-9 col-md-6 col-lg-4 justify-content-between col-lg-4 col-12 mb-3 mb-xl-0">
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                <img src="./img/tg.svg" alt="soc" class="socials__picture">
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                <img src="./img/ig.svg" alt="soc" class="socials__picture">
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                <img src="./img/fb.svg" alt="soc" class="socials__picture">
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                <img src="./img/tw.svg" alt="soc" class="socials__picture">
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                <img src="./img/bh.svg" alt="soc" class="socials__picture">
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="footer__doc font__mazzardH-semiBold mb-3 mb-xl-0">Juristic documents</a>
+        </div>
+      </footer>
+
+
+    </section>
+  </div>
+
+  <script src="https:/code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https:/stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+  <!-- <script src="https:/cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/gruntfile.min.js"></script> -->
+  <script src="JS/index.js"></script>
+</body>
+
+</html>
