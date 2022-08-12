@@ -1,0 +1,106 @@
+.header {
+  padding: 0;
+  display: flex;
+
+  @include bp768 {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+
+  &__box {
+    width: 50%;
+    height: inherit;
+
+    @include bp768 {
+      width: 100%;
+      height: 50%;
+
+    }
+
+    &:first-child {
+      background-image: url('@img/banner.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include bp768 {
+        background-position: center top;
+        height: 50%;
+      }
+    }
+
+    &:last-child {
+      padding: 60px 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      @include bp992 {
+        padding: 50px;
+        align-items: center;
+      }
+
+      @include bp640 {
+        padding: 30px 30px;
+      }
+
+      &__sighnIn {
+        justify-self: flex-end;
+        align-self: flex-end;
+      }
+    }
+  }
+
+  &__logo {
+    margin-bottom: 88px;
+
+    @include bp640 {
+      margin-bottom: 20px;
+    } 
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    padding: 18px 30px;
+    margin-bottom: auto;
+
+    @include bp640 {
+      padding: 15px 20px;
+      font-size: 18px;
+    }
+
+    &:hover img {
+      transform: translateX(-20px);
+      }
+  }
+
+  &__arrow {
+    margin-left: 40px;
+    transform: translateX(0);
+    transition: .4s;
+  }
+
+  &__signIn {
+  font-size: 18px;
+  font-weight: 375;
+  line-height: 20px;
+  }
+
+  &__sighnIn-link {
+    font-size: 20px;
+    font-weight: 494;
+    line-height: 22px;
+    color: $orange;
+  }
+}

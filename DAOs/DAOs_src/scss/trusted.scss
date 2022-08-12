@@ -1,0 +1,97 @@
+.trusted {
+  background-color:#FAF9FA;
+  padding-top:  50px ;
+  padding-bottom:  50px;
+  margin-bottom: 100px;
+  overflow-x: scroll;
+
+  @include tablet {
+    overflow: hidden;
+  }
+
+  &__title { 
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 46px;
+  }
+
+  &__box {
+
+    @include tablet {
+      display: flex;
+    }
+
+    @include minPhone {
+      flex-direction: column;
+    }
+  }
+
+  &__list{
+  display: flex;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: column;
+    width: 50%;
+  
+    @include minPhone {
+      width: 100%;
+    }
+  }
+
+  &:nth-child(1) {
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    @include tablet {
+      margin-bottom: 0;
+      align-items: flex-start;
+      padding-left: 15%;
+    }
+
+    @include phone {
+      padding-left: 10%;
+    }
+
+    @include minPhone {
+      padding-left: 0;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &:nth-child(2) {
+    justify-content: space-between;
+    padding: 0 70px;
+
+    @include tablet {
+      padding: 0;
+      align-items: flex-start;
+      padding-left: 15%;
+    }
+
+    @include phone {
+      padding-left: 10%;
+    }
+
+    @include minPhone {
+      padding-left: 0;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+&__item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin-right: 10px;
+
+  @include tablet {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+}

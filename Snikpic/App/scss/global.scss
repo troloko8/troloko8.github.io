@@ -1,0 +1,103 @@
+html {
+  width: 100%;
+  font-family: Poppins;
+}
+
+body {
+  font-family: Poppins;
+  font-weight:normal;
+  font-style:normal;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.logo {
+
+  @include bp640 {
+    width: 100px;
+  }
+
+  &__picture {
+    width: 100%;
+  }
+}
+
+.wrapper {
+  padding: 0 40px;
+
+  @include bp640 {
+    padding: 0 10px;
+  }
+}
+
+.section {
+  overflow: hidden;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #677487;
+
+  @include bp640 {
+    font-size: 14px;
+  }
+
+  &-black {
+    color: #1D2736;
+  }
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.1;
+
+  &-slider {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.1;
+
+    @include bp768 {
+      font-size: 40px;
+    }
+
+    @include bp640 {
+      font-size: 30px;
+    }
+  }
+}
+
+.btn {
+  padding: 16px 42px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.5;
+  background: #F0998D;
+  box-shadow: 0px 16px 40px rgba(255, 188, 166, 0.33);
+  border-radius: 15px;
+  display: inline-block;
+  transition: color, background-color, .3s;
+  white-space: nowrap;
+
+  @include bp640 {
+    padding: 15px 20px;
+    font-size: 15px;
+  }
+
+  &-nav {
+    background: #FFF0EC;
+    border-radius: 50px;
+    color:#FD7461;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: none;
+  }
+}
+
+.pink {
+  color: $pink;
+}

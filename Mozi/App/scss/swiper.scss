@@ -1,0 +1,33 @@
+.swiper {
+
+  &-wrapper {
+    margin-bottom: 45px;
+  }
+
+  &-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 8px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(22, 23, 72, 0.07), 0px 25px 35px rgba(22, 23, 72, 0.05);
+    border-radius: 8px;
+    height: auto;
+  }
+
+  &__arrow {
+    
+
+  }
+}
+
+.prev-btn {
+  :first-child {
+    transform: rotate(-180deg);
+  }
+}
+
+ .swiper-button-disabled {
+   opacity: .5cb;
+ }

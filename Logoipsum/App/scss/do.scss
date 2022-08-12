@@ -1,0 +1,62 @@
+.do {
+  background-color: $darkBlue;
+  text-align: center;
+  padding: 80px;
+
+  @include bp640 {
+    padding: 50px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 75px;
+
+    @include bp992 {
+      gap: 20px 30px;
+    }
+
+    @include bp768 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include bp640 {
+      grid-template-columns: minmax(200px, 400px);
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    border-top: 6px solid $orange;
+    padding: 35px;
+    background-color: white;
+    font-family: Montserrat;
+    text-align: left;
+
+    @include bp992 {
+      padding: 35px 15px;
+    }
+  }
+  
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+
+  &__subtext {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 0.3;
+  }
+}

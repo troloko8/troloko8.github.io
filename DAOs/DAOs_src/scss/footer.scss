@@ -1,0 +1,127 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-black;
+  padding-top: 97px;
+  padding-bottom: 80px;
+  color: white;
+
+  @include phone {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 350px;
+
+    &:first-child {
+      @include phone {
+        margin-bottom: 30px;
+      }
+    }
+
+    @include phone {
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 96px;
+    line-height: 24px;
+
+    @include phone {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__nameCompany {
+    color: #D6D5DF;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  &__input {
+    padding: 20px;
+    border-radius: 4px;
+    background: #FFFFFF;
+    width: 100%;
+
+    &::placeholder {
+      font-family: 'Metropolis';
+      color: #9998A4;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__send-text {
+    line-height: 24px;
+    margin-bottom: 35px;
+  }
+
+  &-socials {
+    display: flex;
+
+    &__item {
+      display: flex;
+      width: 50px;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: $color-darkGray;
+      margin-right: 30px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover .footer-socials__icon {
+        fill: red;
+      }
+    }
+
+    &__icon {
+      fill: white;
+      transition: .3s;
+    }
+  }
+
+  &__input-box {
+    position: relative;
+    margin-bottom: 10px;
+
+    &::after {
+      content: '';
+      width: 40px;
+      height: 40px;
+      background-image: url('@img/send.svg');
+      background-color: $color-blue;
+      background-repeat: no-repeat;
+      background-position:  center;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(-8px, -50%);
+      cursor: pointer;
+    border-radius: 4px;
+
+    }
+  }
+
+}
+
+// .footer-socials__item:hover {
+//   background-color: blanchedalmond;
+// }

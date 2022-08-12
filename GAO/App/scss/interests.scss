@@ -1,0 +1,54 @@
+.interests {
+  margin-bottom: 60px;
+
+  &__box {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    gap: 10px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__label {
+    display: flex;
+    padding: 15px 24px;
+
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 494;
+    line-height: 20px;
+    color: #747887;
+    transition: .4s;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .interests__name {
+      color: $darkBlue;
+    }
+
+    &:checked ~ .interests__fake-border {
+      border-color: $darkBlue;
+    }
+  }
+
+  &__fake-border {
+    border: 1px solid $gray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .4s border-color;
+  }
+}

@@ -1,0 +1,144 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 150px 0 270px;
+  background-image: url('@img/hero-banner.png');
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 55%;
+
+  @include bp768 {
+    background-size: contain;
+  }
+
+  @include bp640 {
+    padding: 150px 0;
+    text-align: center;
+  }
+
+  &__container {
+    @include bp768 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__box {
+    @include bp768 {
+      background-color: rgba(255, 255, 255, .8) ;
+      backdrop-filter: blur(5px);
+      padding: 50px 40px;
+      border-radius: 15px;
+      border: 5px solid $pink;
+      overflow: hidden;
+    }
+
+    @include bp480 {
+      padding: 30px 20px;
+    }
+  }
+
+  &__title {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #1D2736;
+    margin-bottom: 15px;
+
+    @include bp768 {
+      font-size: 46px;
+    }
+  }
+
+  &__pink {
+    color: #F0998D;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: $gray;
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    border: 1px solid #DFE8FA;
+    border-radius: 15px;
+    padding: 14px 22px;
+    width: 100%;
+    margin-bottom: 15px;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.8;
+      color: $gray;
+    }
+  }
+
+  &__btn-box {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+
+    @include bp640 {
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include bp480 {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &__gray {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+    color:#BBC0C7;
+  }
+
+  &__stars-box{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 27px;
+    color: $gray;
+    margin-bottom: 15px;
+
+    @include bp480 {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  &__companies {
+    display: flex;
+    gap: 50px;
+
+    @include bp640 {
+      gap: 30px;
+      justify-content: center;
+    }
+
+    @include bp480 {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+
+  &__icon {
+    max-width: 120px;
+  }
+}

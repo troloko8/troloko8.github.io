@@ -1,0 +1,158 @@
+body {
+  font-family: Europa;//, Arial, sans-serif;
+  font-weight:normal;
+  font-style:normal;
+  overflow-x: hidden;
+}
+
+.logo {
+  width: 135px;
+
+  @include bp768 {
+    width: 100px;
+  }
+
+  @include bp480 {
+    margin-left: 50px;
+  }
+
+  &__picture {
+    width: 100%;
+  }
+}
+
+.wrapper {
+  padding: 0 180px;
+
+  @include bp1100 {
+    padding: 0 100px;
+  }
+
+  @include bp768 {
+    padding: 0 50px;
+  }
+
+  @include bp480 {
+    padding:  0 20px ;
+  }
+}
+
+.title {
+  font-family: Europa;
+  font-weight: 700;
+  line-height: 62px;
+  color: $darkBlue;
+
+
+  &-banner {
+    font-size: 48px;
+    margin-bottom: 35px;
+
+    @include bp640 {
+      text-align: center;
+      font-size: 35px;
+      line-height: 1;
+    }
+  
+    @include bp480 {
+      font-size: 25px;
+    }
+  }
+  
+  &-general {
+    font-size: 44px;
+    line-height: 57px;
+    margin-bottom: 16px;
+
+    @include bp992 {
+      font-size: 36px;
+      line-height: 1.2;
+    }
+
+    @include bp640 {
+      font-size: 30px;
+    }
+  }
+
+  &-box {
+    font-size: 28px;
+    line-height: 31px;
+  }
+}
+
+.text {
+  font-weight: 400;
+  color: #484C63;
+
+
+  &-banner {
+    font-size: 22px;
+    line-height: 33px;
+
+    @include bp640 {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    @include bp480 {
+      font-size: 16px;
+    }
+  }
+
+  &-general {
+    font-size: 16px;
+    line-height: 27px;
+
+    @include bp640 {
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.btn {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 25%;
+  padding: 14px 32px;
+  border-radius: 6px;
+  background-color: $red;
+  color: white;
+  transition: color, background-color, .3s;
+  display: inline-block;
+  white-space: nowrap;
+
+  @include bp640 {
+    line-height: 1;
+    padding: 15px;
+  }
+
+  &:hover {
+    color: white;
+    background-color: darkblue;
+  }
+
+  &-white {
+    background-color: white;
+    color: $red;
+    border: 1px solid $red;
+  }
+}
+
+.gradient {
+  background: linear-gradient(270deg, #E3E7F6, rgba(227, 231, 246, 0));
+}
+
+.gradient-vertical {
+  background: linear-gradient(0deg, #E3E7F6, rgba(227, 231, 246, 0));
+}
+
+.textbox {
+  max-width: 450px;
+
+  @include bp768 {
+    margin-bottom: 50px;
+  }
+}

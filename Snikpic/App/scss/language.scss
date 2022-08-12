@@ -1,0 +1,32 @@
+.language {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 5px;
+  cursor: pointer;
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height .3s;
+  }
+
+  &__item {
+    border-bottom: 1px solid black;
+    transition: background-color .3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $pink;
+    }
+  }
+}
+
+.active-lang {
+  ul {
+    height: 100px;
+  }
+}

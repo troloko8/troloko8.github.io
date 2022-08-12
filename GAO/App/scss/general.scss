@@ -1,0 +1,80 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.section {
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.title {
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: 494;
+  line-height: 56px;  
+  color: $darkBlue;
+
+  @include bp640 {
+    font-size: 35px;
+  }
+}
+
+.title-small {
+  font-size: 25px;
+  font-weight: 494;
+  line-height: 28px;
+  color: $darkBlue;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 375;
+  line-height: 22px;
+  color: $gray;
+}
+
+.btn {
+  padding: 18px 49px;
+  background-color: $orange;
+  font-family: sans-serif;
+  font-size: 22px;
+  font-weight: 494;
+  line-height: 24px;
+  transition: .4s;
+  color: #FFFFFF;
+
+  @include bp480 {
+    padding: 15px 40px;
+  }
+
+  &:hover {
+    background-color: rgb(223, 100, 0);
+  }
+
+  &-back {
+    background-color: #FFFFFF;
+    border: $gray 1px solid;
+    color: $darkBlue;
+    margin-right: 20px;
+
+    &:hover {
+      background-color: $whiteBlue;
+    }
+  }
+}
+
+.logo {
+  display: inline-block;
+}

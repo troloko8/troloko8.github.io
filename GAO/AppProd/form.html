@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href="css/style.min.css?_v=20220803133429" />
+  <title>GAO</title>
+</head>
+
+<body>
+  <section class="section main">
+    <a class="logo main__logo" href="./index.html">
+      <img class="logo " src="img/logo.svg"/>
+    </a>
+    <div class="progress">
+      <div class="progress__line"></div>
+      <div class="progress__line progress__line-filled"></div>
+      <ul class="progress__list">
+        <li class="progress__item active">
+          <svg width="18" height="22" viewBox="0 0 18 22" xmlns="http://www.w3.org/2000/svg" class="progress__icon">
+            <path d="M17.62 7.45C16.57 2.83 12.54 0.75 8.99997 0.75C8.99997 0.75 8.99997 0.75 8.98997 0.75C5.45997 0.75 1.41997 2.82 0.369973 7.44C-0.800027 12.6 2.35997 16.97 5.21997 19.72C6.27997 20.74 7.63997 21.25 8.99997 21.25C10.36 21.25 11.72 20.74 12.77 19.72C15.63 16.97 18.79 12.61 17.62 7.45ZM8.99997 12.46C7.25997 12.46 5.84997 11.05 5.84997 9.31C5.84997 7.57 7.25997 6.16 8.99997 6.16C10.74 6.16 12.15 7.57 12.15 9.31C12.15 11.05 10.74 12.46 8.99997 12.46Z"/>
+         </svg>                       
+        </li>
+        <li class="progress__item">
+          <svg class="progress__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 22H7C6.59 22 6.25 21.66 6.25 21.25C6.25 20.84 6.59 20.5 7 20.5H17C17.41 20.5 17.75 20.84 17.75 21.25C17.75 21.66 17.41 22 17 22Z" />
+            <path d="M20.35 5.52004L16.35 8.38004C15.82 8.76004 15.06 8.53004 14.83 7.92004L12.94 2.88004C12.62 2.01004 11.39 2.01004 11.07 2.88004L9.16998 7.91004C8.93998 8.53004 8.18998 8.76004 7.65998 8.37004L3.65998 5.51004C2.85998 4.95004 1.79998 5.74004 2.12998 6.67004L6.28998 18.32C6.42998 18.72 6.80998 18.98 7.22998 18.98H16.76C17.18 18.98 17.56 18.71 17.7 18.32L21.86 6.67004C22.2 5.74004 21.14 4.95004 20.35 5.52004ZM14.5 14.75H9.49998C9.08998 14.75 8.74998 14.41 8.74998 14C8.74998 13.59 9.08998 13.25 9.49998 13.25H14.5C14.91 13.25 15.25 13.59 15.25 14C15.25 14.41 14.91 14.75 14.5 14.75Z" />
+          </svg>        
+        </li>
+        <li class="progress__item">
+          <svg class="progress__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z" />
+            <path d="M17.08 14.15C14.29 12.29 9.73996 12.29 6.92996 14.15C5.65996 15 4.95996 16.15 4.95996 17.38C4.95996 18.61 5.65996 19.75 6.91996 20.59C8.31996 21.53 10.16 22 12 22C13.84 22 15.68 21.53 17.08 20.59C18.34 19.74 19.04 18.6 19.04 17.36C19.03 16.13 18.34 14.99 17.08 14.15Z" />
+          </svg>
+        </li>
+        <li class="progress__item">
+          <svg class="progress__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.44 3.09998C14.63 3.09998 13.01 3.97998 12 5.32998C10.99 3.97998 9.37 3.09998 7.56 3.09998C4.49 3.09998 2 5.59998 2 8.68998C2 9.87998 2.19 10.98 2.52 12C4.1 17 8.97 19.99 11.38 20.81C11.72 20.93 12.28 20.93 12.62 20.81C15.03 19.99 19.9 17 21.48 12C21.81 10.98 22 9.87998 22 8.68998C22 5.59998 19.51 3.09998 16.44 3.09998Z" />
+          </svg>
+        </li>
+        <li class="progress__item">
+          <svg class="progress__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2H6C4.34 2 3 3.33 3 4.97V15.88C3 17.52 4.34 18.85 6 18.85H6.76C7.56 18.85 8.32 19.16 8.88 19.72L10.59 21.41C11.37 22.18 12.64 22.18 13.42 21.41L15.13 19.72C15.69 19.16 16.46 18.85 17.25 18.85H18C19.66 18.85 21 17.52 21 15.88V4.97C21 3.33 19.66 2 18 2ZM12 5.75C13.29 5.75 14.33 6.79 14.33 8.08C14.33 9.37 13.29 10.41 12 10.41C10.71 10.41 9.67 9.36 9.67 8.08C9.67 6.79 10.71 5.75 12 5.75ZM14.68 15.06H9.32C8.51 15.06 8.04 14.16 8.49 13.49C9.17 12.48 10.49 11.8 12 11.8C13.51 11.8 14.83 12.48 15.51 13.49C15.96 14.16 15.48 15.06 14.68 15.06Z" />
+          </svg>
+        </li>
+      </ul>
+    </div>
+
+    <form class="form" >
+      <ul class="form__list">
+        <li class="form__step">
+  <h3 class="form__title title">
+    Which Hub Are You In?
+  </h3>
+  <p class="form__text text">
+    We are active in major cities and we schedule meetings based on time zones. Let us know your home base.
+  </p>
+
+  <div class="form__input-box input-search-box">
+    <img src="img/search.svg" alt='search' class="input-search-img" />
+    <input class="input-search" type="text" placeholder="Search your hub..." />
+  </div>
+
+  <h5 class="title-small">Popular Hub</h5>
+
+  <ul class="form-select">
+    <li class="form-select__item">
+      <label class="form-select__label">
+        <picture><source srcset="img/hub1.webp" type="image/webp"><img src="img/hub1.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">Austin</span>
+        <input type="radio" name='hub' value="Austin"  class="form-select__radio" />
+        <div class="form-select__pseudo-radio"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+    <li class="form-select__item">
+      <label class="form-select__label">
+        <picture><source srcset="img/hub2.webp" type="image/webp"><img src="img/hub2.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">Houston</span>
+        <input type="radio" name='hub' value="Houston" class="form-select__radio" />
+        <div class="form-select__pseudo-radio"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+    <li class="form-select__item">
+      <label class="form-select__label">
+        <picture><source srcset="img/hub3.webp" type="image/webp"><img src="img/hub3.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">Dallas</span>
+        <input type="radio" name='hub' value="Dallas" class="form-select__radio" />
+        <div class="form-select__pseudo-radio"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+    <li class="form-select__item">
+      <label class="form-select__label">
+        <picture><source srcset="img/hub4.webp" type="image/webp"><img src="img/hub4.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">New York </span>
+        <input type="radio" name='hub' value="New York"  class="form-select__radio" />
+        <div class="form-select__pseudo-radio"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+    <li class="form-select__item">
+      <label class="form-select__label">
+        <picture><source srcset="img/hub5.webp" type="image/webp"><img src="img/hub5.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">San Antonio</span>
+        <input type="radio" name='hub' value="San Antonio" class="form-select__radio" />
+        <div class="form-select__pseudo-radio"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+    <li class="form-select__item">
+      <label class="form-select__label">
+        <picture><source srcset="img/hub6.webp" type="image/webp"><img src="img/hub6.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">Los Angeles</span>
+        <input type="radio" name='hub' value="Los Angeles" class="form-select__radio" />
+        <div class="form-select__pseudo-radio"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+  </ul>
+</li>
+        <li class="form__step">
+  <div class="form__text-box">
+    <h3 class="form__title title">
+      What Are Your Objectives?
+    </h3>
+    <p class="form__text text">
+      Select up to 3 objectives. These will be kept private from other users but help us find relevant matches.
+    </p>
+  
+    <h5 class="title-small">Select Objectives</h5>
+  </div>
+
+
+  <ul class="form-select">
+    <li class="form-select__item form-select__item-checkbox">
+      <label class="form-select__label">
+        <picture><source srcset="img/obj1.webp" type="image/webp"><img src="img/obj1.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">Brainstorm with peers</span>
+        <input type="checkbox" name='obj' value="Brainstorm with peers"  class="form-select__checkbox" />
+        <div class="form-select__pseudo-checkbox"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+    <li class="form-select__item form-select__item-checkbox">
+      <label class="form-select__label">
+        <picture><source srcset="img/obj2.webp" type="image/webp"><img src="img/obj2.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">Explore other companies</span>
+        <input type="checkbox" name='obj' value="Explore other companies"  class="form-select__checkbox" />
+        <div class="form-select__pseudo-checkbox"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+    <li class="form-select__item form-select__item-checkbox">
+      <label class="form-select__label">
+        <picture><source srcset="img/obj3.webp" type="image/webp"><img src="img/obj3.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">Explore new projects</span>
+        <input type="checkbox" name='obj' value="Explore new projects"  class="form-select__checkbox" />
+        <div class="form-select__pseudo-checkbox"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+    <li class="form-select__item form-select__item-checkbox">
+      <label class="form-select__label">
+        <picture><source srcset="img/obj4.webp" type="image/webp"><img src="img/obj4.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">Raise funding</span>
+        <input type="checkbox" name='obj' value="Raise funding"  class="form-select__checkbox" />
+        <div class="form-select__pseudo-checkbox"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+    <li class="form-select__item form-select__item-checkbox">
+      <label class="form-select__label">
+        <picture><source srcset="img/obj5.webp" type="image/webp"><img src="img/obj5.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">Grow your team</span>
+        <input type="checkbox" name='obj' value="Grow your team"  class="form-select__checkbox" />
+        <div class="form-select__pseudo-checkbox"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+    <li class="form-select__item form-select__item-checkbox">
+      <label class="form-select__label">
+        <picture><source srcset="img/obj6.webp" type="image/webp"><img src="img/obj6.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">Business development</span>
+        <input type="checkbox" name='obj' value="Business development"  class="form-select__checkbox" />
+        <div class="form-select__pseudo-checkbox"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+    <li class="form-select__item form-select__item-checkbox">
+      <label class="form-select__label">
+        <picture><source srcset="img/obj7.webp" type="image/webp"><img src="img/obj7.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">Mentor others</span>
+        <input type="checkbox" name='obj' value="Mentor others"  class="form-select__checkbox" />
+        <div class="form-select__pseudo-checkbox"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+    <li class="form-select__item form-select__item-checkbox">
+      <label class="form-select__label">
+        <picture><source srcset="img/obj8.webp" type="image/webp"><img src="img/obj8.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">Find a cofounder</span>
+        <input type="checkbox" name='obj' value="Find a cofounder"  class="form-select__checkbox" />
+        <div class="form-select__pseudo-checkbox"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+    <li class="form-select__item form-select__item-checkbox">
+      <label class="form-select__label">
+        <picture><source srcset="img/obj9.webp" type="image/webp"><img src="img/obj9.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">Start a company</span>
+        <input type="checkbox" name='obj' value="Start a company"  class="form-select__checkbox" />
+        <div class="form-select__pseudo-checkbox"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+    <li class="form-select__item form-select__item-checkbox">
+      <label class="form-select__label">
+        <picture><source srcset="img/obj10.webp" type="image/webp"><img src="img/obj10.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">Invest</span>
+        <input type="checkbox" name='obj' value="Invest"  class="form-select__checkbox" />
+        <div class="form-select__pseudo-checkbox"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+    <li class="form-select__item form-select__item-checkbox">
+      <label class="form-select__label">
+        <picture><source srcset="img/obj11.webp" type="image/webp"><img src="img/obj11.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">Organize events</span>
+        <input type="checkbox" name='obj' value="Organize events"  class="form-select__checkbox" />
+        <div class="form-select__pseudo-checkbox"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+    <li class="form-select__item form-select__item-checkbox">
+      <label class="form-select__label">
+        <picture><source srcset="img/obj12.webp" type="image/webp"><img src="img/obj12.png" class="form-select__img" alt="picture" /></picture>
+        <span class="form-select__name">Meet intresting people</span>
+        <input type="checkbox" name='obj' value="Meet intresting people"  class="form-select__checkbox" />
+        <div class="form-select__pseudo-checkbox"></div>
+        <div class="form-select__pseudo-border"></div>
+      </label>
+    </li>
+
+  </ul>
+</li>
+        <li class="form__step">
+  <div class="form__text-box">
+    <h3 class="form__title title">
+      Fill Your Profile
+    </h3>
+    <p class="form__text text">
+      This basic information will be shown to your matches every week. Tell us what you would like to show!
+    </p>
+    </div>
+
+  <div class="dropbox">
+    <div class="dropbox__box">
+      <label class="dropbox__label">
+        <input class=" dropbox__input" type="file"/>
+        <svg width="60" height="60" viewBox="0 0 60 60" class="dropbox__icon" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.44988 47.525L6.39988 47.575C5.72488 46.1 5.29988 44.425 5.12488 42.575C5.29988 44.4 5.77488 46.05 6.44988 47.525Z" />
+          <path d="M22.5002 25.95C25.7863 25.95 28.4502 23.2861 28.4502 20C28.4502 16.7139 25.7863 14.05 22.5002 14.05C19.2141 14.05 16.5502 16.7139 16.5502 20C16.5502 23.2861 19.2141 25.95 22.5002 25.95Z" />
+          <path d="M40.4751 5H19.5251C10.4251 5 5.00012 10.425 5.00012 19.525V40.475C5.00012 43.2 5.47512 45.575 6.40012 47.575C8.55012 52.325 13.1501 55 19.5251 55H40.4751C49.5751 55 55.0001 49.575 55.0001 40.475V34.75V19.525C55.0001 10.425 49.5751 5 40.4751 5ZM50.9251 31.25C48.9751 29.575 45.8251 29.575 43.8751 31.25L33.4751 40.175C31.5251 41.85 28.3751 41.85 26.4251 40.175L25.5751 39.475C23.8001 37.925 20.9751 37.775 18.9751 39.125L9.62512 45.4C9.07512 44 8.75012 42.375 8.75012 40.475V19.525C8.75012 12.475 12.4751 8.75 19.5251 8.75H40.4751C47.5251 8.75 51.2501 12.475 51.2501 19.525V31.525L50.9251 31.25Z" />
+        </svg>
+        <span class="dropbox__text">Upload Your Photo</span>
+      </label>
+    </div>
+
+    <div class="dropbox__box">
+    <h5 class="title-small">Other Profile</h5>
+    <div class="form__input-box input-search-box">
+      <img src="img/li.svg" alt='search' class="input-search-img" />
+      <input class="input-search input-profile" type="text" placeholder="LinkedIn URL" />
+    </div>
+    <div class="form__input-box input-search-box">
+      <img src="img/tw.svg" alt='search' class="input-search-img" />
+      <input class="input-search input-profile" type="text" placeholder="Twitter URL" />
+    </div>
+    </div>
+  </div>
+
+  <!-- <div class="form__box-btns">
+    <a class="btn btn-back">Back</a>
+    <a class="btn">Next</a>
+  </div> -->
+</li>
+        <li class="form__step">
+  <div class="form__text-box">
+    <h3 class="form__title title">
+      What Are You Interested In?
+    </h3>
+    <p class="form__text text">
+      Select from the list and add your own interests.
+    </p>
+
+    <div class="form__input-box input-search-box">
+      <img src="img/search.svg" alt='search' class="input-search-img" />
+      <input class="input-search" type="text" placeholder="Add Your Interest" />
+    </div>
+    </div>
+
+    <div class="interests">
+      <div class="interests__box">
+        <h6 class="interests__title title-small">Business</h6>
+        <ul class="interests__list">
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Enterpreneurship</span>
+              <div class="interests__fake-border"></div>
+            </label>  
+          </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Marketing</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+          </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Sales</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+          </li>
+
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Consulting</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+          </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">E-commerce</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+          </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Retail</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+            </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Real Estate</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+            </li>
+        </ul>
+      </div>
+      <div class="interests__box">
+        <h6 class="interests__title title-small">Investing & Finance</h6>
+        <ul class="interests__list">
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Angle Investing</span>
+              <div class="interests__fake-border"></div>
+            </label>  
+          </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Crypto</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+          </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Quant Finance</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+          </li>
+
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Venture Capital</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+          </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Investment Banking</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+          </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Economics</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+            </li>
+        </ul>
+      </div>
+      <div class="interests__box">
+        <h6 class="interests__title title-small">Lifestyle</h6>
+        <ul class="interests__list">
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Travel</span>
+              <div class="interests__fake-border"></div>
+            </label>  
+          </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Fitness</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+          </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Food</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+          </li>
+
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Gaming</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+          </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Writing</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+          </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Reading</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+            </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Dinner Parties</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+            </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Poker</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+            </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Chess</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+            </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Cooking</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+            </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Wellness</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+            </li>
+          <li class="interests__item">
+            <label class="interests__label">
+              <input type="checkbox" class="interests__input" name="interest" />
+              <span class="interests__name">Parenting</span>
+              <div class="interests__fake-border"></div>
+            </label> 
+            </li>
+        </ul>
+      </div>
+    </div>
+<!-- 
+  <div class="form__box-btns">
+    <a class="btn btn-back">Back</a>
+    <a class="btn">Next</a>
+  </div> -->
+</li>
+        <li class="form__step">
+  <div class="form__text-box">
+    <h3 class="form__title title">
+      Tell Us About Your Self
+    </h3>
+    <p class="form__text text">
+      Select from the list and add your own interests.
+    </p>
+    </div>
+
+  <div class="about">
+    <div class="about__box">
+      <div class="form__input-box about__input-box input-search-box">
+        <img src="img/user.svg" alt='user' class="input-search-img" />
+        <input class="input-search input-profile" type="text" placeholder="First Name" />
+      </div>
+      <div class="form__input-box about__input-box input-search-box">
+        <img src="img/user.svg" alt='user' class="input-search-img" />
+        <input class="input-search input-profile" type="text" placeholder="Last Name" />
+      </div>
+    </div>
+    <div class="about__box">
+      <textarea class="input-textarea" placeholder="About Your Self"></textarea>
+    </div>
+  </div>
+
+  <!-- <div class="form__box-btns">
+    <a class="btn btn-back">Back</a>
+    <a class="btn" href="./finalStep.html" >Next</a>
+  </div> -->
+</li>
+        
+      </ul>
+      <div class="form__box-btns">
+        <a class="btn btn-back">Back</a>
+        <a class="btn btn-next">Next</a>
+      </div>
+    </form>
+  </section>
+  <script src='js/app.min.js?_v=20220803133429'></script>
+</body>
+</html>

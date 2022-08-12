@@ -1,0 +1,96 @@
+.main {
+  padding: 40px 200px  50px;
+
+  @include bp1450 {
+    padding: 45px 100px;
+  }
+
+  @include bp768 {
+    padding: 30px 30px;
+  }
+
+  &__logo {
+    margin-bottom: 90px;
+  }
+}
+
+.progress {
+  position: relative;
+  width: min-content;
+  margin-bottom: 60px;
+  
+  &__line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: $darkGray;
+    width: 100%;
+    height: 2px; 
+
+    &-filled {
+      background-color: $orange;
+      width: 0%;
+      transition: .5s;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid $darkGray;
+    border-radius: 100%;
+    margin-right: 100px;
+    background-color: white;
+    transition: .3s .5s;
+    z-index: 1;
+
+    @include bp768 {
+      margin-right: 70px;
+    }
+
+    @include bp640 {
+      margin-right: 50px;
+      width: 45px;
+      height: 45px;
+    }
+
+    @include bp480 {
+      margin-right: 30px;
+      width: 30px;
+      height: 30px;
+
+      svg{
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__icon {
+    fill: $darkGray;
+    transition: .3s .5s;
+  }
+}
+
+.active {
+  background-color: $orange;
+
+ &.progress__item{
+  border-color: $orange;
+  }
+
+  svg{
+    fill: white;
+  }
+}

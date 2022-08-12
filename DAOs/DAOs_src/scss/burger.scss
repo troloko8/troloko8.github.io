@@ -1,0 +1,70 @@
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 30px;
+  z-index: 1000;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  @include phone {
+    display: flex;
+  }
+
+  &__row {
+    height: 4px;
+    background-color: #24a4ee;
+    border-radius: 3px;
+    transition: .3s;
+    transform: translate(0,0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+
+.active .burger__row {
+  width: 100%;
+
+  &:nth-child(1) {
+    transform: translate(0,15px) rotate(135deg);
+
+  }
+
+  &:nth-child(2) {
+    opacity: 0;
+    transform: translate(0,-30px) rotate(0deg);
+
+  }
+
+  &:nth-child(3) {
+    transform: translate(0,-10px) rotate(-135deg);
+
+  }
+}
+
+
+// css for navigation in mobile version
+
+.nav {
+  @include phone {
+    display: none;
+  }
+}
+
+.nav-active {
+  @include phone {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(31, 0, 49, .9);
+  }
+
+}

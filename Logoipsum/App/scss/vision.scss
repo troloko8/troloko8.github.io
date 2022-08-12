@@ -1,0 +1,33 @@
+.vision {
+  padding: 80px 270px;
+  background-color: $darkBlue;
+  text-align: center;
+
+  @include bp992 {
+    padding:  50px 150px;
+  }
+
+  @include bp768 {
+    padding:  50px 50px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0.3px;
+
+    @include bp640 {
+      font-size: 18px;
+    }
+
+    @include bp480 {
+      font-size: 14px;
+    }
+  }
+}

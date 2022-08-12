@@ -1,0 +1,40 @@
+.benefits {
+  padding: 80px 70px;
+  background-color: $darkBlue;
+
+  @include bp640 {
+    padding: 80px 30px;
+  }
+
+  &__title {
+    margin-bottom: 15px
+  }
+
+  &__text {
+    max-width: 600px;
+    margin-bottom: 80px
+  }
+
+  &__list {
+    @extend .do__list;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    padding: 0;
+
+    @include bp1200 {
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include bp480 {
+    grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    padding: 30px;
+  }
+
+  &__box {
+    margin-bottom: 35px;
+  }
+}

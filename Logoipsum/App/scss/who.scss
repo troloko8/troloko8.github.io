@@ -1,0 +1,53 @@
+.who {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url('@img/banner2.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+
+  @include bp992 {
+    background-size: auto;
+    justify-content: center;
+  }
+
+  &__box {
+    width: 50%;
+    max-width: 600px;
+    padding: 60px;
+    box-sizing: content-box;
+
+    @include bp992 {
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(2px) ;
+      padding: 40px 50px;
+      border-radius: 10px;
+    }
+
+    @include bp768 {
+      width: 70%;
+      text-align: center;
+    }
+
+    @include bp640 {
+      width: 90%;
+    }
+    
+    @include bp480 {
+      padding: 30px 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 0.3px;    
+  }
+}

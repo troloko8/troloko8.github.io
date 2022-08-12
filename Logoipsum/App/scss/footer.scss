@@ -1,0 +1,105 @@
+.footer {
+  color: #D3DAD7;
+  padding:  70px 60px;
+  background-color: $darkBlue;
+
+  @include bp640 {
+    padding: 50px 30px;
+  }
+
+  &__info {
+    display: flex;
+    gap: 85px;
+    padding-bottom: 35px;
+    
+    @include bp640 {
+      gap: 30px;
+      justify-content: center;
+    }
+
+    @include bp480 {
+      gap: 10px;
+    }
+
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #D3DAD7;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  &__link {
+    margin-bottom: 9px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__uk {
+    padding-top: 40px ;
+  }
+
+  &__rights {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include bp480 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__bottom {
+    padding-top: 35px;
+    display: flex;
+    justify-content: space-between;
+
+    @include bp480 {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  &__item:hover {
+     
+      svg {
+        fill: $orange;
+      }
+    
+  }
+
+  &__icon {
+    fill: #D3DAD7;
+    transition: .3s fill;
+  }
+}

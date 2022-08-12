@@ -1,0 +1,105 @@
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+.section {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.title {
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+
+  @include bp640 {
+    font-size: 40px;
+  }
+
+  @include bp480 {
+    font-size: 30px;
+  }
+
+  &-white {
+    color: white;
+  }
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 300;
+
+  &-white {
+    color: white;
+  }
+
+  @include bp640 {
+    font-size: 14px;
+  }
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.btn {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  transition: .3s ;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @include bp992 {
+    font-size: 14px;
+  }
+
+  @include bp640 {
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  &-white {
+    color: $darkBlue;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &-dark {
+  padding: 15px 30px;
+  background-color: $darkBlue;
+  color: white;
+
+  @include bp992 {
+    padding: 15px  20px;
+  }
+
+  @include bp640 {
+    padding: 10px 15px;
+  }
+
+
+  &:hover {
+    background-color: $orange;
+    color: white;
+  }
+  }
+}
+
+.logo {
+margin-right: 10px;
+  &__img {
+    @include bp1200 {
+      width: 150px;
+    }
+
+    @include bp640 {
+      width: 100px;
+    }
+  }
+}

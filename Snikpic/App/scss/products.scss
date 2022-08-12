@@ -1,0 +1,139 @@
+.products {
+  background-color: #FDF9F8;
+  padding: 100px;
+
+  @include bp768 {
+    padding: 50px;
+  }
+
+  @include bp480 {
+    padding: 40px 20px;
+  }
+
+  &-navbar {
+    &__list {
+      display: flex;
+      gap: 48px;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.8;
+      margin-bottom: 70px;
+      overflow: hidden;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      @include bp768 {
+        gap: 30px;
+      }
+
+      @include bp480 {
+        font-size: 16px;
+      }
+    }
+
+    &__item {
+      position: relative;
+      padding-bottom: 8px;
+
+      &::after {
+        content: '';
+        // position: absolute;
+        height: 2px;
+        bottom: -8px;
+        width: 0%;
+        display: block;
+        background-color: $pink;
+        transition: width .3s;
+      }
+    }
+  }
+
+  &__container {
+    display: none;
+    align-items: center;
+    width: 100%;
+
+    @include bp992 {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__box {
+    align-items: center;
+    &:first-child {
+      flex: 1 1 40%;
+
+      @include bp768 {
+        text-align: center;
+      }
+    }
+
+    &:last-child {
+      flex: 1 1 60%;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 25px;
+    color: $gray;
+    margin-bottom: 8px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 32px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.9;
+
+    @include bp768 {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 50%;
+      background-color: $dark;
+      opacity: .1;
+      width: 2px;
+      top: 50%;
+      right: -16px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__replacebox {
+    margin-bottom: 40px;
+  }
+}
+
+.active-nav {
+
+  &::after {
+    width: 100%;
+  }
+}
+
+.active-container {
+  display: flex;
+}

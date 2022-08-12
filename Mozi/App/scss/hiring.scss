@@ -1,0 +1,39 @@
+.hiring {
+
+  &__container {
+    background-image: url('@img/hiring-picture.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 50%;
+
+    @include bp768 {
+      background-size: 80%;
+      background-position: center;
+      padding: 100px 20px !important;
+    }
+  }
+
+  &__textbox {
+    max-width: 350px;
+    padding: 150px 0 ;
+
+    @include bp768 {
+      background-color: rgba(255, 255, 255,.9);
+       padding: 60px 20px;
+       max-width: 450px;
+       margin: auto;
+       text-align: center;
+    }
+  }
+  &__btn {
+    margin-top: 55px;
+    position: relative;
+  }
+
+  &__next {
+    position: absolute;
+    left: 45%;
+    top: calc(100% + 15px);
+    width: 150px;
+  }
+}

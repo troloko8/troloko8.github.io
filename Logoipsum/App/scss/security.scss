@@ -1,0 +1,21 @@
+.security {
+  background-image: url('@img/banner3.jpg');
+  background-size: 53%;
+  height: 650px;
+
+  &__text {
+    margin-bottom: 15px;
+  }
+
+  &__btn {
+    background-color: $orange;
+    padding: 15px 30px;
+    display: inline-block;
+    color: white;
+
+    &:hover {
+      background-color: $darkBlue;
+      color: white;
+    }
+  }
+}

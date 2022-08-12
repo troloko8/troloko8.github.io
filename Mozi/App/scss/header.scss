@@ -1,0 +1,66 @@
+.header {
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+  }
+
+  &__bottom {
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    padding:  150px 0;
+
+    @include bp768 {
+      background-size: contain;
+      background-position: center bottom;
+    }
+
+    @include bp640 {
+      text-align: center;
+    }
+  }
+
+  &__description {
+    max-width: 550px;
+
+    &-about{
+      max-width: 400px;
+
+    @include bp640 {
+      max-width: 100%;
+     }
+    }
+
+    @include bp768 {
+      padding: 20px 30px;
+      max-width: 100%;
+    }
+
+    @include bp640 {
+      max-width: 100%;
+      padding: 20px;
+    }
+
+    @include bp768 {
+      background-color: rgba(255, 255, 255, .9);
+      border-radius: 15px;
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 15px;
+
+    @include bp640 {
+      justify-content: center;
+    }
+  }
+}

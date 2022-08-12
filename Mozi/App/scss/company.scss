@@ -1,0 +1,136 @@
+.company {
+  padding: 60px 0 150px;
+  text-align: center;
+
+  &__glassdoor {
+    display: flex;
+    padding: 70px;
+    width: 100%;
+    justify-content: space-between;
+    background: #F7F8FF;
+    box-shadow: 0px 0px 8px rgba(22, 23, 72, 0.07), 0px 25px 35px rgba(22, 23, 72, 0.05);
+    border-radius: 8px;
+    margin-bottom: 130px;
+
+    @include bp992 {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__ratebox {
+    display: flex;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.33;
+    color: #1A2578;
+    white-space: nowrap;
+    align-items: center;
+
+    @include bp992 {
+      margin-bottom: 30px;
+    }
+
+    @include bp640 {
+      font-size: 24px;
+    }
+
+    @include bp480 {
+      flex-direction: column;
+    }
+  }
+
+  &__rate {
+    margin-right: 25px;
+
+    @include bp480 {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__starsbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__starsrate {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.8;
+    margin-bottom: 22px;
+
+    span {
+      margin-right: 5px;
+    }
+  }
+
+  &__textbox {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  &__readmore {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #424B5A;
+  }
+  
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 8px rgba(22, 23, 72, 0.07), 0px 17px 35px rgba(22, 23, 72, 0.05);
+    border-radius: 8px;
+    padding: 35px 60px;
+
+    @include bp640 {
+      flex-direction: column;
+      gap: 15px;
+      padding: 30px 15px;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-size: 28px;
+    line-height: 1;
+    color: #484C63;
+
+    @include bp640 {
+      font-size: 22px;
+    }
+  }
+
+  &__infobox{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    gap: 25px;
+
+    @include bp640 {
+      justify-content: center;
+    }
+  }
+
+  &__info {
+    display: flex;
+    gap: 5px;
+  }
+
+}

@@ -1,0 +1,35 @@
+$color-blue: #2962EF;
+$color-darkGray: #5E5C6C;
+$color-gray: #9998A4;
+$color-whiteGray:#FAFBFD;;
+$color-black: #232427;
+
+$max-width: 1440px;
+$bp-desctop: 1140px;
+$bp-tablet: 768px;
+$bp-phone: 640px;
+$bp-minPhone: 480px;
+
+@mixin desctop {
+  @media screen and (max-width: $bp-desctop) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: $bp-phone) {
+    @content;
+  }
+}
+
+@mixin minPhone {
+  @media screen and (max-width: $bp-minPhone) {
+    @content;
+  }
+}
+

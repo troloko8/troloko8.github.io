@@ -1,0 +1,144 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__box {
+
+    &:first-child {
+      background-image: url('@img/banner.jpg');
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: 50%;
+      height: 100%;
+
+      @include bp992 {
+        background-size: cover;
+      }
+    }
+  }
+
+
+
+  &__top {
+    padding:  10px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 180px;
+
+    @include bp992 {
+      margin-bottom: 50px;
+      padding: 10px 20px;
+    }
+
+    @include bp768 {
+      padding: 10px 70px 10px 30px;
+    }
+  }
+
+  &__bottom {
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 650px;
+
+    @include bp992 {
+      background-color: rgba(247, 247, 247, .6);
+      padding: 20px 40px;
+    }
+
+    @include bp768 {
+      padding: 0 30px;
+      max-width: none;
+    }
+
+    @include bp480 {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__text-blue {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #08699E;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 62px;
+    margin-bottom: 25px;
+
+    @include bp480 {
+      font-size: 35px;
+    }
+
+    &-orange {
+      font-weight: 700;
+      color: $orange;
+    }
+    
+  }
+
+  &__btn {
+    padding: 15px 82px;
+
+    @include bp480 {
+      padding: 15px 30px;
+    }
+  }
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  padding: 50px;
+
+  @include bp768 {
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  @include bp480 {
+    font-size: 14px;
+    padding: 30px 10px;
+  }
+
+  @include bp992 {
+    padding: 30px 0;
+  }
+
+  &__item {
+    position: relative;
+    padding: 0 50px;
+
+    @include bp768 {
+      padding: 0 20px
+    }
+  }
+
+  &__line {
+    height: 65%;
+    width: 2px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  &__text {
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.5em;
+    color: $darkBlue;
+  }
+}

@@ -1,0 +1,29 @@
+.life {
+  padding: 50px 0;
+
+  &__textbox {
+    max-width: 350px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+
+    @include bp640 {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__picture {
+    width: 100%;
+    border-radius: 11px;
+  }
+}

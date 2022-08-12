@@ -1,0 +1,95 @@
+.footer {
+  padding:  490px 140px 80px;
+  background-color: $dark;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+
+  @include bp768 {
+    padding: 600px 110px 80px;
+  }
+
+  @include bp640 {
+    padding: 600px 50px 80px;
+  }
+
+  @include bp480 {
+    padding: 600px 20px 80px;
+  }
+
+  &__container {
+    display: flex;
+    margin-bottom: 80px;
+
+    @include bp768 {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__box {
+    flex: 1 1 50%;
+
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include bp768 {
+        gap: 30px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 100px;
+
+    @include bp992 {
+      gap: 30px;
+    }
+
+    @include bp768 {
+      text-align: center;
+    }
+  }
+
+  &__item {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+    opacity: 0.5;
+    text-align: center;
+  }
+}
+
+.socials {
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    color: $gray;
+  }
+
+  &__item {
+    &:hover {
+      svg{
+        fill: $pink;
+      }
+    }
+  }
+
+  &__picture {
+    fill: white;
+    transition: fill .3s;
+  }
+}

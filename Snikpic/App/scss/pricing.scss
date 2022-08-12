@@ -1,0 +1,121 @@
+.pricing {
+  display: flex;
+  min-height: 100vh;
+
+  @include bp992 {
+    min-height: 0;
+    padding-top: 80px;
+  }
+
+  @include bp992 {
+    flex-direction: column;
+  }
+
+  &__box {
+    flex: 1 1 50%;
+
+    &:last-child {
+      padding: 90px 30px 140px 55px;
+      background-color: #FFFBFA;
+  }
+
+    &:first-child {
+      padding-left: 100px;
+      min-width: 500px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+
+      @include bp992 {
+        padding: 0;
+        align-items: center;
+        margin-bottom: 30px;
+        min-width: 0;
+      }
+      }
+    }
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__list {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+
+      @include bp992 {
+        justify-content: center;
+      }
+    }
+
+    &__item {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.8;
+      padding: 8px 20px;
+      border-radius: 24px;
+    }
+
+    &__textbox{
+      height: 100%;
+      min-height: 400px;
+      background-image: radial-gradient(circle at 6px 6px, #FFEBE7 6px, transparent 0);
+      background-size: 18px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
+      color: $dark;
+
+  }
+
+  &__price {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 96px;
+
+    @include bp480 {
+      font-size: 80px;
+    }
+  }
+
+  &__info {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: left;
+  }
+}
+
+.pricing {
+
+  &-orange {
+    color: #FFAC2F;
+     background:#FFF8EE ;
+    border: 1px solid #FFAC2F;
+  }
+  &-pink {
+    color: #FFD1CA;
+    background:#FFF1EF ;
+    border: 1px solid #FFD1CA;
+  }
+  &-green {
+    color: #98FAC0;
+     background:#ECFFF4 ;
+    border: 1px solid #98FAC0;
+  }
+  &-blue {
+    color: #6EE1E9;
+    background:#F1FEFF ;
+    border: 1px solid #6EE1E9;
+  }
+  &-violet {
+    color: #EBBDFF;
+     background:#FCF5FF ;
+    border: 1px solid #EBBDFF;
+  }
+}

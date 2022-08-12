@@ -1,0 +1,104 @@
+
+.team {
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 155px;
+  text-align: center;  
+
+  @include bp992 {
+    padding: 50px 80px;
+  }
+
+  @include bp768 {
+    padding:  40px 40px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+    padding: 15px 160px;
+
+    @include bp640 {
+      padding: 15px 50px;
+    }
+  }
+
+  &__box {
+    margin-bottom: 200px;
+  }
+
+  &__sweaper-box {
+    padding: 30px 50px;
+    border: 3px solid $orange;
+
+    @include bp640 {
+      padding: 30px 20px;
+    }
+  }
+}
+
+.swiper {
+   
+  &-wrapper {
+    margin-bottom: 50px;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+
+  &__role {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-bottom: 35px;
+  }
+
+  &__subText {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+  }
+
+  &__img {
+    border-radius: 100%;
+    margin-bottom: 10px;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  &__navigation {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+}
+
+.next-btn img {
+  transform: rotate(180deg);
+}
+
+.arrow-btn {
+  background: transparent;
+  outline: none;
+  border: none;
+}

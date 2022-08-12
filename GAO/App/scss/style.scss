@@ -1,0 +1,17 @@
+  @import './base/other';
+  @import './base/reset';
+  @import './base/colors';
+  @import './base/bp';
+
+  @import 'general';
+  @import 'header';
+  @import 'main';
+  @import 'form';
+  @import 'dropbox';
+  @import 'interests';
+  @import 'about';
+  @import 'final';
+
+  .act-step {
+    display: block;
+  }

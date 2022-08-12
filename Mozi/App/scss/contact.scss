@@ -1,0 +1,108 @@
+.contact {
+  padding: 100px 0 150px;
+
+  &__container {
+    display: flex;
+
+    @include bp640 {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 70px;
+    width: 50%;
+    padding-left: 120px;
+ 
+    @include bp768 {
+      padding-left: 30px;
+    }
+
+    @include bp640 {
+      width: 100%;
+      padding: 20px;
+      gap: 20px;
+    }
+
+  }
+
+  &__countrybox {
+    display: flex;
+    margin-bottom: 25px;
+  }
+
+  &__flag {
+    margin-right: 20px;
+  }
+
+  &__country {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.005em;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.005em;
+  }
+} 
+
+.form {
+  width: 50%;
+
+  @include bp640 {
+    width: 100%;
+  }
+
+  &__container {
+    padding: 50px;
+    box-shadow: 0px 0px 8px rgba(22, 23, 72, 0.07), 0px 25px 35px rgba(22, 23, 72, 0.05);
+    border-radius: 8px;
+
+    @include bp768 {
+      padding: 40px 20px;
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.005em;
+    color: #8F90A6;
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    border: 1px solid #E3E7F6;
+    border-radius: 6px;
+    padding: 20px 32px;
+    width: 100%;
+    margin-bottom: 30px;
+    transition: .3s border-color;
+
+    &:focus {
+      border-color: $red;
+    }
+  }
+
+  &__textarea{
+    resize: none;
+    min-height: 150px;
+
+    &::placeholder {
+      font-family: Europe;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.005em;
+      color: #8F90A6;
+    }
+  }
+
+
+}

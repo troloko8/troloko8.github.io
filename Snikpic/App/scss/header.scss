@@ -1,0 +1,32 @@
+.header {
+  padding: 15px 100px;
+
+  @include bp1140 {
+    padding: 15px 50px;
+  }
+
+  @include bp640 {
+    padding: 15px 50px 15px 30px;
+  }
+
+  @include bp480 {
+    padding: 15px 30px  15px 10px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+    justify-content: space-between;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    color: black;
+  }
+}

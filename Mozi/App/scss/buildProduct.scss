@@ -1,0 +1,18 @@
+.buildProduct {
+  padding: 135px 0;
+  text-align: center;
+
+  @include bp640 {
+    padding: 50px 0;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+}

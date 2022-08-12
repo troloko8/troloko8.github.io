@@ -1,0 +1,46 @@
+html {
+  font-size: 14px;
+  font-family: Metropolis;
+
+  @include phone {
+    font-size: 13px;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.section {
+  padding-left: 180px;
+  padding-right: 180px;
+
+  @include desctop {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  
+  @include tablet {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.title {
+font-weight: 700;
+font-size: 36px;
+
+@include phone {
+  text-align: center;
+}
+}
+
+.text {
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: $color-gray;
+
+
+}

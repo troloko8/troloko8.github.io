@@ -1,0 +1,66 @@
+.backed {
+  padding-top: 40px;
+  padding-bottom: 50px;
+
+  &__title {
+    line-height: 44px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin-bottom: 45px;
+  }
+
+  &__list {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+    }
+
+    @include phone {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+  }
+
+  &__item {
+    padding: 20px;
+    border-radius: 4px;
+
+    &:nth-child(2n+1) {
+      background-color: #FAFBFD;
+    }
+
+    &:nth-child(2n) {
+      background-color: white;
+    }
+  }
+
+  &__picture {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    margin-bottom: 8px;
+
+    @include minPhone {
+      font-size: 13px;
+      line-height: 1;
+    }
+  }
+
+  &__link {
+    list-style: none;
+    margin-right: 10px;
+  }
+
+}

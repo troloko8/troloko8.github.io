@@ -1,0 +1,106 @@
+.reviews {
+  padding: 160px 100px;
+  background-color: #FFFAFE;
+  position: relative;
+
+  @include bp1140 {
+    padding: 150px 50px;
+  }
+
+  @include bp640 {
+    padding: 150px 20px ;
+  }
+
+  @include bp480 {
+    padding: 50px 0 ;
+  }
+
+  &__title {  
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.8;
+  color: $dark;
+  margin-bottom: 24px;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+  }
+
+  &__picturebox {
+    position: relative;
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    width: 33.3%;
+    min-width: 250px;
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 100%;
+  }
+
+  &__play {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__textbox {
+    width: 66.6%;
+
+    @include bp992 {
+      width: 100%;
+      padding: 20px 40px;
+    }
+  }
+}
+
+.swiper {
+  position: relative;
+  margin-bottom: 390px;
+
+  &-slide {
+    display: flex;
+    width: 100%;
+    padding: 0 50px;
+
+    @include bp992 {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 30px;
+    }
+
+    @include bp768 {
+      text-align: center;
+    }
+  }
+
+  &-wrapper {
+
+  }
+}
+
+.prev-btn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(180deg);
+  z-index: 1;
+}
+
+.next-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.swiper-button-disabled {
+  opacity: .5;
+}
