@@ -1,0 +1,151 @@
+.features {
+  
+  &__body {
+    padding: 300px 0;
+    background-image: url('@img/model.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    @include bp768 {
+      gap: 50px;
+      text-align: center;
+    }
+  }
+
+  &__container {
+    display: flex;
+    gap: 80px;
+
+    @include bp992 {
+      gap: 30px
+    }
+
+    @include bp768 {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__picture {
+    flex: 1 1 50%;
+
+    @include bp992 {
+      order: 0;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__box {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: .4s ease;
+
+    &._anim-active {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: .4s ease .2s;
+
+    &._anim-active {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+  }
+
+  &__list {
+    font-family: Barlow;
+    font-size: 18px;
+    line-height: 1.1;
+    color: $black;
+
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: .4s ease .4s;
+
+    &._anim-active {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+
+    @include bp768 {
+      justify-content: center;
+    }
+
+    &::before {
+      content: '';
+      background-image: url('@img/ok.png');
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+      
+    }
+  }
+
+  &__value-list {
+    display: flex;
+    gap: 50px;
+
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: .4s ease .4s;
+
+    &._anim-active {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+
+    @include bp768 {
+      justify-content: center;
+    }
+
+    @include bp480 {
+      gap: 30px;
+    }
+  }
+
+  &__value-item {
+    font-family: Barlow;
+  }
+
+  &__name {
+    font-size: 18px;
+    line-height: 1.1;
+    color: $gray;
+  }
+
+  &__value {
+    font-size: 54px;
+    line-height: 1.2;
+
+    @include bp640 {
+      font-size: 40px;
+    }
+  }
+}

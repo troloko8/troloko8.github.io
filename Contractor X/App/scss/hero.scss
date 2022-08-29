@@ -1,0 +1,101 @@
+.hero {
+  min-height: 100vh;
+  height: auto;
+  background: url('@img/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+
+  @include bp768 {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(52, 52, 52, 0.6);
+  }
+
+  &__container {
+    position: relative;
+    color: #fff;
+    max-width: 660px;
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 50px;
+
+    @include bp992 {
+      max-width: 100%;
+    }
+
+    @include bp768 {
+      padding: 100px 0;
+    }
+  }
+
+  &__title {
+    font-size: 72px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: .8s ease;
+  
+    &._anim-active {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    @include bp768 {
+      font-size: 50px;
+    }
+
+    @include bp480 {
+      font-size: 40px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 35px;
+    color: #fff ;
+
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: .8s .4s ease;
+  
+    &._anim-active {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    opacity: 0;
+    transform: translate( -100px,0);
+    transition: .8s .8s ease;
+  
+    &._anim-active {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    
+
+    @include bp640 {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

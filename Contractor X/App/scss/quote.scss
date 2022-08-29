@@ -1,0 +1,72 @@
+.quote {
+  background-image: url('@img/carcase.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__body {
+    padding: 115px 0;
+  }
+
+  &__container {
+    max-width: 600px;
+
+    @include bp768 {
+      max-width: none;
+      background-color:  rgba(255, 255, 255, .8);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+    }
+  }
+
+  &__title._anim-items {
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: .4s ease;
+
+    &._anim-active {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+  }
+
+  &__text {
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: .4s ease .2s;
+
+    &._anim-active {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+  }
+  
+
+  &__text-box {
+    margin-bottom: 35px;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 30px;
+
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: .4s ease .4s;
+
+    &._anim-active {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+
+    @include bp768 {
+      justify-content: center;
+    }
+
+    @include bp480 {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

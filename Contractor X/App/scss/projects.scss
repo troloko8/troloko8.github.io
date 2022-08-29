@@ -1,0 +1,68 @@
+.projects {
+  &__container {
+    display: flex;
+    margin-bottom: 80px;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__orange {
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: .4s ease ;
+    margin-bottom: 15px;
+
+    &._anim-active {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+  }
+
+  &__title {
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: .4s ease .2s;
+
+    &._anim-active {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+  }
+
+  &__btns {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    opacity: 0;
+    transform: translate(200px, 0);
+    transition: .4s ease .4s;
+
+    &._anim-active {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+  }
+
+  &__text-box {
+    max-width: 600px;
+  }
+
+  &__slide {
+    opacity: 0;
+    transition: opacity .4s ease .6s;
+
+    &:nth-child(2) {
+      transition-delay: .8s;
+    }
+
+    &:nth-child(3) {
+      transition-delay: 1s;
+    }
+
+    &._anim-active {
+      opacity: 1;
+    }
+
+  }
+}

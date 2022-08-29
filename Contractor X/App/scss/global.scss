@@ -1,0 +1,131 @@
+html {
+  // width: 100%;
+  font-family: Roboto, Barlow;
+  font-weight: 400;
+}
+
+._lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.padding {
+  padding:  0 145px;
+
+  @include bp1140 {
+    padding: 0 100px;
+  }
+
+  @include bp992 {
+    padding: 0 80px;
+  }
+
+  @include bp640 {
+    padding: 0 40px;
+  }
+
+  @include bp480 {
+    padding: 0 20px;
+  }
+}
+
+.text {
+  font-family: Barlow;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $gray;
+
+  // opacity: 0;
+  // transform: translate(0, 50px) !important;
+  // transition: .8s ease !important;
+
+  // &._anim-active {
+  //   opacity: 1 !important;
+  //   transform: translate(0, 0) !important;
+  // }
+}
+
+.title {
+  font-family: Barlow;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 20px;
+
+  // opacity: 0;
+  // transform: translate(0, 50px) !important;
+  // transition: .8s .4s ease !important;
+
+  // &._anim-active {
+  //   opacity: 1 !important;
+  //   transform: translate(0, 0) !important;
+  // }
+
+  @include bp640 {
+    font-size: 40px;
+  }
+}
+
+.btn {
+  padding: 30px 40px;
+  font-family: Barlow;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.1;
+  display: inline-block;
+  white-space: nowrap;
+  transition: .3s;
+
+  &_orange {
+    background-color: $orange;
+    color: white;
+    border: 2px solid $orange;
+
+    &:hover {
+      color: #000;
+      background-color: transparent;
+      border-color: #000;
+    }
+  }
+
+  &_trans-white {
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+
+    &:hover {
+      color: #fff;
+      background-color: $orange;
+      border-color: $orange;
+    }
+  }
+
+  &_trans-black {
+    border: 2px solid #191919;
+    color: $black;
+    background: transparent;
+
+    &:hover {
+      color: #fff;
+      background-color: $orange;
+      border-color: $orange;
+    }
+  }
+}
+
+.orange {
+  color: $orange;
+  text-transform: uppercase;
+  font-size: 20px;
+
+  &-text {
+    color: $orange;
+  }
+}
